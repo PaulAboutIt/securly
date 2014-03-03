@@ -1,0 +1,88 @@
+/* Coffea Green Theme */
+
+/* Text Colors */
+a,
+.title-tinted,
+.paragraph-lead,
+.button:hover,
+button:hover,
+input[type="button"]:hover,
+blockquote.quotes:before,
+blockquote.quotes:after,
+.highlight,
+.nav-trigger.active,
+.service-box:before,
+.feature-box:hover:before,
+.feature-title,
+.article-nav .post-title,
+.bypostauthor .comment-container .comment-author,
+.tags a:hover {
+    color: #329357;
+}
+
+@media only screen and (min-width: 992px) {
+    .main-nav ul li ul .active > a,
+    .main-nav ul li ul li a:hover {
+        color: #329357;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .main-nav ul .active > a,
+    .main-nav ul .active > a:after,
+    .main-nav ul li:hover > a:after,
+    .main-nav > ul:hover > .active > a,
+    .main-nav ul li:hover > a {
+        color: #329357;
+    }
+}
+
+/* Background Colors */
+a:hover,
+a:focus,
+.button,
+.button,
+button,
+input[type="button"],
+.dropcap.color,
+blockquote.colored,
+.circle-stats p:before,
+.pricing-table .pricing-edition .special-lead,
+.flex-control-nav li .flex-active,
+.flex-control-nav li a:hover,
+.tab-nav .active a,
+.tab-nav li a:hover,
+.collapse-title,
+.collapse-title:hover,
+.progress-default {
+    background-color: #329357;
+}
+
+.section-split.tinted {
+    background-color: #E3F1E1;
+}
+
+/* Border Colors */
+a,
+.button,
+.button,
+button,
+input[type="button"],
+blockquote,
+blockquote.pull-left,
+blockquote.pull-right {
+    border-color: #329357;
+}
+
+/* Selection Text */
+::-moz-selection {
+    background: #c2f2d5;
+    color: #00a445;
+    text-shadow: none;
+}
+
+::selection {
+    background: #c2f2d5;
+    color: #00a445;
+    text-shadow: none;
+}
