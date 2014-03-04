@@ -36,10 +36,52 @@
     margin-bottom: 40px
 }
 
-.our-schools
- {
+.our-schools {
     background: #ebebeb;
  }
+
+ .fa-youtube-square {
+    color:#ce1525;
+    padding: 10px;
+ }
+
+.white {
+    color: #fff;
+}
+
+.blue {
+    color: #4c8ec1;
+}
+
+.circle-border {
+    border-radius: 50%;
+    border: solid 3px #fff;
+}
+
+.ss-lightbulb {
+    margin-top: 5px;
+    padding: 27px 25px 13px 25px;
+    color: #fff;
+}
+
+.ss-file {
+    padding: 27px 25px 13px 25px;
+    color: #fff;
+}
+
+.ss-mail {
+    padding: 27px 25px 13px 25px;
+    color: #fff;
+}
+
+.clients p {
+    max-width: 50%;
+    margin: 0px auto;
+}
+
+.clients p:nth-child(even) {
+    padding-top: 20px;
+}
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
