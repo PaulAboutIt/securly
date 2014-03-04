@@ -12,6 +12,7 @@
  /*------------------------------------------------------------------
 [Table of contents]
 
+0. Custom Styles
 1. Base Styles
 2. General Styles
 3. Header Styles
@@ -24,6 +25,21 @@
 10. Print Styles
 -------------------------------------------------------------------*/
 
+/* CUSTOM STYLES ---------------*/
+
+.login-btn {
+    border: solid 1px white !important;
+    border-radius: 5px;
+}
+
+.schools div{
+    margin-bottom: 40px
+}
+
+.our-schools
+ {
+    background: #ebebeb;
+ }
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -115,7 +131,7 @@ a:focus {
    ========================================================================== */
 body {
     position: relative;
-    font-family: 'Inika', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 14px;
     color: #555;
     overflow-x: hidden;
@@ -131,13 +147,13 @@ hr {
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 700;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 100;
     color: #333;
 }
 
 .hero {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     color: #aaa;
     font-weight: 300;
     text-align: center;
@@ -149,14 +165,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .subtitle {
-    font-family: 'Inika', serif;
-    font-weight: 700;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 100;
     font-size: 18px;
     color: #555;
 }
 
 .title-tinted {
-    font-family: 'Inika', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     color: #219b89;
     font-weight: normal;
     font-size: 32px;
@@ -165,8 +181,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .detail-title,
 .detail-title a  {
-    font-family: 'Inika', serif;
-    font-weight: 700;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 100;
     font-size: 14px;
     color: #888;
     text-transform: uppercase;
@@ -175,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-title {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     color: white;
     font-size: 72px;
     letter-spacing: 5px;
@@ -184,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-subtitle {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     color: white;
     font-size: 30px;
     letter-spacing: -2px;
@@ -195,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     color: #555;
     font-weight: 300;
     font-size: 28px;
@@ -219,14 +235,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .paragraph-title {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 32px;
     text-transform: uppercase;
 }
 
 .overlay-title,
 .overlay-subtitle {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     color: white;
     font-size: 36px;
     font-weight: 700;
@@ -239,7 +255,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-title {
-    font-family: 'Inika', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -271,7 +287,7 @@ em {
 pre {
     background: #ebebeb;
     border: none;
-    font-family: "Monaco", "Consolas";
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 16px;
     color: #666;
     padding: 20px;
@@ -299,7 +315,6 @@ iframe {
 
 /* Links */
 a {
-    border-bottom: 1px solid #219b89;
     color: #219b89;
     word-wrap: break-word;
 
@@ -482,8 +497,8 @@ input[type="button"]:hover {
     background: none;
     color: white;
     font-size: 18px;
-    border: 2px solid white;
-    border-radius: 40px;
+    border: 1px solid white;
+    border-radius: 5px;
     line-height: normal;
     padding: 10px 25px;
 
@@ -492,6 +507,12 @@ input[type="button"]:hover {
     -ms-transition: all 0.1s ease-in;
     -o-transition: all 0.1s ease-in;
     transition: all 0.1s ease-in;
+}
+
+.button-inverted:nth-child(3){
+    background: #4c8ec1;
+    border-color: #4c8ec1;
+    color: #fff;
 }
 
 .button-inverted:hover {
@@ -682,7 +703,6 @@ input[type="color"],
     width: 100%;
     height: 50px;
 
-    font-family: "Inika";
     font-size: 13px;
     color: #333;
 
@@ -839,7 +859,6 @@ address {
 }
 
 address .address-item {
-    font-family: 'Inika', serif;
     position: relative;
     display: block;
     margin-bottom: 25px;
@@ -975,7 +994,6 @@ body,
 
 .page-top {
     position: relative;
-    padding-bottom: 65px;
 }
 
 /* Header Top Bar */
@@ -1032,7 +1050,6 @@ body,
 }
 
 .shrink .nav-trigger {
-    top: 20%;
 }
 
 .nav-trigger.active {
@@ -1084,8 +1101,10 @@ body,
     list-style: none;
 }
 
-.main-nav ul li a {
+.main-nav ul li a {        
+    font-weight: 300;
     position: relative;
+
 }
 
 .main-nav ul .has-subnav > a:after {
@@ -1303,7 +1322,7 @@ body,
 .section-split {
     background-color: #f8f8f8;
     padding: 40px 0;
-    margin: 70px 0;
+    margin: 0px;
 
     background-repeat: no-repeat;
     background-position: center center;
@@ -1330,6 +1349,7 @@ body,
     margin-bottom: -100px;
     padding-bottom: 110px;
     border-top: 2px solid #f3f3f3;
+    background: #ebebeb;
 }
 
 .section-split.parallax {
@@ -1345,7 +1365,7 @@ body,
 }
 
 .section-split.clients {
-    background-image: url("http://placehold.it/1400x800");
+    background-image: url("../assets/img/ResourcesBG.jpg");
 }
 
 .section-split.product {
@@ -1538,7 +1558,7 @@ body {
 }
 
 .feature-title {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
     font-size: 12px;
     color: #219b89;
@@ -1556,7 +1576,7 @@ body {
 .circle-stats p {
     position: relative;
     display: inline-block;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     text-align: center;
     color: white;
     font-weight: 300;
@@ -1617,14 +1637,14 @@ body {
 }
 
 .employee .employee-name {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     color: #555;
     text-transform: uppercase;
     font-weight: 700;
 }
 
 .employee .employee-title {
-    font-family: 'Inika', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-style: italic;
     color: #999;
     font-size: 16px;
@@ -1678,7 +1698,7 @@ body {
     margin: 0;
     padding: 27% 0;
 
-    font-family: 'Inika', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: 700;
     font-size: 22px;
     color: white;
@@ -1744,7 +1764,6 @@ body {
     padding: 2px 0;
     background: #219b89;
 
-    font-family: 'Inika', serif;
     color: white;
     text-transform: uppercase;
     text-align: center;
@@ -1883,7 +1902,7 @@ body {
 }
 
 .portfolio-item .item-description .item-title {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 700;
@@ -1926,7 +1945,6 @@ body {
     margin: 0 12px 10px 12px;
     border: none;
 
-    font-family: 'Inika', serif;
     line-height: normal;
     font-size: 18px;
     color: #bbb;
@@ -2094,7 +2112,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 100%;
 
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     text-align: center;
     color: #333;
     font-weight: 700;
@@ -2201,7 +2219,6 @@ body {
 
 .article-meta .meta-author {
     position: relative;
-    font-family: 'Inika', serif;
     font-size: 16px;
     font-weight: 700;
     font-style: normal;
@@ -2329,7 +2346,7 @@ body {
 }
 
 .article-nav .post-title {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     color: #219b89;
     font-size: 18px;
     font-weight: 300;
@@ -2369,7 +2386,7 @@ body {
     display: inline-block;
     position: relative;
     top: -12px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     color: white;
     line-height: 14px;
     font-weight: 700;
@@ -2574,7 +2591,6 @@ body {
 }
 
 .page-footer .widget-title {
-    font-family: 'Inika', serif;
     font-weight: normal;
     font-size: 22px;
     margin-bottom: 20px;
@@ -2913,7 +2929,7 @@ html[xmlns] .slides {display: block;}
 
 .collapse-title {
     position: relative;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 14px;
     color: #333;
     background: #f1f1f1;
@@ -3470,7 +3486,7 @@ img.mfp-img {
 }
 
 .sidebar .widget-title {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 700;
@@ -3758,9 +3774,9 @@ img.mfp-img {
         display: block;
         padding: 2px 20px 3px 20px;
 
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Helvetica Neue', sans-serif;
         font-size: 15px;
-        font-weight: 700;
+        font-weight: 300;
         color: white;
         text-transform: uppercase;
         line-height: normal;

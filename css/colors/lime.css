@@ -17,13 +17,13 @@ blockquote.quotes:after,
 .article-nav .post-title,
 .bypostauthor .comment-container .comment-author,
 .tags a:hover {
-    color: #219b89;
+    color: #4c8ec1;
 }
 
 @media only screen and (min-width: 992px) {
     .main-nav ul li ul .active > a,
     .main-nav ul li ul li a:hover {
-        color: #219b89;
+        color: #4c8ec1;
     }
 }
 
@@ -33,7 +33,7 @@ blockquote.quotes:after,
     .main-nav ul li:hover > a:after,
     .main-nav > ul:hover > .active > a,
     .main-nav ul li:hover > a {
-        color: #219b89;
+        color: #4c8ec1;
     }
 }
 
@@ -55,7 +55,7 @@ blockquote.colored,
 .collapse-title,
 .collapse-title:hover,
 .progress-default {
-    background-color: #219b89;
+    background-color: #4c8ec1;
 }
 
 .section-split.tinted {
@@ -71,7 +71,7 @@ input[type="button"],
 blockquote,
 blockquote.pull-left,
 blockquote.pull-right {
-    border-color: #219b89;
+    border-color: #4c8ec1;
 }
 
 /* Selection Text */
