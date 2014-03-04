@@ -34,6 +34,16 @@
             scrollable: true
         });
 
+        $('#testimonial-superslides').superslides({
+            play: 8000,
+            animation: 'fade',
+            slide_easing: 'easeInOutCubic',
+            slide_speed: 800,
+            pagination: true,
+            hashchange: false,
+            scrollable: true
+        });
+
         // Shrink top bar size on scroll
         function checkPosition() {
             var targetOffset = $(".page-content").offset().top - 65,

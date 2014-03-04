@@ -37,13 +37,13 @@
 }
 
 .our-schools {
-    background: #ebebeb;
- }
+    background: #ebebeb !important;
+}
 
- .fa-youtube-square {
+.fa-youtube-square {
     color:#ce1525;
     padding: 10px;
- }
+}
 
 .white {
     color: #fff;
@@ -82,6 +82,47 @@
 .clients p:nth-child(even) {
     padding-top: 20px;
 }
+
+.resource-title {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: underline;
+}
+
+.resources-title {
+    color: white !important;
+    margin-top: -65px;
+}
+
+.testimonials    {
+    background: #33b294 !important;
+    height: 550px;
+
+}
+
+.testimonials p {
+    font-family: Georgia serif;
+    color: white !important;
+    padding-top: 30px;
+    font-size: 34px;
+    line-height: 46px;
+}
+
+.features a:hover{
+    background: none;
+    color: #777;
+}
+
+.partners {
+    background: #fff !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tcrunch {
+    margin-top: 12px;
+}
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -273,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 2px;
     width: 7%;
 
-    background: #555;
+    background: #4c8ec1;
 }
 
 .paragraph-title {
@@ -566,12 +607,19 @@ input[type="button"]:hover {
 /* List */
 .link-list {
     margin: 0;
-    padding: 0;
+    padding: 20px 0px 10px 0px;
     list-style: none;
 }
 
 .link-list li {
     margin-bottom: 20px;
+    display: inline;
+    padding-right: 20px;
+    padding-top: 50px;
+}
+
+.link-list li a:hover {
+    background: none;
 }
 
 .bordered-list {
@@ -627,14 +675,13 @@ blockquote.pull-right {
 }
 
 blockquote p {
-    color: #aaa;
+    color: #fff;
     margin-bottom: 15px;
-    font-style: italic;
 }
 
 blockquote cite {
     font-size: 12px;
-    color: #aaa;
+    color: #fff;
     font-style: italic;
 }
 
@@ -686,29 +733,41 @@ blockquote.quotes:after {
     border: none;
     margin: 0 0 35px 0;
     padding: 0;
+    text-align: center;
 }
 
 .testimonial blockquote p {
-    font-size: 13px;
-    line-height: 22px;
-    color: #999;
+    color: #fff;
+    width: 60%;
+    margin: 0px auto 20px;
 }
 
 .testimonial img {
+    max-width: 68px !important;
+    max-height: 68px !important;
     border-radius: 100%;
+    margin: 10px 0px
 }
 
 .testimonial blockquote p:before {
-    content: "“";
+    font-family: "FontAwesome";
+    content: "\f10d";
+    font-size: 1.5em;
+    position: absolute;
+    left: 80px;
 }
 
 .testimonial blockquote p:after {
-    content: "”";
+    font-family: "FontAwesome";
+    content: "\f10e";
+    font-size: 1.5em;
+    position: absolute;
+    right: 80px;
 }
 
 .testimonial blockquote cite {
     font-size: 14px;
-    color: #999;
+    color: #fff;
     font-weight: 700;
     font-style: normal;
 }
@@ -897,7 +956,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 }
 
 address {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 address .address-item {
@@ -922,7 +981,13 @@ address .address-item:before {
     font-size: 24px;
     text-decoration: none;
     margin: 0 15px 15px 0;
+    padding: 10px;
     color: #bbb;
+}
+
+.social-icons a:nth-child(2) {
+    padding-left:17px;
+    padding-right: 17px;
 }
 
 .social-icons a:hover {
@@ -1389,7 +1454,7 @@ body,
 
 .section-split:last-child {
     margin-bottom: -100px;
-    padding-bottom: 110px;
+    padding-bottom: 40px;
     border-top: 2px solid #f3f3f3;
     background: #ebebeb;
 }
@@ -1397,8 +1462,12 @@ body,
 .section-split.parallax {
     display: table;
     min-height: 450px;
-    height: 450px;
+    height: 550px;
     width: 100%;
+}
+
+.section-split.parallax a:nth-child(even):hover {
+    background: none;
 }
 
 .section-split.parallax .container {
@@ -1601,10 +1670,9 @@ body {
 
 .feature-title {
     font-family: 'Helvetica Neue', sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
+    font-size: 16px;
     color: #219b89;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 .circle-stats {
@@ -2570,8 +2638,8 @@ body {
 .page-footer {
     position: relative;
     margin-top: 100px;
-    padding: 75px 0 30px 0;
-    background: #2c2e37;
+    padding: 0px;
+    background: #474747;
     color: #eee;
     font-size: 16px;
 }
@@ -2579,7 +2647,7 @@ body {
 .page-footer .to-top {
     position: absolute;
     left: 47%;
-    background: #2c2e37;
+    background: #474747;
     top: -37px;
     border-radius: 100%;
     text-align: center;
@@ -2601,8 +2669,7 @@ body {
 
 .page-footer a {
     color: #a5a5a5;
-    border: none;
-
+    border-color: #555;
     -webkit-transition: all 0.1s ease-in;
     -moz-transition: all 0.1s ease-in;
     -ms-transition: all 0.1s ease-in;
@@ -2628,8 +2695,6 @@ body {
 }
 
 .page-footer .widget {
-    border-top: 1px solid #ccc;
-    padding-top: 30px;
 }
 
 .page-footer .widget-title {
@@ -2639,14 +2704,26 @@ body {
 }
 
 .page-footer .disclaimer {
-    border-top: 1px solid #ccc;
-    padding-top: 50px;
     color: white;
-    font-size: 18px;
-    text-align: center;
+    font-size: 12px;
+    margin-top: 0px;
+    text-align: left;
     line-height: 28px;
 }
 
+.footer-row {
+    margin-right: 0%;
+    padding-right: 0px;
+}
+
+.footer-contact {
+    padding: 30px 30px 0px 60px;
+    background: #272727;
+}
+
+.footer-menu {
+    padding-top: 30px;
+}
 /* ==========================================================================
    Plugin styles
    ========================================================================== */
