@@ -2712,8 +2712,9 @@ body {
 }
 
 .page-footer .widget-title {
-    font-weight: normal;
-    font-size: 22px;
+    font-weight: 400;
+    color: #777;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -4251,6 +4252,14 @@ img.mfp-img {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
+        .mobile-only {
+    display: block;
+    }
+
+    .desktop-only {
+    display: none;
+    }
+    
     .paragraph-title {
         font-size: 22px;
     }
@@ -4423,6 +4432,14 @@ img.mfp-img {
 @media only screen and (max-width: 479px) {
     .pagination .paging-link {
         display: none;
+    }
+
+    .mobile-only {
+    display: block;
+    }
+
+    .desktop-only {
+    display: none;
     }
 
     .portfolio-nav span {
