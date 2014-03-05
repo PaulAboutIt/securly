@@ -39,9 +39,9 @@
             animation: 'fade',
             slide_easing: 'easeInOutCubic',
             slide_speed: 800,
-            pagination: true,
+            pagination: false,
             hashchange: false,
-            scrollable: true
+            scrollable: true,
         });
 
         // Shrink top bar size on scroll

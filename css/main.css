@@ -76,7 +76,7 @@
 
 .clients p {
     max-width: 50%;
-    margin: 0px auto;
+    margin: 0px auto 40px;
 }
 
 .clients p:nth-child(even) {
@@ -96,8 +96,7 @@
 
 .testimonials    {
     background: #33b294 !important;
-    height: 550px;
-
+    height: 560px !important;
 }
 
 .testimonials p {
@@ -123,6 +122,17 @@
     margin-top: 12px;
 }
 
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.fa-bars {
+    display: none !important;
+}
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -164,10 +174,11 @@ html {
 
 hr {
     display: block;
-    height: 1px;
+    height: 2px;
     border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
+    border-top: 1px solid #bbb !important;
+    opacity: 1;
+    margin: 0;
     padding: 0;
 }
 
@@ -731,7 +742,7 @@ blockquote.quotes:after {
 
 .testimonial blockquote {
     border: none;
-    margin: 0 0 35px 0;
+    margin: 0px;
     padding: 0;
     text-align: center;
 }
@@ -739,30 +750,35 @@ blockquote.quotes:after {
 .testimonial blockquote p {
     color: #fff;
     width: 60%;
+    max-width: 500px;
     margin: 0px auto 20px;
 }
 
 .testimonial img {
+    -webkit-backface-visibility: visible !important;
     max-width: 68px !important;
     max-height: 68px !important;
     border-radius: 100%;
-    margin: 10px 0px
+    margin: 10px 0px;
+    position: relative !important;
 }
 
 .testimonial blockquote p:before {
     font-family: "FontAwesome";
     content: "\f10d";
     font-size: 1.5em;
-    position: absolute;
-    left: 80px;
+    position: relative;
+    float: left;
+    margin-left: -80px;
 }
 
 .testimonial blockquote p:after {
     font-family: "FontAwesome";
     content: "\f10e";
     font-size: 1.5em;
-    position: absolute;
-    right: 80px;
+    position: relative;
+    float: right;
+    margin-right: -60px;
 }
 
 .testimonial blockquote cite {
@@ -1142,7 +1158,7 @@ body,
     display: none;
 
     position: absolute;
-    top: 26%;
+    top: 20%;
     left: 25px;
 
     background: white;
@@ -2745,7 +2761,7 @@ body {
 .superslides .slides-pagination {
     position: absolute;
     left: 0;
-    bottom: 45px;
+    bottom: 35px;
     width: 100%;
     text-align: center;
     z-index: 999;
@@ -4083,6 +4099,11 @@ img.mfp-img {
         text-align: center;
     }
 
+    .fa-bars {
+    display: block !important;
+    margin-top: -5px;
+}
+
     .nav-trigger {
         display: inline-block;
     }
@@ -4374,6 +4395,22 @@ img.mfp-img {
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .mobile-only {
+    display: block;
+    }
+
+    .desktop-only {
+    display: none;
+    }
+
+    .testimonials p {
+    font-family: Georgia serif;
+    color: white !important;
+    padding-top: 30px;
+    font-size: 30px;
+    line-height: 38px;
+    }
+
     .circle-stats {
         width: 155px;
     }
@@ -4393,6 +4430,14 @@ img.mfp-img {
     .portfolio-nav span {
         display: none;
     }
+
+    .testimonials p {
+    font-family: Georgia serif;
+    color: white !important;
+    padding-top: 30px;
+    font-size: 18px;
+    line-height: 22px;
+}
 
     /* Footer */
     .page-footer .to-top {
