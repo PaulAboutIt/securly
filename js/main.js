@@ -44,10 +44,19 @@
             scrollable: true,
         });
 
-        //  VIDEO POPUP
+        //  POPUPs
 
         $('.popup-vimeo').magnificPopup({type:'iframe'});
-        $('.signup-form').magnificPopup({type:'inline'});
+        $('.signup-form').magnificPopup({
+            items: {
+            src: '<div id="signup-form" class="centered col-sm-12"><h3>Sign up today</h3><form class="col-sm-4 col-sm-offset-4" action="mail-form.php" method="post"><input placeholder="name" class="col-sm-12" id="cname" name="name" minlength="2" type="text" required><br><br><input placeholder="email" class="col-sm-12" id="cemail" type="email" name="email" required><br><br><button type="submit">Get Started!</button></form></div>',
+            type:'inline'
+            }
+        });
+
+        // FORM VALIDATOR 
+
+        $("form").validate();
 
         // Shrink top bar size on scroll
         function checkPosition() {

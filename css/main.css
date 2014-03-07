@@ -149,6 +149,14 @@
     color: #333;
     background: #eee;
 }
+
+#signup-form h3{
+    background: #000;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -1328,7 +1336,7 @@ body,
 }
 
 .page-head.features {
-    background-image: url("http://placehold.it/1400x525");
+    background-image: url("../assets/img/features.jpg");
 }
 
 .page-head.product {
@@ -1336,7 +1344,7 @@ body,
 }
 
 .page-head.team {
-    background-image: url("http://placehold.it/1400x525");
+    background-image: url("../assets/img/team.jpg");
 }
 
 .page-head.services {
@@ -1352,7 +1360,7 @@ body,
 }
 
 .page-head.pricing {
-    background-image: url("http://placehold.it/1400x525");
+    background-image: url("../assets/img/pricing.jpg");
 }
 
 .page-head.icons {
@@ -1384,11 +1392,15 @@ body,
 }
 
 .page-head.blog {
-    background-image: url("http://placehold.it/1400x525");
+    background-image: url("../assets/img/blog.jpg");
 }
 
 .page-head.blog-full {
     background-image: url("http://placehold.it/1400x525");
+}
+
+.page-head.news {
+    background-image: url("../assets/img/news.jpg");
 }
 
 .page-head.blog-grid {
@@ -2674,6 +2686,9 @@ body {
     font-size: 16px;
 }
 
+.footer-row {
+}
+
 .page-footer .to-top {
     position: absolute;
     left: 47%;
@@ -2753,7 +2768,7 @@ body {
 }
 
 .footer-menu {
-    padding-top: 30px;
+    padding: 50px;
 }
 /* ==========================================================================
    Plugin styles
