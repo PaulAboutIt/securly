@@ -133,6 +133,22 @@
 .fa-bars {
     display: none !important;
 }
+
+.more-features .fa-arrow-right{
+    width: 60px;
+    height: 60px;
+    background: #333;
+    color: #fff;
+    line-height: 53px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.more-features .fa-arrow-right:hover {
+    color: #333;
+    background: #eee;
+}
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */

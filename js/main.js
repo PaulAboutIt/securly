@@ -44,6 +44,10 @@
             scrollable: true,
         });
 
+        //  VIDEO POPUP
+
+        $('.popup-vimeo').magnificPopup({type:'iframe'});
+
         // Shrink top bar size on scroll
         function checkPosition() {
             var targetOffset = $(".page-content").offset().top - 65,
