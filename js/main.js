@@ -47,6 +47,7 @@
         //  VIDEO POPUP
 
         $('.popup-vimeo').magnificPopup({type:'iframe'});
+        $('.signup-form').magnificPopup({type:'inline'});
 
         // Shrink top bar size on scroll
         function checkPosition() {
