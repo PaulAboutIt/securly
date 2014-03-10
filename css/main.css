@@ -1347,6 +1347,10 @@ body,
     background-image: url("../assets/img/team.jpg");
 }
 
+.page-head.privacy {
+    background-image: url("../assets/img/privacy.jpg");
+}
+
 .page-head.services {
     background-image: url("http://placehold.it/1400x525");
 }
