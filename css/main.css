@@ -234,11 +234,17 @@
 .feature-list-bottom {
     background: #fff !important;
     border-top: none !important;
+    margin-bottom: 30px !important;
 }
 
 .all-features .feature-list .row:nth-child(even) {
     background: #f8f8f8;
     margin: 0px -15px 0px -15px;
+}
+
+.all-features .feature-list .row:last-child img{
+    margin-bottom: -50px !important;
+    background: red;
 }
 
 .row {
@@ -252,12 +258,27 @@
 
 .feature-box.centered {
     padding-left: 15px;
-    margin-bottom: -30px; 
+    background: none !important;
+    margin-bottom: -50px; 
 }
 
 .feature-box.centered p{
     padding-left: 15px;
-    z-index: 99999;
+    position: relative;
+    z-index: 99999 !important;
+}
+
+.background {
+    position: relative;
+    z-index: -1 !important;
+}
+
+.section-split.all-features {
+    background: none !important;
+}
+
+.section-split.testimonials.feature div{
+    height: 320px !important;
 }
 /* ==========================================================================
    Base styles: opinionated defaults
