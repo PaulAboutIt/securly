@@ -114,18 +114,6 @@
     margin: 30px auto 0px;
 }
 
-.features .container:nth-child(even) {
-    background: #fff
-}
-
-.features .container .row:nth-child(odd) {
-    background: #f6f6f6 !important;
-}
-
-.section-split.features {
-    background: #fff !important;
-}
-
 /* TESTIMONIAL STYLES =======*/
 
 .testimonials    {
@@ -211,17 +199,28 @@
 
 .video.feature {
     margin: -30px auto 30px;
-    background: #ebebeb;
+    background: #fff;
     content: "video";
     padding: 5px;
     max-width: 100%;
-    min-height: 320px; 
     border-radius: 3px;
 }
 
 .page-content.feature {
     margin: -30px auto 30px;
     padding-right: 0px;
+}
+
+.features {
+    background: #f8f8f8 !important;
+}
+
+.all-features {
+    background: #fff !important;
+}
+
+.all-features img {
+    max-width: 70%;
 }
 
 .feature-list {
@@ -232,6 +231,34 @@
     background: #f6f6f6 !important;
 }
 
+.feature-list-bottom {
+    background: #fff !important;
+    border-top: none !important;
+}
+
+.all-features .feature-list .row:nth-child(even) {
+    background: #f8f8f8;
+    margin: 0px -15px 0px -15px;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.feature-box.centered {
+    padding-left: 15px;
+    margin-bottom: -30px; 
+}
+
+.feature-box.centered p{
+    padding-left: 15px;
+    z-index: 99999;
+}
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -1266,6 +1293,7 @@ body,
 
     padding: 35px 0;
     z-index: 9999;
+    transition: all 1s;
 }
 
 .head-top.shrink {
@@ -1277,7 +1305,7 @@ body,
     background: rgba(0, 0, 0, 0.5);
 }
 
-.head-top.features .background-blur {
+.head-top .background-blur {
     visibility: hidden;
     opacity: 0;
 }
@@ -1454,8 +1482,8 @@ body,
     background-image: url("http://placehold.it/1400x525");
 }
 
-.page-head.features {
-    background-image: url("../assets/img/features.jpg");
+.page-head.all-features {
+    background-image: url("../assets/img/features.jpg") !important;
     height: 260px;
 }
 
@@ -1815,6 +1843,13 @@ body {
     padding-left: 60px;
     margin-bottom: 35px;
     margin-top: 45px;
+}
+
+.feature-box.short {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .feature-box:before {
@@ -2816,6 +2851,7 @@ body {
 
 .page-footer .to-top {
     position: absolute;
+    z-index: 9999;
     left: 47%;
     background: #474747;
     top: -37px;
@@ -2903,6 +2939,7 @@ body {
 .superslides {
     position: relative;
     height: 100%;
+    padding-left: 0px;
 }
 
 .superslides .slides-container {
