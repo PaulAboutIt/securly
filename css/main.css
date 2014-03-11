@@ -40,6 +40,20 @@
     background: #ebebeb !important;
 }
 
+.our-schools.feature {
+    background: #fff !important;
+}
+
+.our-schools.feature img {
+    width: 50%;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.our-schools.feature div:nth-child(3) {
+    padding-top: 20px;
+}
+
 .fa-youtube-square {
     color:#ce1525;
     padding: 10px;
@@ -94,6 +108,26 @@
     margin-top: -65px;
 }
 
+.features-title {
+    color: #fff;
+    font-size: 4em;
+    margin: 30px auto 0px;
+}
+
+.features .container:nth-child(even) {
+    background: #fff
+}
+
+.features .container .row:nth-child(odd) {
+    background: #f6f6f6 !important;
+}
+
+.section-split.features {
+    background: #fff !important;
+}
+
+/* TESTIMONIAL STYLES =======*/
+
 .testimonials    {
     background: #33b294 !important;
     height: 560px !important;
@@ -105,6 +139,28 @@
     padding-top: 30px;
     font-size: 34px;
     line-height: 46px;
+}
+
+.testimonials.feature {
+    background: #fff !important;
+    max-height: 360px !important;
+    border: none !important;
+}
+
+.testimonials.feature p {
+    font-family: Georgia serif;
+    color: #333 !important;
+    padding-top: 30px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.testimonials.feature span {
+    color: #4c8ec1;
+}
+
+.testimonials.feature cite {
+    color: #555 !important;
 }
 
 .features a:hover{
@@ -130,10 +186,6 @@
     display: block;
 }
 
-.fa-bars {
-    display: none !important;
-}
-
 .more-features .fa-arrow-right{
     width: 60px;
     height: 60px;
@@ -155,6 +207,29 @@
     padding: 20px;
     border-radius: 10px;
     color: #fff;
+}
+
+.video.feature {
+    margin: -30px auto 30px;
+    background: #ebebeb;
+    content: "video";
+    padding: 5px;
+    max-width: 100%;
+    min-height: 320px; 
+    border-radius: 3px;
+}
+
+.page-content.feature {
+    margin: -30px auto 30px;
+    padding-right: 0px;
+}
+
+.feature-list {
+    width: 100%;
+}
+
+.feature-list-top {
+    background: #f6f6f6 !important;
 }
 
 /* ==========================================================================
@@ -327,6 +402,20 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 5%;
 }
 
+.page-subtitle.feature {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: none;
+    font-style: none;
+    letter-spacing: normal;
+    font-weight: 300;
+    margin:0px auto 5%;
+    width: 30%;
+}
+
 .section-title {
     font-family: 'Helvetica Neue', sans-serif;
     color: #555;
@@ -348,6 +437,30 @@ h1, h2, h3, h4, h5, h6 {
     width: 7%;
 
     background: #4c8ec1;
+}
+
+.feature .section-title:after {
+    content: " ";
+    position: absolute;
+    bottom: -18px;
+    left: 46.4%;
+
+    height: 2px;
+    width: 7%;
+
+    background: none;
+}
+
+.feature .section-title:before {
+    content: " ";
+    position: absolute;
+    top: -16px;
+    left: 46.4%;
+
+    height: 2px;
+    width: 7%;
+
+    background: #555;
 }
 
 .paragraph-title {
@@ -1149,18 +1262,24 @@ body,
 
     width: 100%;
     background: black;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0);
 
     padding: 35px 0;
     z-index: 9999;
 }
 
 .head-top.shrink {
+    background: rgba(0, 0, 0, 0.3);
     padding: 17px 0;
 }
 
 .head-top.darken {
     background: rgba(0, 0, 0, 0.5);
+}
+
+.head-top.features .background-blur {
+    visibility: hidden;
+    opacity: 0;
 }
 
 .head-top.shrink .background-blur {
@@ -1337,6 +1456,7 @@ body,
 
 .page-head.features {
     background-image: url("../assets/img/features.jpg");
+    height: 260px;
 }
 
 .page-head.product {
@@ -1392,7 +1512,7 @@ body,
 }
 
 .page-head.work-single {
-    background-image: url("http://placehold.it/1400x525");
+    background-image: url("../assets/img/single-feature1.jpg");
 }
 
 .page-head.blog {
@@ -1694,6 +1814,7 @@ body {
     position: relative;
     padding-left: 60px;
     margin-bottom: 35px;
+    margin-top: 45px;
 }
 
 .feature-box:before {
@@ -3911,6 +4032,10 @@ img.mfp-img {
         float: left;
     }
 
+    .fa-bars {
+    display: none !important;
+    }
+
     .head-top .container {
         position: relative;
         display: table;
@@ -4133,10 +4258,20 @@ img.mfp-img {
         text-align: center;
     }
 
+    .page-subtitle.feature {
+    width: 60%;
+    }
+
+    .page-head.feature {
+        height: 500px;
+    }
+
+    .
+
     .fa-bars {
     display: block !important;
     margin-top: -5px;
-}
+    }
 
     .nav-trigger {
         display: inline-block;
