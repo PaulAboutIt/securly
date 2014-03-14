@@ -280,6 +280,15 @@
 .section-split.testimonials.feature div{
     height: 320px !important;
 }
+
+.line-graph {
+    margin-top: 40px;
+}
+
+.schools div img{
+    max-width: 75px;
+}
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -1525,7 +1534,8 @@ body,
 }
 
 .page-head.faq {
-    background-image: url("http://placehold.it/1400x525");
+    background-image: url("");
+    height: 240px;
 }
 
 .page-head.columns {
@@ -1565,7 +1575,7 @@ body,
 }
 
 .page-head.blog {
-    background-image: url("../assets/img/blog.jpg");
+    background-image: url("../assets/img/single-feature1.jpg");
 }
 
 .page-head.blog-full {
@@ -1670,7 +1680,6 @@ body,
 .section-split:last-child {
     margin-bottom: -100px;
     padding-bottom: 40px;
-    border-top: 2px solid #f3f3f3;
     background: #ebebeb;
 }
 
@@ -2867,7 +2876,8 @@ body {
     font-size: 16px;
 }
 
-.footer-row {
+.footer-row.container {
+    padding-left: 0px;
 }
 
 .page-footer .to-top {
@@ -3552,7 +3562,10 @@ button::-moz-focus-inner {
     top: 1px; }
 
 .mfp-close-btn-in .mfp-close {
-  color: #333333; }
+  color: #FFF;
+  border: solid 3px #FFF;
+  border-radius: 50%;
+  line-height: 25px; }
 
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
   color: white;
@@ -4292,6 +4305,14 @@ img.mfp-img {
         width: 170px;
     }
 
+    .tcrunch {
+    margin-top: 17px;
+}
+
+.edweek {
+    margin-top: 14px;
+}
+
     .circle-stats .stat {
         font-size: 56px;
     }
@@ -4619,7 +4640,6 @@ img.mfp-img {
     }
 
     .button-inverted {
-        font-size: 12px;
         padding: 6px 15px;
     }
 
@@ -4660,6 +4680,14 @@ img.mfp-img {
 @media only screen and (max-width: 479px) {
     .pagination .paging-link {
         display: none;
+    }
+
+    .all-features .features-title {
+        margin-bottom: 20px;
+    }
+
+    .feature-box {
+        padding-left: 30px;
     }
 
     .mobile-only {
