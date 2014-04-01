@@ -70,7 +70,7 @@
             <!-- START PAGE HEADER -->
             <div class="page-head pricing">
                 <div class="container">
-                    <h2 class="page-title animated" data-animation="fadeInDown">Pricing</h2>
+                    <h2 class="page-title animated" data-animation="fadeInDown">Get Quotes</h2>
                     
                 </div>
             </div>
@@ -79,83 +79,18 @@
         <!-- END HEADER -->
 
         <!-- START MAIN CONTENT -->
-        <section id="main" class="page-content pricing-page">
+        <section id="main" class="page-content quote-page">
             <div class="container">
-                <div class="row price-row">
-                    <div class="col-sm-5 animated col-sm-offset-1" data-animation="fadeInDown">
-                        <ul class="pricing-table">
-                            <li class="pricing-edition">
-                                In-School Filtering
-                            </li>
-                            <li class="pricing-price">
-                                <sup>$</sup>
-                                3<br>
-                                <h4> /user/year</h4>
-                            </li>
-                            <li>No Hardware. No Software.</li>
-                            <li>Whitelisting by Teachers.</li>
-                            <li>Zero touch onboarding & Zero sign-on auditing</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-5 animated" data-animation="fadeInDown" data-animation-delay="300">
-                        <ul class="pricing-table">
-                            <li class="pricing-edition blue-edition">
-                                Take-Home Filtering
-                            </li>
-                            <li class="pricing-price blue-price">
-                                <sup>$</sup>
-                                10
-                                <h4>/user/year</h4>
-                            </li>
-                            <li>No Hardware. No Software.</li>
-                            <li>Whitelisting by Teachers.</li>
-                            <li>Zero touch onboarding & Zero sign-on auditing</li>
-                        </ul>
-                    </div>
-                </div>   
-                <div class="container centered">
-                    <h1>Volume Discount Calculator</h1>
-                    <span>Get an instant quote by clicking the button below.</span>
-                    <br>
-                    <a href="quote.html"><button class="inverted-button get-quote">Get Quote</button></a>
-                </div>  
-            </div>
-            <br>
-
-            <div class="container animated pricing-faq" data-animation="fadeInUp">
-                <h2 class="section-title">Frequently asked questions</h2>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h4 class="subtitle">How long are your contracts?</h4>
-                        <p>Now this happened some years before the spread of home computers, and computer terminals were not a familiar sight to the average person. When the two friends got to the hospital, a guard stopped them.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h4 class="subtitle">What are the advantages?</h4>
-                        <p>All contributions and suggestions about the Jargon File will be considered donations to be placed in the public domain as part of this File, and may be used in subsequent paper editions.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h4 class="subtitle">Do I need another provider?</h4>
-                        <p>It is OK to submit items of jargon you have originated if they have spread to the point of being used by people who are not personally acquainted with you. We prefer items to be attested by independent.</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h4 class="subtitle">Can I install it on my server?</h4>
-                        <p>The guard got out his list of things that patients were permitted to have in their rooms: TV, radio, electric razor, typewriter, tape player, ... no computer terminals. Computer terminals weren't on the list, so the guard wouldn't let it in. Rules are rules, you know.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h4 class="subtitle">How do I sign up?</h4>
-                        <p>We are looking to expand the File's range of technical specialties covered. There are doubtless rich veins of jargon yet untapped in the scientific computing, graphics, and networking hacker communities; also in numerical analysis, computer architectures.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h4 class="subtitle">How do I cancel my subscription?</h4>
-                        <p>All contributions and suggestions about the Jargon File will be considered donations to be placed in the public domain as part of this File, and may be used in subsequent paper editions. Submissions may be edited for accuracy, clarity and concision.</p>
+                <div class="row quote-row">
+                    <div class="col-sm-10 animated col-sm-offset-1" data-animation="fadeInDown">
+                        <label>In-School Filtering<br><input type="text" id="cemail" placeholder="Number of Students + Staff"></label><br>
+                        <label>Take-Home Filtering<br><input type="text" id="cemail" placeholder="Number of Devices"></label><br>
+                        <button class="get-quote">Calculate</button>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- END MAIN CONTENT -->
+           
 
         <!-- START FOOTER -->
         <footer class="page-footer">

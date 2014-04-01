@@ -27,6 +27,53 @@
 
 /* CUSTOM STYLES ---------------*/
 
+.quote-row {
+    background: #fff;
+    border-radius: 10px;
+    border-top: solid 10px #cb483b;
+    padding-top: 30px;
+    min-height: 200px;
+    position: relative;
+}
+
+.quote-page {
+    margin-top: -30px;
+    z-index: 9999999;
+
+}
+
+.pricing-faq {
+    background: #FFF;
+    width:100%;
+}
+
+.get-quote {
+    background: #515151;
+    width: 200px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.right-feature {
+    float: right;
+}
+
+.granular {
+    background: #fff;
+}
+
+.head-logo img{
+    height: 30px;
+}
+
+.terms-container {
+    margin-top: 60px; 
+}
+
+.privacy-container {
+    margin-top: 60px; 
+}
+
 .homepage {
     background: #f8f8f8;
 }
@@ -152,7 +199,7 @@ label.custom-select {
         width: 300px;
         height: 40px;
         box-shadow: -1px -1px 2px #ccc; 
-        background: url(../assets/img/down-arrow.jpg) 264px 5px no-repeat #f3f3f3;
+        background: url(../assets/img/down-arrow.jpg) 264px 5px no-repeat #f3f3f3 !important;
         background-size: 30px;
         padding: 4px 3px 3px 5px;
         margin: 15px 25px 25px 25px;
@@ -378,8 +425,17 @@ label.custom-select {
     display: none;
 }
 
+.mobile-only hr{
+    opacity: .3;
+}
+
 .desktop-only {
     display: block;
+}
+
+.more-features {
+    background: #fff;
+    padding-bottom: 30px;
 }
 
 .more-features .fa-arrow-right{
@@ -414,6 +470,7 @@ label.custom-select {
 
 .features {
     background: #f8f8f8 !important;
+    padding-bottom: 0px !important;
 }
 
 .all-features {
@@ -488,6 +545,10 @@ label.custom-select {
 
 .schools div img{
     max-width: 75px;
+}
+
+.white-row {
+    background: #fff;
 }
 
 /* ==========================================================================
@@ -1715,8 +1776,8 @@ body,
 }
 
 .page-head.all-features {
-    background-image: url("../assets/img/features.jpg") !important;
-    height: 260px;
+    background-image: url("../assets/img/AllFeatures.jpg") !important;
+    height: 300px;
 }
 
 .page-head.product {
@@ -1728,16 +1789,17 @@ body,
 }
 
 .page-head.privacy {
-    background-image: url("../assets/img/privacy.jpg");
+    background-image: url("../assets/img/Privacy_Terms.jpg");
+    height: 320px;
 }
 
 .page-head.services {
     background-image: url("http://placehold.it/1400x525");
 }
 
-.page-head.faq {
-    background-image: url("");
-    height: 240px;
+.page-head.terms {
+    background-image: url("../assets/img/Privacy_Terms.jpg");
+    height: 320px;
 }
 
 .page-head.columns {
@@ -1745,7 +1807,8 @@ body,
 }
 
 .page-head.pricing {
-    background-image: url("../assets/img/pricing.jpg");
+    background-image: url("../assets/img/features.jpg");
+    height: 300px;
 }
 
 .page-head.icons {
@@ -2209,6 +2272,11 @@ body {
     margin: 0;
 }
 
+.employee .employee-social.founder {
+    margin-top: -10px;
+    margin-left: 174px;
+}
+
 .employee .employee-social a {
     color: #aaa;
     font-size: 12px;
@@ -2276,9 +2344,15 @@ body {
 }
 
 /* Pricing Tables */
+.pricing-page {
+    background: #f3f3f3;
+}
+
 .pricing-table {
     margin: 0 0 45px 0;
-    padding: 0;
+    background: #fff;
+    border-radius: 10px;
+    padding:0px 0px 50px 0px;
     list-style: none;
     text-align: center;
 }
@@ -2289,22 +2363,30 @@ body {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 
-    background: #f4f4f4;
-    margin: 0 0 3px 0;
+    background: #fff;
+    margin: 20px 0 3px 0;
     line-height: normal;
-    padding: 33px 15px;
+    padding: 3px 15px;
     font-size: 18px;
 }
 
 .pricing-table .pricing-edition {
     position: relative;
-    background: #1c1d23;
-    color: white;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 16px;
+    margin-top: -30px;
+    background: #fff;
+    color: #33b294;
+    font-size: 26px;
+    font-weight: 100;
     letter-spacing: 1px;
     padding: 20px 15px;
+    border-top: solid 10px #33b294;
+    border-radius: 10px;
+}
+
+.blue-edition {
+    border-top: solid 10px #4c8ec1 !important;
+    color: #4c8ec1 !important;
+
 }
 
 .pricing-table .pricing-edition .special-lead {
@@ -2335,12 +2417,39 @@ body {
 
 .pricing-table .pricing-price {
     background: none;
-    color: #aaa;
-    font-size: 90px;
-    padding: 65px 5px 95px 5px;
+    color: #fff;
+    font-size: 70px;
+    padding: 65px 5px 85px 25px;
     line-height: 1px;
+    text-align: left;
     white-space: nowrap;
-    background: white;
+    background: #33b294;
+    border-radius: 50%;
+    width: 150px;
+    height: 90px;
+    margin: 0px auto;
+}
+
+.blue-price {
+    background: #4c8ec1 !important;
+    padding-left: 15px !important;
+    letter-spacing: -7px;
+}
+
+.blue-price h4 {
+    letter-spacing: normal;
+    margin-left: 22px !important;
+}
+
+.blue-price sup {
+    left: 10px !important;
+}
+
+.pricing-price h4 {
+    margin-top: 40px;
+    margin-left: 13px;
+    color: #fff;
+    font-weight: 200;
 }
 
 .special .pricing-price {
@@ -3167,11 +3276,14 @@ body {
 }
 
 .footer-contact {
+    width: inherit;
     padding: 30px 30px 0px 60px;
     background: #272727;
     right:0px;
+    z-index: 99;
     position: absolute;
     height: 205px;
+    min-width: 360px;
     }
 
 .footer-menu {
@@ -3778,7 +3890,6 @@ button::-moz-focus-inner {
 
 .mfp-close-btn-in .mfp-close {
   color: #FFF;
-  border: solid 3px #FFF;
   border-radius: 50%;
   line-height: 25px; }
 
@@ -4314,6 +4425,7 @@ img.mfp-img {
 
 /* Dekstop sizes (devices and browsers) */
 @media only screen and (min-width: 992px) {
+
     .head-logo {
         float: left;
     }
@@ -4521,12 +4633,16 @@ img.mfp-img {
     }
 
     .tcrunch {
-    margin-top: 17px;
+    margin-top: 37px;
 }
 
-.edweek {
-    margin-top: 14px;
-}
+    .edweek {
+        margin-top: 34px;
+    }
+
+    .edsurge {
+        margin-top: 30px
+    }
 
     .circle-stats .stat {
         font-size: 56px;
@@ -4716,7 +4832,45 @@ img.mfp-img {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
-        .mobile-only {
+    .right-feature {
+    float: none;
+    }           
+
+    .safe-youtube img{
+        margin-bottom: -50px
+    }
+
+    .feature-box {
+        margin-top: 0px;
+    }
+
+    .footer-contact {
+        width: 100%;
+        padding-left: 85px;
+    }
+
+    .schools div{
+        width: 50%;
+        float: left;
+    }
+
+    .blue-section {
+        margin-top: 30px;
+    }
+
+    .tcrunch {
+    margin-top: 37px;
+    }
+
+    .edweek {
+    margin-top: 34px;
+    }
+
+    .edsurge {
+    margin-top: 27px;
+    }
+    
+    .mobile-only {
     display: block;
     }
 
