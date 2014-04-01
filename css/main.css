@@ -27,6 +27,158 @@
 
 /* CUSTOM STYLES ---------------*/
 
+.homepage {
+    background: #f8f8f8;
+}
+
+#signup-form {
+    background: #FFF;
+    border-top: 10px solid #33b294;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+#signup-form h3{
+    padding: 20px;
+    border-radius: 10px;
+    color: #000;
+}
+
+.signup-button {
+    width: 200px;
+    text-transform: none;
+    font-weight: normal;
+}
+
+#signup-form button {
+    margin-left: 25px;
+    background: #33b294;
+    opacity: 1;
+    border-color: #f3f3f3;
+    clear: left;
+    float: left;
+}
+
+#signup-form button:hover {
+    color:#777;
+    background: #f3f3f3;
+    border-color: #fff;
+}
+
+#signup-form input {
+    margin-left: 30px;
+}
+
+#cemail{
+    background: #f3f3f3;
+    height: 40px;
+    font-size: 30px !important;
+    line-height: 40px;
+    text-decoration: none;
+    font-style: none !important;
+    box-shadow: -1px -1px 2px #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ipadd {
+    clear: both;
+    margin-left: 15px !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ebebeb;
+}
+
+#signup-form input::-webkit-input-placeholder {
+   font-style: normal;
+   text-decoration: none !important;
+   font-size: 16px;
+   line-height: 40px;
+}
+
+#signup-form input:-moz-placeholder { /* Firefox 18- */
+   font-style: normal;
+   text-decoration: none !important;
+   font-size: 16px;
+   line-height: 40px;  
+}
+
+#signup-form input::-moz-placeholder {  /* Firefox 19+ */
+   font-style: normal;
+   text-decoration: none !important;
+   font-size: 16px;
+   line-height: 40px;  
+}
+
+#signup-form input:-ms-input-placeholder {  
+   font-style: normal;
+   text-decoration: none !important;
+   font-size: 16px;
+   line-height: 40px;  
+}
+
+.check {
+    height: 45px;
+    margin-top: 15px;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:25px;
+    height:25px;
+    margin:10px 4px 10px 15px;
+    vertical-align:middle;
+    box-shadow: -1px -1px 2px #ccc; 
+    background:url(../assets/img/check_sheet.png) left top no-repeat #f3f3f3;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../assets/img/check_sheet.png) -25px top no-repeat #f3f3f3;
+}
+
+label.custom-select {
+    position: relative;
+    display: inline-block;
+
+}
+
+    .custom-select select {
+        display: inline-block;
+        width: 300px;
+        height: 40px;
+        box-shadow: -1px -1px 2px #ccc; 
+        background: url(../assets/img/down-arrow.jpg) 264px 5px no-repeat #f3f3f3;
+        background-size: 30px;
+        padding: 4px 3px 3px 5px;
+        margin: 15px 25px 25px 25px;
+        font: 16px;
+        color: #777;
+        font-weight: normal;
+        outline:none; /* remove focus ring from Webkit */
+        line-height: 30px !important;
+        border:0;
+        -webkit-appearance:none;
+        -moz-appearance: button;
+    }
+
+
+
+.cancel {
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #33b294;
+    float: left;
+}
+
+.hero a {
+    margin: 25px;
+}
+
 .chrome-icon {
     background: url('../assets/img/chrome.svg');
     background-size: 35px;
@@ -44,6 +196,11 @@
 .content_container1 {
     max-width: 900px;
     margin-top: 20px;
+    margin-left: 10%;
+}
+
+.content_container1:last-child() {
+    padding-bottom: 40px
 }
 
 .seperator {
@@ -60,6 +217,7 @@
 
 .press_logo {
     margin-top: 30px;
+    float: right;
 }
 
 .press_logo img {
@@ -75,6 +233,7 @@
 .login-btn {
     border: solid 1px white !important;
     border-radius: 5px;
+    margin-left: 25px;
 }
 
 .schools div{
@@ -151,6 +310,10 @@
 .resources-title {
     color: white !important;
     margin-top: -65px;
+}
+
+.resources-title:after {
+    background: white !important;
 }
 
 .features-title {
@@ -233,13 +396,6 @@
 .more-features .fa-arrow-right:hover {
     color: #333;
     background: #eee;
-}
-
-#signup-form h3{
-    background: #000;
-    padding: 20px;
-    border-radius: 10px;
-    color: #fff;
 }
 
 .video.feature {
@@ -825,6 +981,7 @@ input[type="button"]:hover {
 
 .button-inverted {
     display: inline-block;
+    min-width: 200px;
     background: none;
     color: white;
     font-size: 18px;
@@ -1001,8 +1158,8 @@ blockquote.quotes:after {
 }
 
 .testimonial blockquote p:before {
-    font-family: "FontAwesome";
-    content: "\f10d";
+    font-family: "SSGizmo";
+    content: "“";
     font-size: 1.5em;
     position: relative;
     float: left;
@@ -1010,8 +1167,8 @@ blockquote.quotes:after {
 }
 
 .testimonial blockquote p:after {
-    font-family: "FontAwesome";
-    content: "\f10e";
+    font-family: "SSGizmo";
+    content: '”';
     font-size: 1.5em;
     position: relative;
     float: right;
@@ -1054,10 +1211,9 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-    width: 100%;
     height: 50px;
 
-    font-size: 13px;
+    font-size: 23px;
     color: #333;
 
     -webkit-box-sizing: border-box;
@@ -1071,6 +1227,7 @@ input[type="color"],
     border-radius: 0;
     border: 1px solid #eee;
     padding: 0 45px 0 15px;
+    font-style: none;
 }
 
 textarea {
@@ -1403,7 +1560,7 @@ body,
 
     position: absolute;
     top: 20%;
-    left: 25px;
+    right: 25px;
 
     background: white;
     cursor: pointer;
@@ -2932,6 +3089,7 @@ body {
 
 .footer-row.container {
     padding-left: 0px;
+    margin-left: 40px !important;
 }
 
 .page-footer .to-top {
@@ -3011,7 +3169,10 @@ body {
 .footer-contact {
     padding: 30px 30px 0px 60px;
     background: #272727;
-}
+    right:0px;
+    position: absolute;
+    height: 205px;
+    }
 
 .footer-menu {
     padding: 50px;
@@ -4388,7 +4549,7 @@ img.mfp-img {
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 992px) {
     .head-top .container {
-        text-align: center;
+        text-align: left;
     }
 
     .page-subtitle.feature {
