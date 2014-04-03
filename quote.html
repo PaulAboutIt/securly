@@ -82,10 +82,23 @@
         <section id="main" class="page-content quote-page">
             <div class="container">
                 <div class="row quote-row">
-                    <div class="col-sm-10 animated col-sm-offset-1" data-animation="fadeInDown">
-                        <label>In-School Filtering<br><input type="text" id="cemail" placeholder="Number of Students + Staff"></label><br>
-                        <label>Take-Home Filtering<br><input type="text" id="cemail" placeholder="Number of Devices"></label><br>
+                    <div class="animated col-sm-5 col-sm-offset-1 left" data-animation="fadeInDown">
+                        <label>In-School Filtering<br>
+                            <input type="number" id="cemail" placeholder="Number of Students + Staff">
+                        </label><br>
+                        <label>Take-Home Filtering<br>
+                            <input type="number" id="cemail" placeholder="Number of Devices">
+                        </label><br>
                         <button class="get-quote">Calculate</button>
+                        <span class="big-right-arrow">▻</span>
+                    </div>
+                    <div class="centered col-sm-6">
+                        <div class="price-line">
+                            <span>$</span>
+                            <span class="quote-price">3090</span><span id="per-year">/year</span><br>
+                        </div>    
+                        <button class="inverted-button free-trial">Free Trial</button><br>
+                        <span class="quote-text">Contact us for details<br> on multi-year discounts</span>
                     </div>
                 </div>
             </div>

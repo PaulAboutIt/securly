@@ -27,6 +27,33 @@
 
 /* CUSTOM STYLES ---------------*/
 
+.price-line {
+    margin: 10px;
+    width: 100%;
+}
+
+.quote-price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #33b294 !important;
+}
+
+.free-trial {
+    background-color: #4c8ec1;
+    color: #fff;
+    width: 200px;
+}
+
+.big-right-arrow {
+    font-family: "SSGizmo";
+    font-size: 100px;
+    color: #eeecec;
+    line-height: 200px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 .quote-row {
     background: #fff;
     border-radius: 10px;
@@ -34,6 +61,12 @@
     padding-top: 30px;
     min-height: 200px;
     position: relative;
+    color: #868686;
+}
+
+.quote-row div.left {
+    float: left;
+    padding-right: 70px;
 }
 
 .quote-page {
@@ -119,9 +152,9 @@
 #cemail{
     background: #f3f3f3;
     height: 40px;
-    font-size: 30px !important;
     line-height: 40px;
     text-decoration: none;
+    font-weight: 100;
     font-style: none !important;
     box-shadow: -1px -1px 2px #ccc;
     -webkit-box-sizing: border-box;
@@ -875,7 +908,7 @@ a {
 
 a:hover,
 a:focus {
-    background: #219b89;
+    background: none;
     color: white;
     text-decoration: none;
     outline: 0;
@@ -908,8 +941,8 @@ input[type="button"] {
     display: inline-block;
     font-size: 14px;
     color: white;
-    text-transform: uppercase;
-    font-weight: 700;
+    text-transform: none;
+    font-weight: 200;
     line-height: normal;
     background-color: #219b89;
     border: 1px solid #219b89;
@@ -1297,32 +1330,32 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-    font-size: 11px;
+    font-size: 16px;
     color: #aaa;
-    font-weight: 300;
-    font-style: italic;
-    line-height: 22px;
+    font-weight: 100;
+    font-style: none;
+    line-height: 40px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-    font-size: 11px;
+    font-size: 16px;
     color: #aaa;
-    font-weight: 300;
-    font-style: italic;
+    font-weight: 100;
+    font-style: none;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-    font-size: 11px;
+    font-size: 16px;
     color: #aaa;
-    font-weight: 300;
-    font-style: italic;
+    font-weight: 100;
+    font-style: none;
 }
 
 input:-ms-input-placeholder {
-    font-size: 11px;
+    font-size: 16px;
     color: #aaa;
-    font-weight: 300;
-    font-style: italic;
+    font-weight: 100;
+    font-style: none;
 }
 
 .input-field .placeholder {

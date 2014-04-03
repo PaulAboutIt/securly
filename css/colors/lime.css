@@ -55,7 +55,7 @@ blockquote.colored,
 .collapse-title,
 .collapse-title:hover,
 .progress-default {
-    background-color: #4c8ec1;
+    background-color: none;
 }
 
 .section-split.tinted {
