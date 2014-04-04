@@ -23,6 +23,9 @@
         // Fade in body on page load (JS enabled only!)
         $('body').addClass('loaded');
 
+        //Numeric
+        $('input.numeric').numeric();
+
         // Init Superslides
         $('#main-superslides').superslides({
             play: 8000,

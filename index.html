@@ -423,28 +423,60 @@
 
             <div id="signup-form" class="col-sm-10 col-sm-offset-1 mfp-hide">
                 <h3>School Information</h3>
-                <form action="mail-form.php" method="post">
-                    <input placeholder="Google Apps Domain" class="col-sm-5" id="cemail" name="name" minlength="2" type="text" required/>
+                <form action="signup-form.php" method="post">
+                    <input placeholder="Google Apps Domain" class="col-sm-5" id="cemail" name="gapps" minlength="2" type="text" required/>
                     <input placeholder="Email Address" class="col-sm-5" id="cemail" type="email" name="email" required/>
-                    <div class="col-sm-10">
-                        <input placeholder="IP Addresses" class="ipadd col-sm-11" id="cemail" type="ipadd" name="ipadd" required/>
+                    <div class="col-sm-12">
+                        <input placeholder="IP Addresses" class="ipadd col-sm-10" id="cemail" type="ipaddress" name="ipadd" required/>
+                        <div class="bubble col-sm-2">
+                            <span>List of ip addresses separated by comma</span>
+                        </div>
                     </div>
                     <div class="check col-sm-5">
-                        <input type="checkbox" id="c1" name="cc" />
+                        <input type="checkbox" id="c1" name="ccTakeHome" />
                         <label for="c1"><span></span>Take-Home Filtering</label>
                     </div>
                     <div class="col-sm-6 check">
-                        <input type="checkbox" id="c2" name="cc" />
+                        <input type="checkbox" id="c2" name="ccInSchool" />
                         <label for="c2"><span></span>IN-School Filtering</label>
                     </div>
-                    <label class="custom-select">
-                        <select name="source" class="col-sm-6">
-                            <option>Source 1</option>
-                            <option>Source 2</option>
-                            <option>Source 3</option>
-                        </select>
-                    <button type="submit" class="signup-button">Sign up</button>
-                    <a href="index.html"><span class="cancel">Cancel</span></a>
+                    <div class="take-home-options col-sm-12">
+                        <div class="col-sm-3 small-check">
+                        <input type="checkbox" id="c2-1" name="ccWindows" />
+                        <label for="c2-1"><span></span>Windows</label>
+                    </div>
+                    <div class="col-sm-3 small-check">
+                        <input type="checkbox" id="c2-2" name="ccChromebook" />
+                        <label for="c2-2"><span></span>Chromebook</label>
+                    </div>
+                    <div class="col-sm-3 small-check">
+                        <input type="checkbox" id="c2-3" name="ccAndroid" />
+                        <label for="c2-3"><span></span>Android</label>
+                    </div>
+                    <div class="col-sm-3 small-check">
+                        <input type="checkbox" id="c2-4" name="ccMacbook" />
+                        <label for="c2-4"><span></span>Macbook</label>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 sources">    
+                        <label class="custom-select">
+                            <select name="source" class="">
+                                <option>Source</option>
+                                <option>Google</option>
+                                <option>News</option>
+                                <option>Conference</option>
+                                <option>Co-Worker</option>
+                                <option>Other</option>
+                            </select>
+                        </label>    
+                        <div class="bubble">
+                            <span>Where did you here about us?</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 signup-buttons">    
+                        <button type="submit" class="signup-button">Sign up</button>
+                        <a href="index.html"><span class="cancel">Cancel</span></a>
+                    </div>
                 </form>
             </div>
         </footer>

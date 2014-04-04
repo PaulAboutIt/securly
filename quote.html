@@ -84,21 +84,20 @@
                 <div class="row quote-row">
                     <div class="animated col-sm-5 col-sm-offset-1 left" data-animation="fadeInDown">
                         <label>In-School Filtering<br>
-                            <input type="number" id="cemail" placeholder="Number of Students + Staff">
+                            <input type="number" id="cemail" class="numeric" min="0" placeholder="Number of Students + Staff">
                         </label><br>
                         <label>Take-Home Filtering<br>
-                            <input type="number" id="cemail" placeholder="Number of Devices">
+                            <input type="number" id="cemail" class="numeric" min="0" placeholder="Number of Devices">
                         </label><br>
                         <button class="get-quote">Calculate</button>
                         <span class="big-right-arrow">▻</span>
                     </div>
                     <div class="centered col-sm-6">
-                        <div class="price-line">
-                            <span>$</span>
-                            <span class="quote-price">3090</span><span id="per-year">/year</span><br>
+                        <div class="price-line col-sm-4">
+                            <span>$</span><span class="quote-price">3090</span><span id="per-year">/year</span><br>
                         </div>    
-                        <button class="inverted-button free-trial">Free Trial</button><br>
-                        <span class="quote-text">Contact us for details<br> on multi-year discounts</span>
+                        <button class="signup-form inverted-button free-trial">Free Trial</button><br>
+                        <span class="quote-text">Contact us for details <br>on multi-year discounts</span>
                     </div>
                 </div>
             </div>
@@ -106,8 +105,7 @@
            
 
         <!-- START FOOTER -->
-        <footer class="page-footer">
-            <a href="#top" class="to-top icon-arrow-up8"></a>
+        <footer class="page-footer quotes-footer">
             <div class="container footer-row">
                 <div class="row">
                     
@@ -150,7 +148,64 @@
                     </div>
                 </div>
 
-                
+                <div id="signup-form" class="col-sm-10 col-sm-offset-1 mfp-hide">
+                <h3>School Information</h3>
+                <form action="signup-form.php" method="post">
+                    <input placeholder="Google Apps Domain" class="col-sm-5" id="cemail" name="gapps" minlength="2" type="text" required/>
+                    <input placeholder="Email Address" class="col-sm-5" id="cemail" type="email" name="email" required/>
+                    <div class="col-sm-12">
+                        <input placeholder="IP Addresses" class="ipadd col-sm-10" id="cemail" type="ipaddress" name="ipadd" required/>
+                        <div class="bubble col-sm-2">
+                            <span>List of ip addresses separated by comma</span>
+                        </div>
+                    </div>
+                    <div class="check col-sm-5">
+                        <input type="checkbox" id="c1" name="ccTakeHome" />
+                        <label for="c1"><span></span>Take-Home Filtering</label>
+                    </div>
+                    <div class="col-sm-6 check">
+                        <input type="checkbox" id="c2" name="ccInSchool" />
+                        <label for="c2"><span></span>IN-School Filtering</label>
+                    </div>
+                    <div class="take-home-options col-sm-12">
+                        <div class="col-sm-3 small-check">
+                        <input type="checkbox" id="c2-1" name="ccWindows" />
+                        <label for="c2-1"><span></span>Windows</label>
+                    </div>
+                    <div class="col-sm-3 small-check">
+                        <input type="checkbox" id="c2-2" name="ccChromebook" />
+                        <label for="c2-2"><span></span>Chromebook</label>
+                    </div>
+                    <div class="col-sm-3 small-check">
+                        <input type="checkbox" id="c2-3" name="ccAndroid" />
+                        <label for="c2-3"><span></span>Android</label>
+                    </div>
+                    <div class="col-sm-3 small-check">
+                        <input type="checkbox" id="c2-4" name="ccMacbook" />
+                        <label for="c2-4"><span></span>Macbook</label>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 sources">    
+                        <label class="custom-select">
+                            <select name="source" class="">
+                                <option>Source</option>
+                                <option>Google</option>
+                                <option>News</option>
+                                <option>Conference</option>
+                                <option>Co-Worker</option>
+                                <option>Other</option>
+                            </select>
+                        </label>    
+                        <div class="bubble">
+                            <span>Where did you here about us?</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 signup-buttons">    
+                        <button type="submit" class="signup-button">Sign up</button>
+                        <a href="index.html"><span class="cancel">Cancel</span></a>
+                    </div>
+                </form>
+            </div>
             </div>
         </footer>
         <!-- END FOOTER -->
@@ -170,6 +225,7 @@
         <script src="js/vendor/jquery.superslides.min.js"></script>
         <script src="js/vendor/jquery.fitvids.js"></script>
         <script src="js/vendor/spin.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.numeric.js"></script>
         <script src="js/vendor/jquery.validate.min.js"></script>
         <script src="js/vendor/jquery.form.min.js"></script>
         <!--[if lt IE 9]>
