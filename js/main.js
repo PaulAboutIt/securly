@@ -28,9 +28,9 @@
         $( ".th-check" ).change(function() {
           var show = $('.take-home-options').css('display');
           if (show == 'none') {
-            $('.take-home-options').show();
+            $('.take-home-options').show(200);
           } else {
-            $('.take-home-options').hide();
+            $('.take-home-options').hide(300);
           }
         });
 

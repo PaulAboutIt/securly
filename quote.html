@@ -112,9 +112,7 @@
                     <div class="col-sm-7 footer-menu">
                         <div class="widget">
                             <ul class="link-list">
-                                <li>
-                                    <a href="blog.html">Blog</a>
-                                </li>
+  
                                 <li>
                                     <a href="news.html">News</a>
                                 </li>
@@ -155,12 +153,12 @@
                     <input placeholder="Email Address" class="col-sm-5" id="cemail" type="email" name="email" required/>
                     <div class="col-sm-12">
                         <input placeholder="IP Addresses" class="ipadd col-sm-10" id="cemail" type="ipaddress" name="ipadd" required/>
-                        <div class="bubble col-sm-2">
+                        <div class="bubble col-sm-2 hidden">
                             <span>List of ip addresses separated by comma</span>
                         </div>
                     </div>
                     <div class="check col-sm-5">
-                        <input type="checkbox" id="c1" name="ccTakeHome" />
+                        <input type="checkbox" id="c1" class="th-check" name="ccTakeHome" />
                         <label for="c1"><span></span>Take-Home Filtering</label>
                     </div>
                     <div class="col-sm-6 check">
@@ -196,7 +194,7 @@
                                 <option>Other</option>
                             </select>
                         </label>    
-                        <div class="bubble">
+                        <div class="bubble hidden">
                             <span>Where did you here about us?</span>
                         </div>
                     </div>
