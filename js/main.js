@@ -23,6 +23,37 @@
         // Fade in body on page load (JS enabled only!)
         $('body').addClass('loaded');
 
+        //Show Take Home Checkboxes
+
+        $( ".th-check" ).change(function() {
+          var show = $('.take-home-options').css('display');
+          if (show == 'none') {
+            $('.take-home-options').show();
+          } else {
+            $('.take-home-options').hide();
+          }
+        });
+
+        //Show Hints
+        var timer;
+        $(".ipadd").on("mouseenter", function(){
+            timer = setTimeout(function () {
+                $(".ipadd + .bubble").removeClass("hidden");
+            }, 500);
+        }).on("mouseleave", function(){
+            clearTimeout(timer);
+            $(".bubble").addClass("hidden");
+        });
+
+        $(".sources").on("mouseenter", function(){
+            timer = setTimeout(function () {
+                $(".sources .bubble").removeClass("hidden");
+            }, 500);
+        }).on("mouseleave", function(){
+            clearTimeout(timer);
+            $(".bubble").addClass("hidden");
+        });
+
         //Numeric
         $('input.numeric').numeric();
 

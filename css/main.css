@@ -27,26 +27,28 @@
 
 /* CUSTOM STYLES ---------------*/
 
+.hidden {
+    display: none;
+}
+
 .check label {
     float: left;
     clear: left;
 }
 
-.bubble 
-{
-display: none;
-position: absolute;
-width: 15%;
-height: 200%;
-text-align: left;
-left: 72%;
-top: -9px;
-padding: 0px;
-/* float: left; */
-background: #1d1d1d;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
+.bubble {
+    position: absolute;
+    width: 15%;
+    height: 130%;
+    text-align: left;
+    left: 72%;
+    top: -9px;
+    padding: 0px;
+    /* float: left; */
+    background: #1d1d1d;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 .bubble span {
