@@ -3478,6 +3478,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    margin-top: 0px;
     text-align: center;
     color: white;
 }
