@@ -356,7 +356,7 @@
         function initGoogleMaps() {
             // Init on contact page
             if ($('#contact-map').length > 0) {
-                var myLatlng = new google.maps.LatLng(37.775566, -122.419281),
+                var myLatlng = new google.maps.LatLng(37.40404, -121.97898),
                     mapOptions = {
                         center: myLatlng,
                         zoom: 19,
