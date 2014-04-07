@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 65 Md';
+  src: url('HelveticaNeueLTPro-Md.eot'); /* IE9 Compat Modes */
+  src: url('HelveticaNeueLTPro-Md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('HelveticaNeueLTPro-Md.woff') format('woff'), /* Modern Browsers */
+       url('HelveticaNeueLTPro-Md.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('HelveticaNeueLTPro-Md.svg#f7d82596051ef62313f950dc45dac827') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
