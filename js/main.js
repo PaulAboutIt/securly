@@ -23,6 +23,12 @@
         // Fade in body on page load (JS enabled only!)
         $('body').addClass('loaded');
 
+        //Calculate Functions
+        $('.get-quote').on('click', function() {
+            $('.calculate-message').addClass('hidden');
+            $('.quote-parent').removeClass('hidden');
+        })
+
         //Show Take Home Checkboxes
 
         $( ".th-check" ).change(function() {
@@ -81,12 +87,7 @@
         //  POPUPs
 
         $('.popup-vimeo').magnificPopup({type:'iframe'});
-        $('.signup-form').magnificPopup({
-            items: {
-            src: '#signup-form',
-            type:'inline'
-            }
-        });
+        
 
         // FORM VALIDATOR 
 

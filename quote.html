@@ -82,22 +82,27 @@
         <section id="main" class="page-content quote-page">
             <div class="container">
                 <div class="row quote-row">
-                    <div class="animated col-sm-5 col-sm-offset-1 left" data-animation="fadeInDown">
+                    <div class="animated col-sm-6 col-sm-offset-1 left" data-animation="fadeInDown">
                         <label>In-School Filtering<br>
-                            <input type="number" id="cemail" class="numeric" min="0" placeholder="Number of Students + Staff">
+                            <input type="text" id="cemail" class="numeric" min="0" placeholder="Number of Students + Staff">
                         </label><br>
                         <label>Take-Home Filtering<br>
-                            <input type="number" id="cemail" class="numeric" min="0" placeholder="Number of Devices">
+                            <input type="text" id="cemail" class="numeric" min="0" placeholder="Number of Devices">
                         </label><br>
                         <button class="get-quote">Calculate</button>
                         <span class="big-right-arrow">▻</span>
                     </div>
-                    <div class="centered col-sm-6">
-                        <div class="price-line col-sm-4">
-                            <span>$</span><span class="quote-price">3090</span><span id="per-year">/year</span><br>
-                        </div>    
-                        <button class="signup-form inverted-button free-trial">Free Trial</button><br>
-                        <span class="quote-text">Contact us for details <br>on multi-year discounts</span>
+                    <div class="centered col-sm-5">
+                        <div class="calculate-message">
+                            <span>Enter the details on the left to get an instant quote.</span>
+                        </div>
+                        <div class="quote-parent hidden">
+                            <div class="price-line col-sm-4">
+                                <span>$</span><span class="quote-price">0</span><span id="per-year">/year</span><br>
+                            </div>    
+                            <button href="signup.html" class="signup-form inverted-button free-trial">Free Trial</button><br>
+                            <span class="quote-text">Contact us for details <br>on multi-year discounts</span>
+                        </div>
                     </div>
                 </div>
             </div>

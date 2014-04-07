@@ -28,6 +28,23 @@
 
 /* CUSTOM STYLES ---------------*/
 
+.press_title {
+    color: #777 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+.press_title:hover {
+    color: #999 !important;
+}
+
+.calculate-message {
+    width: 180px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .video-container video{
     position: absolute;
     min-width: 100%;
@@ -125,7 +142,7 @@ top: 20px;
     line-height: 200px;
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: -20px;
 }
 
 .quote-row {
@@ -145,11 +162,20 @@ top: 20px;
     z-index: 999;
 }
 
+.quote-row div label input {
+    width: 100%;
+}
+
 .quote-page {
     background-color: #f3f3f3;
     margin-top: -30px;
     z-index: 9999999;
+}
 
+.signup-page {
+    background-color: #f3f3f3;
+    margin-top: -70px;
+    z-index: 9999999;
 }
 
 .page-footer.quotes-footer {
@@ -247,6 +273,7 @@ top: 20px;
     line-height: 40px;
     text-decoration: none;
     font-weight: 300;
+    font-size: 16px;
     font-style: none !important;
     box-shadow: -1px -1px 2px #ccc;
     -webkit-box-sizing: border-box;
@@ -316,8 +343,26 @@ input[type="checkbox"] + label span {
     background:url(../assets/img/check_sheet.png) left top no-repeat #f3f3f3;
     cursor:pointer;
 }
+
 input[type="checkbox"]:checked + label span {
     background:url(../assets/img/check_sheet.png) -25px top no-repeat #f3f3f3;
+}
+
+.small-check input[type="checkbox"] + label span {
+    display:inline-block;
+    width:15px;
+    height:15px;
+    margin:10px 4px 10px 15px;
+    vertical-align:middle;
+    box-shadow: -1px -1px 2px #ccc; 
+    background:url(../assets/img/check_sheet.png) left top no-repeat #f3f3f3;
+    cursor:pointer;
+    background-size: 30px 15px;
+}
+
+.small-check input[type="checkbox"]:checked + label span {
+    background-size: 30px 15px !important;
+    background:url(../assets/img/check_sheet.png) -15px top no-repeat #f3f3f3;
 }
 
 label.custom-select {
@@ -370,10 +415,10 @@ label.custom-select {
 
 .date {
     font-weight: normal;
-    margin-left: 15px;
     color: #ccc;
-    font-size: 14px;
-    float: right;
+    font-size: 10px;
+    float: left;
+    width: 100%;
 }
 
 .content_container1 {
@@ -525,12 +570,13 @@ label.custom-select {
     background: #fff !important;
     max-height: 360px !important;
     border: none !important;
+    padding-top: 0px;
 }
 
 .testimonials.feature p {
     font-family: Georgia serif;
     color: #333 !important;
-    padding-top: 30px;
+    padding-top: 0px;
     font-size: 18px;
     line-height: 30px;
 }
@@ -967,6 +1013,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog-full .article-title {
     margin: 0 0 5px 0;
+}
+
+.news-item:nth-child(1) {
+    border-top: none; 
 }
 
 /* Paragraph & Typographic */
@@ -1671,7 +1721,7 @@ address .address-item:before {
 }
 
 .section-split .box {
-    background: #ebebeb;
+    background: #f8f8f8;
 }
 
 .box > *:last-child,
@@ -2009,7 +2059,8 @@ body,
 }
 
 .page-head.news {
-    background-image: url("../assets/img/news.jpg");
+    background-image: url("../assets/img/News_Events.jpg");
+    height: 300px;
 }
 
 .page-head.blog-grid {
@@ -2317,8 +2368,7 @@ body {
 }
 
 .feature-box:hover:before {
-    color: #219b89;
-
+    color: #999 !important;
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
     -ms-transition: all 0.3s ease-in;
@@ -2525,10 +2575,14 @@ body {
     box-sizing: border-box;
 
     background: #fff;
-    margin: 20px 0 3px 0;
+    margin: 10px 0 3px 0;
     line-height: normal;
     padding: 3px 15px;
     font-size: 18px;
+}
+
+.pricing-table li button {
+    width: 200px;
 }
 
 .pricing-table .pricing-edition {
@@ -2580,15 +2634,22 @@ body {
     background: none;
     color: #fff;
     font-size: 70px;
-    padding: 65px 5px 85px 25px;
-    line-height: 1px;
+    line-height: 70px;
+    padding: 25px 5px 85px 25px;
     text-align: left;
     white-space: nowrap;
     background: #33b294;
     border-radius: 50%;
     width: 150px;
-    height: 90px;
-    margin: 0px auto;
+    height: 150px;
+    margin: 0px auto -10px;
+}
+
+.pricing-table .pricing-price span {
+    font-size: 34px;
+    margin-right: -10px;
+    margin-left: 10px;
+
 }
 
 .blue-price {
@@ -2607,10 +2668,10 @@ body {
 }
 
 .pricing-price h4 {
-    margin-top: 40px;
     margin-left: 13px;
     color: #fff;
-    font-weight: 200;
+    margin-top: -5px;
+    font-weight: 300;
 }
 
 .special .pricing-price {
@@ -4828,10 +4889,6 @@ img.mfp-img {
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 992px) {
 
-    .big-right-arrow {
-        visibility: hidden;
-    }
-
     .employee-name {
         font-size: 16px;
     }
@@ -5006,15 +5063,27 @@ img.mfp-img {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
 
+    .big-right-arrow {
+        visibility: hidden;
+    }
+
+    .calculate-message {
+    display: none;
+    }
+
     .partners:before {
         margin-top: -20px;
-}
+    }
 
     .pricing-page {
         margin-top: -30px;
     }
 
     .quote-page {
+        margin-top: -60px;
+    }
+
+    .signup-page {
         margin-top: -60px;
     }
 

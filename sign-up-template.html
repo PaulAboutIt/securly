@@ -1,10 +1,196 @@
-<div id="signup-form" class="col-sm-10 col-sm-offset-1 mfp-hide">
-    <h3>School Information</h3>
-    <form class="col-sm-4 col-sm-offset-4" action="mail-form.php" method="post">
-        <input placeholder="name" class="col-sm-12" id="cname" name="name" minlength="2" type="text" required>
-        <br><br>
-        <input placeholder="email" class="col-sm-12" id="cemail" type="email" name="email" required>
-        <br><br>
-        <button type="submit">Get Started!</button>
-    </form>
-</div>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Securl.ly - Web Filtering 2.0 For Schools</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+
+        <link rel="stylesheet" type="text/css" href="css/ss-gizmo.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/icomoon.css">  
+        <link rel="stylesheet" href="css/colors/lime.css">
+        <link rel="stylesheet" href="css/colors/lime.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body>
+        <!-- START HEADER -->
+        <header id="top" class="page-top">
+            <!-- START HEADER TOP -->
+            <div class="head-top">
+                <div class="container">
+                    <a href="index.html" class="head-logo">
+                        <img src="assets/img/logo.svg" alt="Securly" height="40px">
+                    </a>
+
+                    <span class="nav-trigger fa fa-bars"></span>
+
+                    <!-- START MAIN NAVIGATION -->
+                    <nav class="main-nav">
+                        <ul>
+                            <!--<li class="active"><a href="index.html">Home</a></li>-->
+                            <li class="nav" aria-haspopup="false">
+                                <a href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav" aria-haspopup="true">
+                                <a href="features.html">Features</a>
+                            </li>
+                            <li>
+                                <a href="http://www.securly.com/login" class="login-btn">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- END MAIN NAVIGATION -->
+                </div>
+            </div>
+            <!-- END HEADER TOP -->
+			<div class="col-sm-10 col-sm-offset-1">
+			    <h3>School Information</h3>
+			    <form action="signup-form.php" method="post">
+			        <input placeholder="Google Apps Domain" class="col-sm-5" id="cemail" name="gapps" minlength="2" type="text" required/>
+			        <input placeholder="Email Address" class="col-sm-5" id="cemail" type="email" name="email" required/>
+			        <div class="col-sm-12">
+			            <input placeholder="IP Addresses" class="ipadd col-sm-10" id="cemail" type="ipaddress" name="ipadd" required/>
+			            <div class="bubble col-sm-2 hidden">
+			                <span>List of ip addresses separated by comma</span>
+			            </div>
+			        </div>
+			        <div class="check col-sm-5">
+			            <input type="checkbox" id="c1" class='th-check' name="ccTakeHome" />
+			            <label for="c1"><span></span>Take-Home Filtering</label>
+			        </div>
+
+			        <div class="col-sm-6 check">
+			            <input type="checkbox" id="c2" name="ccInSchool" />
+			            <label for="c2"><span></span>IN-School Filtering</label>
+			        </div>
+			        
+			        <div class="take-home-options col-sm-12">
+			            <div class="col-sm-3 small-check">
+			                <input type="checkbox" id="c2-1" name="ccWindows" />
+			                <label for="c2-1"><span></span>Windows</label>
+			            </div>
+			            <div class="col-sm-3 small-check">
+			                <input type="checkbox" id="c2-2" name="ccChromebook" />
+			                <label for="c2-2"><span></span>Chromebook</label>
+			            </div>
+			            <div class="col-sm-3 small-check">
+			                <input type="checkbox" id="c2-3" name="ccAndroid" />
+			                <label for="c2-3"><span></span>Android</label>
+			            </div>
+			            <div class="col-sm-3 small-check">
+			                <input type="checkbox" id="c2-4" name="ccMacbook" />
+			                <label for="c2-4"><span></span>Macbook</label>
+			            </div>
+			        </div>
+			        <div class="col-sm-12 sources">    
+			            <label class="custom-select">
+			                <select name="source" class="">
+			                    <option>Source</option>
+			                    <option>Google</option>
+			                    <option>News</option>
+			                    <option>Conference</option>
+			                    <option>Co-Worker</option>
+			                    <option>Other</option>
+			                </select>
+			            </label>    
+			            <div class="bubble hidden">
+			                <span>Where did you here about us?</span>
+			            </div>
+			        </div>
+			        <div class="col-sm-10 signup-buttons">    
+			            <button type="submit" class="signup-button">Sign up</button>
+			            <a href="index.html"><span class="cancel">Cancel</span></a>
+			        </div>
+			    </form>
+			</div>
+
+			<!-- START FOOTER -->
+	        <footer class="page-footer">
+	            <a href="#top" class="to-top icon-arrow-up8"></a>
+	            <div class="footer-row container">
+	                <div class="row">
+	                    
+	                    <div class="col-sm-7 footer-menu">
+	                        <div class="widget">
+	                            <ul class="link-list">
+	                                <li>
+	                                    <a href="contact.html">Contact</a>
+	                                </li>
+	                                <li>
+	                                    <a href="news.html">News</a>
+	                                </li>
+	                                <li>
+	                                    <a href="about.html">About</a>
+	                                </li>
+	                                <li>
+	                                    <a href="terms.html">Terms</a>
+	                                </li>
+	                                <li>
+	                                    <a href="privacy.html">Privacy</a>
+	                                </li>
+	                            </ul>
+	                            <p class="disclaimer">&copy; Copyright Securly inc, 2014</p>
+	                        </div>
+	                    </div>
+	                    <div class="col-sm-5 footer-contact">
+	                        <div class="widget">
+	                            <h4 class="widget-title">Get in touch.</h4>
+	                            <address>
+	                                <a href="tel:18557328759"><span class="address-item icon-mobile">1-855-SECURLY</span></a>
+	                            </address>
+
+	                            <p class="social-icons">
+	                                <a href="http://twitter.com" class="fa fa-twitter circle-border" target="_blank"></a>
+	                                <a href="http://facebook.com" class="fa fa-facebook circle-border" target="_blank"></a>
+	                                <a href="http://google.com" class="fa fa-google-plus circle-border" target="_blank"></a>
+	                                <a href="mailto:support@securly.com" class="fa fa-envelope-o circle-border" target="_blank"></a>
+	                            </p>
+	                        </div>
+	                    </div>
+	                </div>
+	                
+
+	                
+	            </div>
+
+	            
+	        </footer>
+	        
+	        <!-- END FOOTER -->
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHU2q81-hmoEP5UQ0W5qriGM4HYwasY0Y&amp;sensor=false"></script>-->
+        <script src="js/vendor/retina-1.1.0.min.js"></script>
+        <script src="js/vendor/jquery.easing.1.3.js"></script>
+        <script src="js/vendor/jquery.animate-enhanced.min.js"></script>
+        <script src="js/vendor/jquery.isotope.min.js"></script>
+        <script src="js/vendor/jquery.flexslider-min.js"></script>
+        <script src="js/vendor/jquery.parallax-1.1.3.js"></script>
+        <script src="js/vendor/jquery.placeholder.js"></script>
+        <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+        <script src="js/vendor/waypoints.min.js"></script>
+        <script src="js/vendor/jquery.superslides.min.js"></script>
+        <script src="js/vendor/jquery.fitvids.js"></script>
+        <script src="js/vendor/spin.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.numeric.js"></script>
+        <script src="js/vendor/jquery.validate.min.js"></script>
+        <script src="js/vendor/jquery.form.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="js/vendor/respond.min.js"></script>
+        <![endif]-->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
