@@ -2256,7 +2256,6 @@ body,
 
 .section-split.parallax {
     display: table;
-    min-height: 550px;
     height: 550px;
     width: 100%;
 }
