@@ -176,7 +176,6 @@ top: 20px;
     line-height: 200px;
     position: absolute;
     top: 0px;
-    right: -20px;
 }
 
 .quote-row {
@@ -582,6 +581,7 @@ label.custom-select {
     color: #fff;
     font-size: 4em;
     margin: 30px auto 0px;
+    font-family: 'HelveticaNeueLT Std UltLt' sans-serif;
 }
 
 /* TESTIMONIAL STYLES =======*/
@@ -967,7 +967,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-    font-family: 'HelveticaNeueLT Std UltLt', sans-serif;
+    font-family: 'HelveticaNeueLT Pro 45 Lt', sans-serif;
     color: #555;
     font-weight: 300;
     font-size: 28px;
@@ -1285,6 +1285,7 @@ input[type="button"]:hover {
     border-radius: 5px;
     line-height: normal;
     padding: 10px 25px;
+    font-family: 'HelveticaNeueLT Pro 45 Lt' !important;
 
     -webkit-transition: all 0.1s ease-in;
     -moz-transition: all 0.1s ease-in;
@@ -2196,7 +2197,7 @@ body,
 
 .section-split.parallax {
     display: table;
-    min-height: 450px;
+    min-height: 550px;
     height: 550px;
     width: 100%;
 }
@@ -2411,7 +2412,7 @@ body {
 }
 
 .feature-title {
-    font-family: 'HelveticaNeueLT Std UltLt', sans-serif;
+    font-family: 'HelveticaNeueLT Pro 45 Lt', sans-serif;
     font-size: 20px;
     color: #219b89;
     font-weight: 300;
