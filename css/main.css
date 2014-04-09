@@ -61,7 +61,56 @@
 }
 
 /* CUSTOM STYLES ---------------*/
+.tabs {
+    z-index: 9999999999;
+    position: relative;
+    width: 400px;
+    padding-top: 10px;
+    margin-top: -40px;
+    margin-left: 15%;
+    border-top: 1px solid hsla(0,0%,100%,.4);
+}
 
+.tabs li {
+    display: inline;
+    margin-right: 60px;
+    margin-left: -30px;
+}
+
+.tabs a {
+    color: #ebebeb;
+    text-transform: uppercase;
+    line-height: 18px;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+
+.tabs .active {
+    border-top: 2px solid hsla(0,0%,100%,.4);
+    font-weight: bold;
+} 
+
+#login {
+    background: hsla(0, 0%, 0%, .6);
+    padding: 40px;
+    color: #fff;
+}
+
+#login img{
+    margin-bottom: 40px;
+    width: 250px;
+}
+
+#login button.button-inverted {
+    width: 200px;
+    margin-top: 40px;
+    background: #4c8ec1;
+    border: none;
+}
+
+#login div:nth-child(1) {
+    border-right: 1px solid #fff;
+}
 .press_title {
     color: #777 !important;
     font-size: 18px !important;
@@ -5097,6 +5146,11 @@ img.mfp-img {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
+
+    .tabs {
+        margin-top: -80px;
+        margin-bottom: 50px;
+    }
 
     .big-right-arrow {
         visibility: hidden;
