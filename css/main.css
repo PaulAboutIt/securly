@@ -94,9 +94,13 @@
     font-weight: bold;
 } 
 
-.google-login input{
+#login input{
     background: #f8f8f8;
-    border-radius: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 35px;
+    min-width: 250px; 
 }
 
 #login {
@@ -4778,7 +4782,7 @@ img.mfp-img {
 
     .main-nav ul li a {
         display: block;
-        padding: 2px 20px 3px 20px;
+        padding: 8px 20px 3px 20px;
 
         font-family: 'HelveticaNeueLT Pro 45 Lt', sans-serif;
         font-size: 15px;
