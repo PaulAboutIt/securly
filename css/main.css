@@ -61,6 +61,33 @@
 }
 
 /* CUSTOM STYLES ---------------*/
+
+#whitepaper-inline {
+    background: #000;
+}
+
+.submit_panel, .requestquote_btn {
+    float: left;
+    clear: left;
+    margin: 20px 40px;
+}
+
+.contact_formarea li {
+    list-style-type: none !important;
+}
+
+.label {
+    text-align: left;
+    float: left;
+    clear: left;
+}
+
+.text {
+    float: left;
+    width: 100%;
+    clear: left;
+}
+
 .tabs {
     z-index: 9999999999;
     position: relative;
@@ -94,7 +121,7 @@
     font-weight: bold;
 } 
 
-#login input{
+#login input, input.text {
     background: #f8f8f8;
     border-radius: 5px;
     box-shadow: none;
@@ -598,17 +625,17 @@ label.custom-select {
 
 .ss-lightbulb {
     margin-top: 5px;
-    padding: 27px 25px 13px 25px;
+    padding: 35px 25px 13px 25px;
     color: #fff;
 }
 
 .ss-file {
-    padding: 27px 25px 13px 25px;
+    padding: 35px 25px 13px 25px;
     color: #fff;
 }
 
 .ss-mail {
-    padding: 27px 25px 13px 25px;
+    padding: 35px 25px 13px 25px;
     color: #fff;
 }
 
@@ -625,6 +652,7 @@ label.custom-select {
     font-size: 1.5em;
     color: white;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .resources-title {

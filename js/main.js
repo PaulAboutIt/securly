@@ -131,6 +131,30 @@
               type: 'inline'
           }
         });
+
+        //NEWSLETTER POPUP
+        $('.newsletter-btn').magnificPopup({
+          items: {
+              src: '#freetrial_inline',
+              type: 'inline'
+          }
+        });
+
+        //WHITE PAPER POPUP
+        $('.whitepaper-btn').magnificPopup({
+          items: {
+              src: '#whitepaper_inline',
+              type: 'inline'
+          }
+        });
+
+        //LEARN MORE POPUP
+        $('.learn-more-btn').magnificPopup({
+          items: {
+              src: '#learn-more-form',
+              type: 'inline'
+          }
+        });
         
 
         // FORM VALIDATOR 
