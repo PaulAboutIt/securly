@@ -62,6 +62,14 @@
           });
 
         //Calculate Functions
+
+        $.fn.digits = function(){ 
+            return this.each(function(){ 
+                $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+            })
+            alert('digits')
+        }
+
         $('.get-quote').on('click', function() {
             $('.calculate-message').addClass('hidden');
             $('.quote-parent').removeClass('hidden');
@@ -70,7 +78,9 @@
             var dev = +($('.num-devices').val());
             var quote = +((stu + dev)*10);
 
-            $('.quote-price').html(quote);
+            
+            $('.quote-price').text(quote);
+            $('.quote-price').digits();
         })
 
         //Show Take Home Checkboxes
