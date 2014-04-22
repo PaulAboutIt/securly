@@ -121,7 +121,7 @@
     font-weight: bold;
 } 
 
-#login input, input.text {
+#login input, .text {
     background: #f8f8f8;
     border-radius: 5px;
     box-shadow: none;
