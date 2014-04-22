@@ -62,8 +62,13 @@
 
 /* CUSTOM STYLES ---------------*/
 
-#whitepaper-inline {
-    background: #000;
+#whitepaper_inline, #freetrial_inline, #learn-more-form {
+    background: hsla(0,0%,0%,.8);
+    padding: 30px 70px 30px 30px;
+}
+
+#learn-more-form {
+    margin-top: 20px;
 }
 
 .submit_panel, .requestquote_btn {
@@ -72,8 +77,31 @@
     margin: 20px 40px;
 }
 
+.contact_contentarea h2 {
+    color: #fff;
+}
+
 .contact_formarea li {
     list-style-type: none !important;
+}
+
+.contact_formarea li input {
+    box-shadow: none;
+    background: #777;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact_formarea li input:focus {
+    box-shadow: none;
+    background: #fff;
+    border: 1px solid #4c8ec1;
+    border-radius: 5px;
+}
+
+.contact_formarea li select {
+    height: 35px;
+    margin-bottom: 10px;
 }
 
 .label {
