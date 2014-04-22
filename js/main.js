@@ -65,6 +65,12 @@
         $('.get-quote').on('click', function() {
             $('.calculate-message').addClass('hidden');
             $('.quote-parent').removeClass('hidden');
+
+            var stu = +($('.num-students').val());
+            var dev = +($('.num-devices').val());
+            var quote = +((stu + dev)*10);
+
+            $('.quote-price').html(quote);
         })
 
         //Show Take Home Checkboxes

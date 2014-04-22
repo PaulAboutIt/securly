@@ -309,9 +309,7 @@ top: 20px;
     z-index: 999;
 }
 
-.quote-row div label input {
-    width: 100%;
-}
+
 
 .quote-page {
     background-color: #f3f3f3;
