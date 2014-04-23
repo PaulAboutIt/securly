@@ -347,7 +347,7 @@ top: 20px;
     background: #fff;
 }
 
-.head-logo img, .head-logo video{
+.head-logo, .head-logo img, .head-logo video{
     height: 30px;
 }
 
