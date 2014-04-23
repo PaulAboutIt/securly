@@ -62,13 +62,12 @@
 
 /* CUSTOM STYLES ---------------*/
 
-#whitepaper_inline, #freetrial_inline, #learn-more-form {
-    background: hsla(0,0%,0%,.8);
-    padding: 30px 70px 30px 30px;
+.white-input {
+    background-color: #FFF !important;
 }
 
 #learn-more-form {
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 .submit_panel, .requestquote_btn {
@@ -119,7 +118,6 @@
 .tabs {
     z-index: 9999999999;
     position: relative;
-    width: 400px;
     padding-top: 10px;
     margin-top: -40px;
     margin-left: 15%;
@@ -133,7 +131,7 @@
 .tabs li {
     display: inline;
     margin-right: 60px;
-    margin-left: -30px;
+    margin-left: -15px;
 }
 
 .tabs a {
@@ -159,7 +157,6 @@
 }
 
 #login {
-    background: hsla(0, 0%, 0%, .6);
     padding: 40px;
     color: #fff;
 }
@@ -405,7 +402,7 @@ top: 20px;
 #signup-form button:hover {
     color:#777;
     background: #f3f3f3;
-    border-color: #fff;
+    border-color: #33b294;
 }
 
 #signup-form input {
@@ -736,18 +733,18 @@ label.custom-select {
     color: #555 !important;
 }
 
-.partners:before {
+.testimonials:before {
     content: '';
     position: absolute;
     border-style: solid;
-    border-width: 24px 24px 0px 24px;
+    border-width: 0px 24px 24px 24px;
     border-color: #33b294 transparent;
     display: block;
     width: 0;
-    z-index: 9999999;
+    z-index: 9;
     left: 50%;
     margin-left: -12px;
-    margin-top: -40px;
+    margin-top: -64px;
 }
 
 .features a:hover{
@@ -1170,6 +1167,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
     line-height: 22px;
     margin-bottom: 25px;
+    font-family: 'HelveticaNeueLT Pro 45 Lt', sans-serif;
 }
 
 strong {
@@ -1386,6 +1384,7 @@ button:hover,
 input[type="button"]:hover {
     color: #219b89;
     background-color: white;
+    border: 1px solid #4c8ec1;
 }
 
 .button-inverted {
@@ -1594,14 +1593,12 @@ blockquote.quotes:after {
 
 .testimonial blockquote br{
     display: block;
-    margin: -8px 0 !important;
     height: 0px;
     content: " ";
 }
 
 .testimonial blockquote cite span {
     font-style: italic;
-    line-height: 5px;
     font-weight: 300;
 }
 
@@ -3676,6 +3673,10 @@ body {
     box-sizing: border-box;
 }
 
+.slides-container li {
+    height: 500px !important;
+}
+
 .superslides .slides-pagination {
     position: absolute;
     left: -10px;
@@ -4127,7 +4128,7 @@ html[xmlns] .slides {display: block;}
   overflow: hidden;
   position: fixed;
   background: #0b0b0b;
-  opacity: 0.8;
+  opacity: 0.9;
   filter: alpha(opacity=80); }
 
 .mfp-wrap {
@@ -5209,6 +5210,11 @@ img.mfp-img {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
+
+    .testimonials:before {
+        
+        margin-top: -44px;
+    }
 
     .tabs {
         margin-top: -80px;

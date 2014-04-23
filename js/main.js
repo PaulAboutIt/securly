@@ -61,14 +61,16 @@
             });
           });
 
-        //Calculate Functions
+        //Style Input With Text
+        $('input').blur( function() {
+           if ($(this).val().length != 0) {
+            $(this).addClass('white-input');
+           }
+        })         
 
-        $.fn.digits = function(){ 
-            return this.each(function(){ 
-                $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
-            })
-            alert('digits')
-        }
+
+        //Calculate Quote Functions
+
 
         $('.get-quote').on('click', function() {
             $('.calculate-message').addClass('hidden');
