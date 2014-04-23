@@ -349,6 +349,7 @@ top: 20px;
 
 .head-logo, .head-logo img, .head-logo video{
     height: 30px;
+    overflow: visible;
 }
 
 .terms-container {
