@@ -20,6 +20,9 @@
             $articleContainer = $('.article-container'),
             isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
+
+
+
         // Fade in body on page load (JS enabled only!)
         $('body').addClass('loaded');
 

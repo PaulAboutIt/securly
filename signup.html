@@ -16,6 +16,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/ss-gizmo.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-combobox.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/icomoon.css">  
         <link rel="stylesheet" href="css/colors/lime.css">
@@ -108,7 +109,7 @@
 			                </div>
 			                <div class="col-sm-12 sources">    
 			                    <label class="custom-select">
-			                        <select name="source" class="">
+			                        <select name="source" class="combobox">
 			                            <option>Source</option>
 			                            <option>Google</option>
 			                            <option>News</option>
@@ -205,10 +206,17 @@
         <script type="text/javascript" src="js/vendor/jquery.numeric.js"></script>
         <script src="js/vendor/jquery.validate.min.js"></script>
         <script src="js/vendor/jquery.form.min.js"></script>
+        <script src="js/bootstrap-combobox.js"></script>
         <!--[if lt IE 9]>
         <script src="js/vendor/respond.min.js"></script>
         <![endif]-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <script type="text/javascript">
+            (function(){
+                    $('.combobox').selectpicker({style: '', dropupAuto: false, });  
+            })();
+        </script>
     </body>
 </html>
