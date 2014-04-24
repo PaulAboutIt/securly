@@ -5229,6 +5229,10 @@ img.mfp-img {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
 
+    .video-container video{
+        margin-left: -30%;
+    }
+
     .link-list {
         margin: 0 -40px;
     }
