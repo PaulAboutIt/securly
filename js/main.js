@@ -152,6 +152,9 @@
               type: 'inline'
           }
         });
+        $('.login-btn').on('click', function() {
+            $('.main-nav').removeClass('trigger-active');
+        });
 
         //NEWSLETTER POPUP
         $('.newsletter-btn').magnificPopup({
