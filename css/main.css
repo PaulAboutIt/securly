@@ -5244,6 +5244,14 @@ img.mfp-img {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
 
+    #login {
+        padding: 0px;
+    }
+
+    .feature-list-bottom {
+        margin-bottom: 0px !important;
+    }
+
     .login-btn {
         margin-left: 0px;
     }
