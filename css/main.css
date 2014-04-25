@@ -5244,6 +5244,15 @@ img.mfp-img {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
 
+    .footer-row.container {
+        margin-left: 0px !important;
+    }
+
+    .footer-menu {
+        padding: 50px 100px 30px; 
+    }
+
+
     #login {
         padding: 0px;
     }
@@ -5301,6 +5310,9 @@ img.mfp-img {
 
     .quote-row div.left {
         padding-top: 20px;
+        float: none;
+        padding-right: 0px;
+        text-align: center;
     }
 
     .quote-text {
