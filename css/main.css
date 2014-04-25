@@ -62,6 +62,14 @@
 
 /* CUSTOM STYLES ---------------*/
 
+.hero-img {
+    background: url('../assets/video/hero.jpg');
+    background-size: cover;
+    height: 560px;
+    width: 100%;
+    background-position: 30%;
+}
+
 .mobile-quote {
         display: none;
     }
@@ -100,6 +108,7 @@
 
 .contact_formarea li {
     list-style-type: none !important;
+    margin-left: -40px;
 }
 
 .contact_formarea li input {
@@ -622,6 +631,12 @@ label.custom-select {
     border: solid 1px white !important;
     border-radius: 5px;
     margin-left: 25px;
+}
+
+.login-btn:hover {
+    color: #4c8ec1 !important;
+    border-color: #4c8ec1 !important;
+    background-color: #fff !important;
 }
 
 .schools div{
@@ -4262,7 +4277,7 @@ button::-moz-focus-inner {
   height: 44px;
   line-height: 44px;
   position: absolute;
-  right: -30px;
+  right: 0px;
   top: 0;
   text-decoration: none;
   text-align: center;
@@ -5229,12 +5244,29 @@ img.mfp-img {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
 
+    .login-btn {
+        margin-left: 0px;
+    }
+
+    .press_logo {
+        float: left;
+        margin-left: 30px;
+    }
+
+    .news-item {
+        margin-left: -60px;
+    }
+
+    .press_title, .original_post_content {
+        float: left;
+    }
+
     .video-container video{
         margin-left: -90%;
     }
 
     .link-list {
-        margin: 0 -40px;
+        margin: 0 -60px;
     }
 
     .testimonials:before {
@@ -5353,7 +5385,6 @@ img.mfp-img {
 
     .section-split {
         padding: 20px 0;
-        margin: 35px 0;
     }
 
     .hero {
