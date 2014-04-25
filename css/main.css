@@ -5403,6 +5403,7 @@ img.mfp-img {
 
     .section-title {
         font-size: 20px;
+        margin-bottom: 0px;
     }
 
     .overlay-title,
@@ -5543,6 +5544,7 @@ img.mfp-img {
 
     .all-features .features-title {
         margin-bottom: 20px;
+        font-size: 25px;
     }
 
     .feature-box {
