@@ -26,6 +26,13 @@
         // Fade in body on page load (JS enabled only!)
         $('body').addClass('loaded');
 
+        $('input').on('focus', function() {
+            $('.head-top').addClass('input-selected');
+        })
+        $('input').on('blur', function() {
+            $('.head-top').removeClass('input-selected');
+        })
+
         //News and Events Tab 
 
         $('ul.tabs').each(function(){

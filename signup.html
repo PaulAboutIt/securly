@@ -73,8 +73,8 @@
 					<div id="signup-form" class="col-sm-10 col-sm-offset-1">
 			            <h3>School Information</h3>
 			            <form action="signup-form.php" method="post">
-			                <input placeholder="Google Apps Domain" class="col-sm-5" id="cemail" name="gapps" minlength="2" type="text" required/>
-			                <input placeholder="Email Address" class="col-sm-5" id="cemail" type="email" name="email" required/>
+			                <input placeholder="Google Apps Domain" class="col-sm-10 col-md-6" id="cemail" name="gapps" minlength="2" type="text" required/>
+			                <input placeholder="Email Address" class="col-sm-10 col-md-6" id="cemail" type="email" name="email" required/>
 			                <div class="col-sm-12">
 			                    <input placeholder="IP Addresses" class="ipadd col-sm-10" id="cemail" type="ipaddress" name="ipadd" required/>
 			                    <div class="bubble col-sm-2 hidden desktop-only">
@@ -85,28 +85,30 @@
 			                    <input type="checkbox" id="c1" class="th-check" name="ccTakeHome" />
 			                    <label for="c1"><span></span>Take-Home Filtering</label>
 			                </div>
-			                <div class="col-sm-6 check">
-			                    <input type="checkbox" id="c2" name="ccInSchool" />
-			                    <label for="c2"><span></span>In-School Filtering</label>
+                            <!--BEGIN HIDDEN CHECKBOXES-->
+                            <div class="take-home-options col-sm-12">
+                                <div class="col-sm-3 small-check">
+                                    <input type="checkbox" id="c2-1" name="ccWindows" />
+                                    <label for="c2-1"><span></span>Windows</label>
+                                </div>
+                                <div class="col-sm-3 small-check">
+                                    <input type="checkbox" id="c2-2" name="ccChromebook" />
+                                    <label for="c2-2"><span></span>Chromebook</label>
+                                </div>
+                                <div class="col-sm-3 small-check">
+                                    <input type="checkbox" id="c2-3" name="ccAndroid" />
+                                    <label for="c2-3"><span></span>Android</label>
+                                </div>
+                                <div class="col-sm-3 small-check">
+                                    <input type="checkbox" id="c2-4" name="ccMacbook" />
+                                    <label for="c2-4"><span></span>Macbook</label>
+                                </div>    			                
 			                </div>
-			                <div class="take-home-options col-sm-12">
-			                    <div class="col-sm-3 small-check">
-			                    <input type="checkbox" id="c2-1" name="ccWindows" />
-			                    <label for="c2-1"><span></span>Windows</label>
-			                </div>
-			                <div class="col-sm-3 small-check">
-			                    <input type="checkbox" id="c2-2" name="ccChromebook" />
-			                    <label for="c2-2"><span></span>Chromebook</label>
-			                </div>
-			                <div class="col-sm-3 small-check">
-			                    <input type="checkbox" id="c2-3" name="ccAndroid" />
-			                    <label for="c2-3"><span></span>Android</label>
-			                </div>
-			                <div class="col-sm-3 small-check">
-			                    <input type="checkbox" id="c2-4" name="ccMacbook" />
-			                    <label for="c2-4"><span></span>Macbook</label>
-			                </div>
-			                </div>
+                            <!--END HIDDEN CHECKBOXES-->
+                            <div class="col-sm-6 check">
+                                <input type="checkbox" id="c2" name="ccInSchool" />
+                                <label for="c2"><span></span>In-School Filtering</label>
+                            </div>
 			                <div class="col-sm-12 sources">    
 			                    <label class="custom-select">
 			                        <select name="source" class="combobox">

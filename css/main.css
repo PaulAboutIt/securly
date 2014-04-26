@@ -65,7 +65,7 @@
 .hero-img {
     background: url('../assets/video/hero.jpg');
     background-size: cover;
-    height: 560px;
+    height: 586px;
     width: 100%;
     background-position: 30%;
 }
@@ -5243,6 +5243,10 @@ img.mfp-img {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
+
+    .input-selected {
+        display: none
+    }
 
     .footer-row.container {
         margin-left: 0px !important;

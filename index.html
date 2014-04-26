@@ -309,7 +309,7 @@
                             <div class="row testimonial animated" data-animation="fadeInUp">
                                 <div class="col-sm-12">
                                     <blockquote>
-                                        <p>I too think this is an amazing product.</p>
+                                        <p>I too think this is an amazing product and would suggest it for any school using internet technology.</p>
                                         <img src="assets/img/testimonial2.png" alt="Billy Sullivan" class="preserve"><br>
                                         <cite>Brian Sullivan<span> <br>Senior Systems Administrator<br>Aspire Public Schools</span></cite>
                                     </blockquote>
@@ -411,13 +411,15 @@
             </div>
             <!--START LOGIN -->
             <div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
-                <div class="google-login col-sm-12 centered">
-                    <img src="http://www.securly.com/images/gafe_logo.png"><br>
-                    <input type="text" placeholder="Google Apps ID" required/>
-                    <a href="#login"><br>
-                        <button class="button-inverted green">Submit</button>
-                    </a>
-                </div>  
+                <form action="login.php" method="post">    
+                    <div class="google-login col-sm-12 centered">
+                        <img src="http://www.securly.com/images/gafe_logo.png"><br>
+                        <input type="text" placeholder="Google Apps ID" id="cemail" min-length="2" required/>
+                        <a href="#login"><br>
+                            <button class="button-inverted green">Submit</button>
+                        </a>
+                    </div>  
+                </form
             </div>
             <!--END LOGIN -->
 
