@@ -61,6 +61,14 @@
 }
 
 /* CUSTOM STYLES ---------------*/
+.video-container {
+    height: 520px;
+}
+
+.video-container img {
+    width: 100%;
+    height: auto;
+}
 
 .hero-img {
     background: url('../assets/video/hero.jpg');
@@ -1039,7 +1047,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-box h4 {
-    line-height: 1.2em;
+    line-height: 1.3em;
 }
 
 .hero {
