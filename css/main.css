@@ -5260,7 +5260,7 @@ img.mfp-img {
 }
 
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {\
 
     .superslides, .superslides .slide-content {
         
@@ -5333,6 +5333,7 @@ img.mfp-img {
 
     .mobile-quote {
         display: block;
+        margin-top: 40px;
     }
 
     .quote-row div.left {
