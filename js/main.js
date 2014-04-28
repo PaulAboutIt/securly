@@ -80,9 +80,7 @@
 
 
         //Calculate Quote Functions
-
-
-        $('.get-quote').on('click', function() {
+        function calc () {
             $('.calculate-message').addClass('hidden');
             $('.quote-parent').removeClass('hidden');
 
@@ -92,8 +90,13 @@
 
             
             $('.quote-price').text(quote);
-            $('.quote-price').digits();
+        }
+
+
+        $('.get-quote').on('click', function() {
+            calc();
         })
+
 
         //Show Take Home Checkboxes
 

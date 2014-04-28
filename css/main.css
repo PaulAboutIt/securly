@@ -1747,8 +1747,9 @@ textarea.valid {
 
 label.error {
     position: absolute;
-    bottom: 2px;
-    left: 0;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -70px;
     color: #c57c7e;
     font-style: italic;
     font-weight: 700;
@@ -3591,7 +3592,6 @@ body {
     padding: 0px;
     background: #474747;
     color: #eee;
-    font-size: 16px;
 }
 
 .footer-row.container {
@@ -5244,6 +5244,11 @@ img.mfp-img {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
 
+    .superslides, .superslides .slide-content {
+        
+        height: 586px !important;
+    }
+
     .input-selected {
         display: none
     }
@@ -5253,7 +5258,7 @@ img.mfp-img {
     }
 
     .footer-menu {
-        padding: 50px 100px 30px; 
+        padding: 50px 100px 50px; 
     }
 
 
@@ -5361,7 +5366,7 @@ img.mfp-img {
     }
 
     .footer-contact {
-        width: 100%;
+        width: auto;
         padding-left: 50px;
     }
 
