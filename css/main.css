@@ -67,6 +67,7 @@
 
 .video-container img {
     width: 100%;
+    min-height: 586px;
 }
 
 .hero-img {
