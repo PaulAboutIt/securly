@@ -786,7 +786,10 @@ label.custom-select {
     z-index: 9;
     left: 50%;
     margin-left: -12px;
-    margin-top: -64px;
+    margin-top: -62px;
+}
+.testimonials.feature:before {
+    display: none;
 }
 
 .features a:hover{
@@ -4280,7 +4283,7 @@ button.mfp-close, button.mfp-arrow {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
-  display: block;
+  display: none;
   outline: none;
   padding: 0;
   z-index: 1046;
@@ -5257,13 +5260,16 @@ img.mfp-img {
     .nav-trigger {
         top: 30%;
     }
+    .superslides, .superslides .slide-content {
+        height: 586px !important;
+    }
+
 }
 
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 768px) {\
+@media only screen and (max-width: 768px) {
 
     .superslides, .superslides .slide-content {
-        
         height: 586px !important;
     }
 
@@ -5373,7 +5379,7 @@ img.mfp-img {
     }
 
     .right-feature {
-        float: none;
+        /*float: none;*/
     }           
 
     .safe-youtube img{
@@ -5403,7 +5409,7 @@ img.mfp-img {
     }
 
     .edweek {
-    margin-top: 0px;
+    /*margin-top: 0px;*/
     }
 
     .edsurge {
@@ -5452,6 +5458,10 @@ img.mfp-img {
     .section-title {
         font-size: 20px;
         margin-bottom: 0px;
+    }
+
+    .section-title.about {
+        margin-bottom: 40px;
     }
 
     .overlay-title,
