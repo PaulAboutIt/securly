@@ -107,11 +107,12 @@
 .submit_panel, .requestquote_btn {
     float: left;
     clear: left;
-    margin: 20px 40px;
+    margin: 20px auto;
 }
 
 .contact_contentarea h2 {
     color: #fff;
+    margin-left: 20px;
 }
 
 .contact_formarea li {
@@ -1291,6 +1292,7 @@ a.head-logo,  a.head-logo:hover, a.head-logo:focus{
     background-image: url('../assets/img/logo.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    float: left;
 }
 
 .page-content .section-split a img {
