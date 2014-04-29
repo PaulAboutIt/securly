@@ -2092,6 +2092,7 @@ body,
 .main-nav {
     position: relative;
     z-index: 9999;
+    float: right;
 }
 
 .main-nav ul {
