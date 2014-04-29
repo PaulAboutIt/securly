@@ -5056,6 +5056,11 @@ img.mfp-img {
 
 /* Smaller than desktop 1200 (devices and browsers) */
 @media only screen and (max-width: 1200px) {
+
+    .superslides, .superslides .slide-content{
+        min-height: 586px !important;
+    }
+
     .circle-stats {
         width: 170px;
     }
@@ -5262,7 +5267,7 @@ img.mfp-img {
     .nav-trigger {
         top: 30%;
     }
-    .superslides, .superslides .slide-content, .video-container {
+    .superslides, .superslides .slide-content{
         height: 586px !important;
     }
 
