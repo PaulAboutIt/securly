@@ -5058,7 +5058,7 @@ img.mfp-img {
 @media only screen and (max-width: 1200px) {
 
     #main-superslides, .superslides, .superslides .slide-content, .video-container video{
-        min-height: 600px !important;
+        min-height: 100% !important;
         min-width: 100% !important;
     }
 
