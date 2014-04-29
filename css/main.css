@@ -3704,7 +3704,7 @@ body {
     right:0px;
     z-index: 99;
     position: absolute;
-    height: 205px;
+    height: 202px;
     min-width: 360px;
     }
 
@@ -5058,7 +5058,11 @@ img.mfp-img {
 /* Smaller than desktop 1200 (devices and browsers) */
 @media only screen and (max-width: 1200px) {
 
-    #main-superslides, .superslides, .superslides .slide-content, .video-container video, .video-container video img{
+    #main-superslides, 
+    .superslides, 
+    .superslides .slide-content, 
+    .video-container video, 
+    .video-container video img{
         min-height: 100% !important;
         min-width: 100% !important;
     }
@@ -5069,7 +5073,7 @@ img.mfp-img {
 
     .tcrunch {
     margin-top: 37px;
-}
+    }
 
     .edweek {
         margin-top: 30px;
@@ -5109,14 +5113,12 @@ img.mfp-img {
     }
 
     .page-subtitle.feature {
-    width: 60%;
+        width: 60%;
     }
 
     .page-head.feature {
         height: 500px;
     }
-
-    .
 
     .fa-bars {
     display: block !important;
@@ -5144,10 +5146,8 @@ img.mfp-img {
         background: white;
         padding: 0 25px 15px 25px;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
-
         -webkit-transform: translateY(-10px);
         -moz-transform: translateY(-10px);
         -o-transform: translateY(-10px);
