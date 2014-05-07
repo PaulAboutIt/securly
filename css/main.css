@@ -112,7 +112,8 @@
 
 .contact_contentarea h2 {
     color: #fff;
-    margin-left: 20px;
+    margin: 0px auto;
+    max-width: 200px;
 }
 
 .contact_formarea li {
@@ -4287,9 +4288,9 @@ button.mfp-close, button.mfp-arrow {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
-  display: none;
+  /*display: none;*/
   outline: none;
-  padding: 0;
+  padding: 10px;
   z-index: 1046;
   -webkit-box-shadow: none;
   box-shadow: none; }
