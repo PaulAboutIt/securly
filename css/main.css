@@ -5091,7 +5091,7 @@ img.mfp-img {
 
     .main-nav ul li:hover > a:after {
         text-decoration: none;
-        color: white;
+        color: #777;
 
         transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -5157,16 +5157,16 @@ img.mfp-img {
     }
     .main-nav ul li ul:after 
     {
-    content: '';
-    position: absolute;
-    border-style: solid;
-    border-width: 0 8px 8px;
-    border-color: #FFFFFF transparent;
-    display: block;
-    width: 0;
-    z-index: 1;
-    top: -8px;
-    right: 10px;
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 0 8px 8px;
+        border-color: #FFFFFF transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        top: -8px;
+        right: 10px;
     }
 
     .main-nav ul .active ul {
@@ -5224,6 +5224,9 @@ img.mfp-img {
 
     .main-nav ul li ul li a:hover {
         color: #219b89;
+    }
+    .main-nav ul li ul li:hover > a {
+        color: #333 !important;
     }
 
     /* sub-subnav */
