@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>Securly - Web Filtering 2.0 For Schools</title>
+        <title>Securly - Web Filtering 2.0 for Schools</title>
 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -41,13 +41,33 @@
                         <ul>
                             <!--<li class="active"><a href="index.html">Home</a></li>-->
                             <li class="nav" aria-haspopup="false">
-                                <a href="pricing.html">Pricing</a>
+                                <a href="pricing.html">Parents</a>
                             </li>
-                            <li class="nav" aria-haspopup="true">
+                            <li class="nav" aria-haspopup="false">
                                 <a href="features.html">Features</a>
+                            </li>
+                            <li class="nav" aria-haspopup="false">
+                                <a href="resources">Resources</a>
+                            </li>
+                            <li class="nav" aria-haspopup="false">
+                                <a href="news.html">News</a>
+                            </li>
+                            <li class="nav" aria-haspopup="false">
+                                <a href="blog.html">Blog</a>
                             </li>
                             <li>
                                 <a href="#" class="login-btn">Login</a>
+                                <ul>
+                                    <li><a href=""><i class="fa fa-building-o"></i>School</a></li>
+                                    <li class="login-btn"><a href=""><i class="ss ss-home"></i>Parent</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="sign-up-btn">Sign Up <i class="caret-o ss ss-navigatedown"></i></a>
+                                <ul>
+                                    <li><a href="signup.html"><i class="fa fa-building-o"></i>School</a></li>
+                                    <li><a href="parentsignup.html"><i class="ss ss-home"></i>Parent</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </nav>
@@ -68,13 +88,24 @@
                     <!-- START SLIDE CONTENT -->
                     <div class="slide-content">
                         <div class="container hero">
-                            <h2 class="page-title " data-animation="fadeInDown">Web Filtering 2.0 <br>for schools</h2>
-                            <a class="button-inverted" href="features.html" data-animation="bounceIn">Learn More</a>
-                            <a href="signup.html" class="signup-form button-inverted" data-animation="bounceIn">Get a Free Trial</a>
+                            <h2 class="page-title" data-animation="fadeInDown">
+                                Web Filtering 2.0 <br>for Schools
+                            </h2>
+                            <button href="signup.html" class="get-started" data-animation="bounceIn">Get Started - Free Forever!</button>
+                            <div class="parent-info">
+                               <img src="assets/img/parents_icon.svg" class="parents-icon"/>
+                                <h3>Parents</h3>
+                                <p>Shape and secure <br>your kids online education</p>
+                                <a href="parent-features.html">
+                                    <button class="button-primary learn-more" data-animation="bounceIn">
+                                    Learn More <i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
+                        
                     </div>
                     <div class="mobile-only hero-img"></div>
-
                     <!-- END SLIDE CONTENT -->
                 </div>
             </div>
@@ -406,24 +437,48 @@
                         </div>
                     </div>
                 </div>
-                
-
-                
             </div>
+            
+            <!-- ####################### START POPUP MODULES #######################-->
+            
             <!--START LOGIN -->
             <div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+               <h3>Login to your Securly Account</h3>
                 <form action="login.php" method="post">    
                     <div class="google-login col-sm-12 centered">
-                        <img src="http://www.securly.com/images/gafe_logo.png"><br>
-                        <input type="text" placeholder="Google Apps ID" id="cemail" min-length="2" required/>
-                        
+                        <input type="text" placeholder="Email Address" id="cemail" min-length="2" required/>
+                        <input type="password" placeholder="Password" id="cemail" min-length="2" required/>
                     </div>  
                     <a href="#login"><br>
-                            <button class="button-inverted green">Submit</button>
-                        </a>
-                </form
+                        <button class="button-inverted green">Submit</button>
+                    </a>
+                    <a class="forgot-password">Forgot Password?</a>
+                    <span>Don't have an account? </span><a class="get-started-link">Get Started</a>
+                </form>
             </div>
             <!--END LOGIN -->
+            
+            <!--START SIGNUP POPUP -->
+            <div id="sign-up" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+                <div class="sign-up-location col-sm-12 centered">
+                    <div class="sign-up-header">Sign up as</div>
+                    <a href="parentsignup.html">
+                        <div class="sign-up-home">
+                            <i class="ss ss-home"></i>
+                            <h3>Parent</h3>
+                            <p>Some description text will appear here.</p>
+                        </div>
+                    </a>
+                    <a href="signup.html">
+                        <div class="sign-up-school">
+                            <i class="fa fa-building-o"></i>
+                            <h3 class="school-h3">School</h3>
+                            <p>Some description text will appear here.</p>
+                        </div>
+                    </a>   
+                </div>  
+            </div>
+            <!--END SIGNUP POPUP -->
 
             <!--START WHITEPAPER FORM -->
             <div id='whitepaper_inline' class="mfp-hide col-sm-4 col-sm-offset-4 centered">

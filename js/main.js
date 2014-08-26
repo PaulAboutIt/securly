@@ -161,7 +161,20 @@
               src: '#login',
               type: 'inline'
           }
+        }); 
+        
+        $('.get-started-link').magnificPopup({
+          items: {
+              src: '#sign-up',
+              type: 'inline'
+          }
         });
+        $('.get-started').magnificPopup({
+          items: {
+              src: '#sign-up',
+              type: 'inline'
+          }
+        }); 
         $('.login-btn').on('click', function() {
             $('.main-nav').removeClass('trigger-active');
         });
