@@ -50,6 +50,9 @@
 
         /*Signup functions for Parents*/
         $('#sign-up').submit(function(e){
+            if ($('#confirm-email').val() != '') {
+                return false;
+            }
             var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
             if (re.test($('#parent-password').val()) && e.target.checkValidity()) {
                 $.ajax({
@@ -62,11 +65,15 @@
                         window.location.href="/app/#/getstarted";
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
-                           
+                        
+                        if(jqXHR.status == 409) {
+                            $('.already').append('<span class="pass-error">This email is already registered.</span>');  
+                            console.log(jqXHR.status);
+                        }
                     }
                   });
             } else if (!re.test($('#login-password').val())){
-                $('.forgot-password').append('<span class="pass-error">Password must contain at least one capital and one lowercase letter along with a number.</span>');
+                $('.cancel').append('<span class="pass-error">Password must contain at least one capital and one lowercase letter along with a number.</span>');
             }
             return false;
         });

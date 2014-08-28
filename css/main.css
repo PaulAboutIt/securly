@@ -61,6 +61,18 @@
 }
 
 /* CUSTOM STYLES ---------------*/
+.pass-error {
+    color: red;
+    margin-bottom: 0px;
+    /*float:left;
+    clear: both;*/
+    display: block
+}
+#confirm-email {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
 .parents-icon {
     position: absolute;
     width: 85px !important;
