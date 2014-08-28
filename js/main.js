@@ -21,58 +21,56 @@
             isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
         /*Login functions for Parents*/
-        $("#login-button").click(function(){    
-              username=$("#cemail").val();
-              password=$("#login-password").val();
-              $.ajax({
-               type: "POST",
-               url: "app/login.php",
-                data: "name="+username+"&pwd="+password,
-               success: function(html){    
-                if(html=='true')    {
-                 //$("#add_err").html("right username or password");
-                 window.location="dashboard.php";
-                }
-                else    {
-                $("#add_err").css('display', 'inline', 'important');
-                 $("#add_err").html("<img src='images/alert.png' />Wrong username or password");
-                }
-               },
-               beforeSend:function()
-               {
-                $("#add_err").css('display', 'inline', 'important');
-                $("#add_err").html("<img src='images/ajax-loader.gif' /> Loading...")
-               }
-              });
+        $("#parent-login").submit(function(e){  
+            $('.pass-error').remove();
+            var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+            if (re.test($('#login-password').val()) && e.target.checkValidity()) {
+                $.ajax({
+                    type: "POST",
+                    url: "http://devwww4.securly.com/app/login.php",
+                    data: {email: $('#cemail').val(), password: $('#login-password').val()},
+                    dataType: JSON,
+                    complete: function(xhr, textStatus){    
+                        console.log('response', xhr.status, textStatus);
+                        if(xhr.status == 200)
+                            window.location.href="/app/#/getstarted";
+                        if(xhr.status == 500)
+                            $('.forgot-password').append('<span class="pass-error">Inncorrect email or password</span>');
+                        if(xhr.status == 404)
+                            console.log('404');
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                           
+                    }
+                  });
+            }
+            
             return false;
         });
 
         /*Signup functions for Parents*/
-        $("#sign-up").click(function(){    
-              username=$("#parent-email").val();
-              password=$("#parent-password").val();
-              $.ajax({
-               type: "POST",
-               url: "app/signup.php",
-                data: "name="+username+"&pwd="+password,
-               success: function(html){    
-                if(html=='true')    {
-                 //$("#add_err").html("right username or password");
-                 window.location="dashboard.php";
-                }
-                else    {
-                $("#add_err").css('display', 'inline', 'important');
-                 $("#add_err").html("<img src='images/alert.png' />Wrong username or password");
-                }
-               },
-               beforeSend:function()
-               {
-                $("#add_err").css('display', 'inline', 'important');
-                $("#add_err").html("<img src='images/ajax-loader.gif' /> Loading...")
-               }
-              });
+        $('#sign-up').submit(function(e){
+            var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+            if (re.test($('#parent-password').val()) && e.target.checkValidity()) {
+                $.ajax({
+                    type: "POST",
+                    url: "http://devwww4.securly.com/app/backend/_signupconsumer.php",
+                    data: {email: $('#parent-email').val(), password: $('#parent-password').val(), tzOffset: new Date().getTimezoneOffset()},
+                    dataType: JSON,
+                    success: function(data){    
+                        console.log('success');
+                        window.location.href="/app/#/getstarted";
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                           
+                    }
+                  });
+            } else if (!re.test($('#login-password').val())){
+                $('.forgot-password').append('<span class="pass-error">Password must contain at least one capital and one lowercase letter along with a number.</span>');
+            }
             return false;
         });
+        
 
         // Fade in body on page load (JS enabled only!)
         $('body').addClass('loaded');
