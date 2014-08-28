@@ -30,14 +30,12 @@
                     url: "http://devwww4.securly.com/app/login.php",
                     data: {email: $('#cemail').val(), password: $('#login-password').val()},
                     dataType: JSON,
-                    complete: function(xhr, textStatus){    
-                        console.log('response', xhr.status, textStatus);
-                        if(xhr.status == 200)
+                    success: function(xhr, textStatus){    
+                        if(xhr.status == 200) {
                             window.location.href="/app/#/getstarted";
-                        if(xhr.status == 500)
+                        } else if (xhr.status == 500) {
                             $('.forgot-password').append('<span class="pass-error">Inncorrect email or password</span>');
-                        if(xhr.status == 404)
-                            console.log('404');
+                        }
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
                            
@@ -60,15 +58,14 @@
                     url: "http://devwww4.securly.com/app/backend/_signupconsumer.php",
                     data: {email: $('#parent-email').val(), password: $('#parent-password').val(), tzOffset: new Date().getTimezoneOffset()},
                     dataType: JSON,
-                    success: function(data){    
-                        console.log('success');
-                        window.location.href="/app/#/getstarted";
+                    complete: function(xhr, textStatus){  
+                        if(xhr.status == 200) {
+                            window.location.href="/app/#/getstarted";
+                        }
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
-                        
                         if(jqXHR.status == 409) {
                             $('.already').append('<span class="pass-error">This email is already registered.</span>');  
-                            console.log(jqXHR.status);
                         }
                     }
                   });
