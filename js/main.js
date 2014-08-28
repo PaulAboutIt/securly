@@ -20,8 +20,59 @@
             $articleContainer = $('.article-container'),
             isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
+        /*Login functions for Parents*/
+        $("#login-button").click(function(){    
+              username=$("#cemail").val();
+              password=$("#login-password").val();
+              $.ajax({
+               type: "POST",
+               url: "app/login.php",
+                data: "name="+username+"&pwd="+password,
+               success: function(html){    
+                if(html=='true')    {
+                 //$("#add_err").html("right username or password");
+                 window.location="dashboard.php";
+                }
+                else    {
+                $("#add_err").css('display', 'inline', 'important');
+                 $("#add_err").html("<img src='images/alert.png' />Wrong username or password");
+                }
+               },
+               beforeSend:function()
+               {
+                $("#add_err").css('display', 'inline', 'important');
+                $("#add_err").html("<img src='images/ajax-loader.gif' /> Loading...")
+               }
+              });
+            return false;
+        });
 
-
+        /*Signup functions for Parents*/
+        $("#sign-up").click(function(){    
+              username=$("#parent-email").val();
+              password=$("#parent-password").val();
+              $.ajax({
+               type: "POST",
+               url: "app/signup.php",
+                data: "name="+username+"&pwd="+password,
+               success: function(html){    
+                if(html=='true')    {
+                 //$("#add_err").html("right username or password");
+                 window.location="dashboard.php";
+                }
+                else    {
+                $("#add_err").css('display', 'inline', 'important');
+                 $("#add_err").html("<img src='images/alert.png' />Wrong username or password");
+                }
+               },
+               beforeSend:function()
+               {
+                $("#add_err").css('display', 'inline', 'important');
+                $("#add_err").html("<img src='images/ajax-loader.gif' /> Loading...")
+               }
+              });
+            return false;
+        });
 
         // Fade in body on page load (JS enabled only!)
         $('body').addClass('loaded');

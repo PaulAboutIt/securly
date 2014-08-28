@@ -437,20 +437,18 @@
                 </div>
             </div>
             
-            <!-- ####################### START POPUP MODULES #######################-->
+            <!--####################### START POPUP MODULES #######################-->
             
             <!--START LOGIN -->
             <div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
                 
                <h3>Login to your Securly Account</h3>
-                <form action="login.php" method="post">    
+                <form>    
                     <div class="google-login col-sm-12 centered">
                         <input type="text" placeholder="Email Address" id="cemail" min-length="2" required/>
                         <input type="password" placeholder="Password" id="login-password" min-length="2" required/>
                     </div>  
-                    <a href="#login"><br>
-                        <button class="button-inverted green">Submit</button>
-                    </a>
+                    <button class="button-inverted green" id="login-button">Submit</button>
                     <a class="forgot-password">Forgot Password?</a>
                     <span>Don't have an account? </span><a class="get-started-link">Get Started</a>
                 </form>
