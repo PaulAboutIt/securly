@@ -186,7 +186,7 @@
         });
 
         //Numeric
-        $('input.numeric').numeric();
+        /*$('input.numeric').numeric();*/
 
         // Init Superslides
         $('#main-superslides').superslides({
