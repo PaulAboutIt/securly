@@ -27,10 +27,10 @@
             if (re.test($('#login-password').val()) && e.target.checkValidity()) {
                 $.ajax({
                     type: "POST",
-                    url: "http://devwww4.securly.com/app/login.php",
+                    url: gUrlHome + "/_login.php",
                     data: {email: $('#cemail').val(), password: $('#login-password').val()},
                     dataType: JSON,
-                    success: function(xhr, textStatus){    
+                    complete: function(xhr, textStatus){ 
                         if(xhr.status == 200) {
                             window.location.href="/app/#/getstarted";
                         } else if (xhr.status == 500) {
@@ -42,8 +42,8 @@
                     }
                   });
             }
-            
             return false;
+            
         });
 
         /*Signup functions for Parents*/
@@ -52,21 +52,24 @@
                 return false;
             }
             var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-            if (re.test($('#parent-password').val()) && e.target.checkValidity()) {
+            if (re.test($('#parent-password').val()) && e.target.checkValidity()) {                
                 $.ajax({
                     type: "POST",
-                    url: "http://devwww4.securly.com/app/backend/_signupconsumer.php",
+                    url: gUrlHome + "/_signupconsumer.php",
                     data: {email: $('#parent-email').val(), password: $('#parent-password').val(), tzOffset: new Date().getTimezoneOffset()},
                     dataType: JSON,
-                    complete: function(xhr, textStatus){  
+                    complete: function(xhr, textStatus){ 
+                        console.log(xhr, textStatus);
                         if(xhr.status == 200) {
                             window.location.href="/app/#/getstarted";
                         }
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
+                        console.log('err', jqXHR, textStatus, errorThrown);
                         if(jqXHR.status == 409) {
                             $('.already').append('<span class="pass-error">This email is already registered.</span>');  
                         }
+                        return false
                     }
                   });
             } else if (!re.test($('#login-password').val())){
