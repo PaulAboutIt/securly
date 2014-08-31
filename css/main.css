@@ -61,6 +61,9 @@
 }
 
 /* CUSTOM STYLES ---------------*/
+#return-login {
+    display:block
+}    
 .pass-error {
     color: red;
     margin-bottom: 0px;
@@ -637,10 +640,11 @@ top: 20px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-#login-password {
+#login-password, #password-reset, #password-reset-conf {
     background: #f3f3f3;
     height: 40px;
     line-height: 40px;
+    display: block;
     text-decoration: none;
     font-weight: 300;
     font-size: 16px;

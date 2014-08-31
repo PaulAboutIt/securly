@@ -45,7 +45,64 @@
             return false;
             
         });
+        
+        $("#reset-login").submit(function(e){  
+            $('.pass-error').remove();
+            var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+            if (re.test($('#login-password').val()) && e.target.checkValidity()) {
+                $.ajax({
+                    type: "GET",
+                    url: gUrlHome + "/_passwordReset?" + $.param({email: encodeURIComponent($('#cemail').val())}),
+                    complete: function(xhr, textStatus){ 
+                        if(xhr.status == 200) {
+                            $('#reset-login').append('<span class="pass-error">an email has been sent to' + $('#cemail').val() + '</span><br><span>Please click the link in that email to reset your password in the next 72 hours.</span>');
+                        } else if (xhr.status == 500) {
+                            $('.forgot-password').append('<span class="pass-error">Inncorrect email or password</span>');
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                           
+                    }
+                  });
+            }
+            return false;
+            
+        });
 
+        $("#reset-password").submit(function(e){  
+            console.log('click');
+            $('.pass-error').remove();
+            if($('#password-reset').val() != $('#password-reset-conf').val()) {
+                console.log('Add error maessage');
+                return false;
+            };
+            var token = getUrlParameter('token');
+            if(!token) {
+                window.location.href= mainUrl;
+            }
+            var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+            if (re.test($('#password-reset').val()) && e.target.checkValidity()) {
+                $.ajax({
+                    type: "POST",
+                    url: gUrlHome + "/_passwordReset",
+                    data: {password: $('#password-reset').val(), token: token},
+                    complete: function(xhr, textStatus){ 
+                        if(xhr.status == 200) {
+                            /*go to login page*/
+                            alert('success');
+                        } else if (xhr.status == 500) {
+                            $('.forgot-password').append('<span class="pass-error">Inncorrect email or password</span>');
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                           
+                    }
+                  });
+            }
+            return false;
+        });
+        
+        
         /*Signup functions for Parents*/
         $('#sign-up').submit(function(e){
             if ($('#confirm-email').val() != '') {
@@ -186,7 +243,7 @@
         });
 
         //Numeric
-        /*$('input.numeric').numeric();*/
+        $('input.numeric').numeric();
 
         // Init Superslides
         $('#main-superslides').superslides({
@@ -210,7 +267,14 @@
         });
 
         //  POPUPs
-
+        $('#forgot-password').on('click', function() {
+            $('#normal-login').addClass('hidden');
+            $('#reset').removeClass('hidden');
+        }); 
+        $('#retun-login').on('click', function() {
+            $('#normal-login').removeClass('hidden');
+            $('#reset').addClass('hidden');
+        });         
         $('.popup-vimeo').magnificPopup({type:'iframe'});
         $('.login-btn').magnificPopup({
           items: {
