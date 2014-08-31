@@ -129,8 +129,10 @@
                         return false
                     }
                   });
-            } else if (!re.test($('#login-password').val())){
-                $('.cancel').append('<span class="pass-error">Password must contain at least one capital and one lowercase letter along with a number.</span>');
+            } else if (!re.test($('#parent-password').val())){
+                console.log('Do It');
+                $('.already').append('<span class="error" style="color:red">Password must contain at least one capital and one lowercase letter along with a number.</span>');
+                
             }
             return false;
         });
