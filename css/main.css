@@ -308,6 +308,10 @@
     cursor: pointer;
     margin-bottom: 40px;
 }
+#forgot-password {
+    display: block;
+    cursor: pointer;
+}
 
 #login a:hover {
     color: #777;
