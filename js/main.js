@@ -34,7 +34,9 @@
                         if(xhr.status == 200) {
                             window.location.href="/app/#/getstarted";
                         } else if (xhr.status == 500) {
-                            $('.forgot-password').append('<span class="pass-error">Inncorrect email or password</span>');
+                            $('#normal-login').append('<span class="pass-error">Inncorrect email or password</span>');
+                        } else if (xhr.status == 401) {
+                            $('#normal-login').append('<span class="pass-error">Inncorrect email or password</span>');
                         }
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
@@ -91,7 +93,8 @@
                     complete: function(xhr, textStatus){ 
                         if(xhr.status == 200) {
                             /*go to login page*/
-                            alert('success');
+                            /*window.location.href('/');*/
+                            /*document.getElementById('login-btn').click();*/
                         } else if (xhr.status == 500) {
                             $('.forgot-password').append('<span class="pass-error">Inncorrect email or password</span>');
                         }
