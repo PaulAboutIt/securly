@@ -32,7 +32,7 @@
                     dataType: JSON,
                     complete: function(xhr, textStatus){ 
                         if(xhr.status == 200) {
-                            window.location.href="/app/#/getstarted";
+                            window.location.href="/app/#/";
                         } else if (xhr.status == 500) {
                             $('#normal-login').append('<span class="pass-error">Inncorrect email or password</span>');
                         } else if (xhr.status == 401) {
@@ -45,8 +45,7 @@
                   });
             } else if (!re.test($('#login-password').val())){
                 $('pass-error').remove();
-                $('#parent-login').append('<span class="pass-error" style="color:red">Password must contain at least one capital and one lowercase letter along with a number.</span>');
-                
+                $('#parent-login').append('<span class="pass-error" style="color:red">Password or Username is invalid.</span>');
             }
             return false;
         });
@@ -60,7 +59,10 @@
                     url: gUrlHome + "/_passwordReset?" + $.param({email: encodeURIComponent($('#cemail').val())}),
                     complete: function(xhr, textStatus){ 
                         if(xhr.status == 200) {
-                            $('#reset-login').append('<span class="pass-error">an email has been sent to' + $('#cemail').val() + '</span><br><span>Please click the link in that email to reset your password in the next 72 hours.</span>');
+                            $('#reset-login').append('<span class="pass-error">an email has been sent to' + $('#cemail').val() + '</span><br><span>Please click the link in that email to reset your password in the next 72 hours.</span><br><button onclick="window.location.reload()">Refresh and Login</button>');
+                            $('#reset-password-button').remove();
+                            $('.reset-input').remove();
+                            
                         } else if (xhr.status == 500) {
                             $('.forgot-password').append('<span class="pass-error">Inncorrect email or password</span>');
                         }
@@ -82,7 +84,7 @@
             };
             var token = getUrlParameter('token');
             if(!token) {
-                window.location.href= mainUrl;
+                window.location.href= './app/get-stared';
             }
             var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
             if (re.test($('#password-reset').val()) && e.target.checkValidity()) {
@@ -123,7 +125,7 @@
                     complete: function(xhr, textStatus){ 
                         console.log(xhr, textStatus);
                         if(xhr.status == 200) {
-                            window.location.href= gUrl;
+                            window.location.href= '/app/#/getstarted';
                         }
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
