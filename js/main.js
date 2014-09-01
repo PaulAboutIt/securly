@@ -123,7 +123,7 @@
                     complete: function(xhr, textStatus){ 
                         console.log(xhr, textStatus);
                         if(xhr.status == 200) {
-                            window.location.href="/app/#/getstarted";
+                            window.location.href= gUrl;
                         }
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
