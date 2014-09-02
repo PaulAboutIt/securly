@@ -53,7 +53,7 @@
         $("#reset-login").submit(function(e){  
             $('.pass-error').remove();
             var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-            if (re.test($('#login-password').val()) && e.target.checkValidity()) {
+            if (e.target.checkValidity()) {
                 $.ajax({
                     type: "GET",
                     url: gUrlHome + "/_passwordReset?" + $.param({email: encodeURIComponent($('#cemail').val())}),
@@ -83,7 +83,6 @@
                 $('#reset-password').append('<span class="error" style="color:red">Password mismatch</span>');
                 return false;
             };
-            
             var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
             if (re.test($('#password-reset').val()) && e.target.checkValidity()) {
                 var token = getUrlParameter('token');
@@ -268,7 +267,7 @@
             $('#reset').addClass('hidden');
         });         
         $('.popup-vimeo').magnificPopup({type:'iframe'});
-        $('.login-btn').magnificPopup({
+        $('#login-btn').magnificPopup({
           items: {
               src: '#login',
               type: 'inline'

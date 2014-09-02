@@ -173,6 +173,9 @@
     width: 205px;
     font-family: 'HelveticaNeueLT Pro 45 Lt';
 }
+.get-started-link {
+    cursor: pointer;
+}
 .get-started {
     background: #4c8ec1;
     font-family: 'HelveticaNeueLT Pro 45 Lt';
@@ -633,7 +636,7 @@ top: 20px;
     box-sizing: border-box;
 }
 
-#cemail{
+#cemail, #login-password, #password-reset, #password-reset-conf {
     background: #f3f3f3;
     height: 40px;
     line-height: 40px;
@@ -646,19 +649,8 @@ top: 20px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-#login-password, #password-reset, #password-reset-conf {
-    background: #f3f3f3;
-    height: 40px;
-    line-height: 40px;
-    display: block;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 16px;
-    font-style: none !important;
-    box-shadow: -1px -1px 2px #ccc;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+#sign-up {
+    max-width: 500px;
 }
 .ipadd {
     clear: both;
@@ -838,6 +830,10 @@ label.custom-select {
 .press_logo img {
     vertical-align: middle;
     margin: auto;
+}
+
+.learn-more {
+    margin-left: -5px !important;   
 }
 
 .learn-more:hover {
