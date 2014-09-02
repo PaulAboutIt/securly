@@ -52,14 +52,13 @@
         
         $("#reset-login").submit(function(e){  
             $('.pass-error').remove();
-            var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
             if (e.target.checkValidity()) {
                 $.ajax({
                     type: "GET",
-                    url: gUrlHome + "/_passwordReset?email=" + encodeURIComponent($('#cemail').val(),
+                    url: gUrlHome + "/_passwordReset?email=" + encodeURIComponent($('#reset-email').val()),
                     complete: function(xhr, textStatus){ 
                         if(xhr.status == 200) {
-                            $('#reset-login').append('<span class="pass-error">an email has been sent to ' + $('#cemail').val() + '</span><br><span>Please click the link in that email to reset your password in the next 72 hours.</span><br><button onclick="window.location.reload()">Refresh and Login</button>');
+                            $('#reset-login').append('<span class="pass-error">an email has been sent to ' + $('#reset-email').val() + '</span><br><span>Please click the link in that email to reset your password in the next 72 hours.</span><br><button onclick="window.location.reload()">Refresh and Login</button>');
                             $('#reset-password-button').remove();
                             $('.reset-input').remove();
                         } else if (xhr.status == 500) {
