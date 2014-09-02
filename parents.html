@@ -1,0 +1,664 @@
+
+        <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+	<base href="http://devwww3.securly.com/">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Securly - Web Filtering 2.0 For Schools & Families</title>
+
+        <meta name="description" content="Securly is a cloud based web filtering & web-analytics engine purpose built for K-12 schools designed to provide seamless web filtering service for chromebook filtering and take home iPad.">
+
+	<META NAME="KEYWORDS" CONTENT="Securly, SECURLY, web analytics, social media analytics, parental control, parental controls, school, block youtube, block facebook, block porn, block adult, web filter, webfiltering, Chromebook, Chromebooks,K-12, K12">	
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/ss-gizmo.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/icomoon.css">
+        <link rel="stylesheet" href="css/colors/lime.css">
+        <link rel="stylesheet" href="css/colors/lime.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body>
+
+<script>
+function submit_email(type)
+{
+
+var firstName = "";
+var lastName = "";
+var phone = "";
+var sqrt = "";
+var ipaddress = "";
+var domain = "";
+var email = "";
+var lead_source = "";
+var promo= "";
+
+if (type == 'freemium_invite')
+{
+        email = document.forms[type]["email"].value;
+        var url = encodeURI("backend/_sendemail?req="+type+"&fn="+firstName+"&ln="+lastName+"&phone="+phone+"&email="+email+"&lead_source="+lead_source+"&ipaddress="+ipaddress+"&domain="+domain+"&sqrt="+sqrt+"&promo="+promo);
+
+
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET", url, false);
+        xmlhttp.send();
+        return;
+}
+
+if (type == 'learn_more')
+{
+        firstName = document.forms[type]["first_name"].value;
+        lastName = document.forms[type]["last_name"].value;
+        phone = document.forms[type]["phone"].value;
+        sqrt = document.forms[type]["sqrt"].value;
+}
+
+if (type == 'free_trial')
+{
+        ipaddress = document.forms[type]["00N70000003Rb1w"].value;
+        domain = document.forms[type]["00N70000003Rb21"].value;
+}
+
+        email = document.forms[type]["email"].value;
+        lead_source = document.forms[type]["lead_source"].value;
+
+        var url = encodeURI("backend/_sendemail?req="+type+"&fn="+firstName+"&ln="+lastName+"&phone="+phone+"&email="+email+"&lead_source="+lead_source+"&ipaddress="+ipaddress+"&domain="+domain+"&sqrt="+sqrt+"&promo="+promo);
+
+
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET", url, false);
+        xmlhttp.send();
+
+}
+</script>
+
+        <!-- START HEADER -->
+        <header id="top" class="page-top">
+            <!-- START HEADER TOP -->
+            <div class="head-top">
+                <div class="container">
+                    <a href="/" class="head-logo"></a>
+
+                    <span class="nav-trigger fa fa-bars"></span>
+
+                    <!-- START MAIN NAVIGATION -->
+                    <nav class="main-nav">
+                        <ul>
+                            <li class="nav" aria-haspopup="false">
+                                <a href="/pricing">Pricing</a>
+                            </li>
+                            <li class="nav" aria-haspopup="true">
+                                <a href="/allfeatures">Features</a>
+                            </li>
+                            <li class="nav" aria-haspopup="true">
+                                <a href="/resources">Resources</a>
+                            </li>
+                            <li class="nav" aria-haspopup="true">
+                                <a href="/news">News</a>
+                            </li>
+                            <li class="nav" aria-haspopup="true">
+                                <a href="http://blog.securly.com" target="_blank">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#" class="login-btn">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- END MAIN NAVIGATION -->
+                </div>
+            </div>
+            <!-- END HEADER TOP -->
+
+
+
+        
+            <!-- START MAIN SLIDER -->
+            <div id="main-superslides" class="main-slider superslides">
+                <div class="video-container">
+                    <div class="desktop-only chrome">
+                        <img src="assets/img/parents.jpg" alt="Securly web filtering for schools">
+                    </div>
+                    <!-- START SLIDE CONTENT -->
+                    <div class="slide-content">
+                        <div class="container hero">
+                            <h2 class="page-title " data-animation="fadeInDown">Shape &amp; Secure<br> your kids <br>online education</h2>
+                            
+                            <a href="/signup" class="signup-form button-inverted" data-animation="bounceIn">Get Started - Free Forever</a>
+                        </div>
+                    </div>
+                    <div class="mobile-only hero-img chrome-img"></div>
+
+                    <!-- END SLIDE CONTENT -->
+                </div>
+            </div>
+            <!-- END MAIN SLIDER -->
+        </header>
+        <!-- END HEADER -->
+
+        <!-- START MAIN CONTENT -->
+        <section id="main" class="homepage page-content">
+            <div class="container">
+                <h1 class="hero animated section-title" data-animation="fadeInUp">Features</h1>
+            </div>
+
+           
+
+            <!-- START SECTION SPLIT -->
+            <div class="section-split features" style="background: #FFF;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 centered animated" data-animation="fadeInLeft">
+                            <br>
+                            <p><img style="background: #fff;" alt="Dashboard for Consumer" src="assets/img/dashboard_img.gif"></p>
+                            <br>
+                        </div>
+                        <div class="col-sm-5 col-sm-offset-1 animated" data-animation="fadeInRight">
+			    <a href="/features/anydeviceanywhere" class="learn-more">
+	                            <h2 class="feature-title">1:1 Education Analytics</h2>
+			    </a>
+                            <br>
+                            <!-- START FEATURE -->
+                           <p>Securly provides cloud based Big Data analytics designed to improve your child’s productivity and achievement. Parents can now analyze their kids’ activity across educational sites and time sinks, in-school and at-home across school provided 1:1 devices such as iPads, Nexus tablets and Chromebooks.</p>
+                            <!-- END FEATURE -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- START FEATURE -->
+                    <div class="row">
+                        <div class="col-sm-6 centered animated right-feature" data-animation="fadeInRight">
+                            <br>
+                            <p class="safe-youtube"><img alt="1:1 Device Management" src="assets/img/parents_filtering.gif"/></p>
+                            <br>
+                        </div>
+                        <div class="col-sm-5 col-sm-offset-1 animated" data-animation="fadeInLeft">
+                            <div class="feature-box">
+                                <a href="/features/safesearchyoutube" class="learn-more">
+                                    <h2 class="feature-title">Coming Soon - 1:1 Device Management</h2>
+                                </a>    
+                                <p>Parents can now become the IT admins of the 1:1 devices at home, opening up sites for supervised access that are otherwise blocked by the district. E.g. if the district blocks online games, Twitter, and YouTube – parents can open these up for supervised access at home.</p>
+                               
+                            </div>
+                        </div> 
+                    </div>
+                <!-- END FEATURE -->
+
+         
+
+
+            </div>
+            <!-- END SECTION SPLIT -->
+
+
+
+
+            <!-- START SECTION SPLIT -->
+            <div class="section-split our-schools">
+                <div class="container">
+                    <h3 class="section-title">Our Schools Love Us</h3>
+                    <div class="row centered animated schools" data-animation="fadeInDown">
+                        <div class="col-sm-2">
+                            <img src="assets/img/schools1.jpg" alt="Wessy">
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="assets/img/schools2.jpg" alt="CA ARO">
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="assets/img/schools3.jpg" alt="The Writer's Window">
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="assets/img/schools4.jpg" alt="Channelside">
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="assets/img/schools5.jpg" alt="Anna Marie">
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="assets/img/schools6.jpg" alt="Anna Marie">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SECTION SPLIT -->
+
+            <!-- START SECTION SPLIT -->
+            <div class="section-split testimonials">
+                <div id="testimonial-superslides" class="container superslides">
+                    <ul class="slides-container">
+                        <li>
+                            <!-- START TESTIMONIAL -->
+                            <div class="row testimonial animated" data-animation="fadeInUp">
+
+                                <div class="col-sm-12">
+
+                                    <blockquote>
+                                        <p>Securly is hands down the best web-filter for K-12. It is very easy to use and even easier to implement.</p>
+                                        <img src="assets/img/brian_sullivan.png" alt="Brian Sullivan" class="preserve" style="background-color: red; height: 100px; width: 100px; border-radius:60px; -moz-border-radius:60px; -webkit-border-radius:60px;" ><br>
+                                        <cite>Brian Sullivan<span> <br>Senior Systems Administrator<br>Aspire Public Schools</span></cite>
+                                    </blockquote>
+                                </div>
+                                <!-- END TESTIMONIAL -->
+                            </div>
+                        </li>
+                        <li>
+                            <!-- START TESTIMONIAL -->
+                            <div class="row testimonial animated" data-animation="fadeInUp">
+                                <div class="col-sm-12">
+                                    <blockquote>
+                                        <p>When we pulled our appliance and cut in Securly, multiple users actually asked me - "Wow Tim how did you make the network so much faster?"</p>
+                                        <img src="/assets/img/tim_white.png" alt="Tim White" class="preserve"><br>
+                                        <cite>Tim White<span> <br>Director of Technology<br>Webb City R-VII School District</span></cite>
+                                    </blockquote>
+                                </div>
+                                <!-- END TESTIMONIAL -->
+                            </div>
+                        </li>
+                        <li>
+                            <!-- START TESTIMONIAL -->
+                            <div class="row testimonial animated" data-animation="fadeInUp">
+                                <div class="col-sm-12">
+                                    <blockquote>
+                                        <p>Securly has transformed the way we use technology and has opened up the Internet to be a wonderful and fantastic learning tool while keeping our kids safe.</p>
+                                        <img src="assets/img/gary_spracklen.png" alt="Gary Spracklen" class="preserve"><br>
+                                        <cite>Gary Spracklen<span><br>Director of Digital Learning and Innovation<br>IPACA (UK)</span></cite>
+                                    </blockquote>
+                                </div>
+                                <!-- END TESTIMONIAL -->
+                            </div>
+                        </li>
+                        <li>
+                            <!-- START TESTIMONIAL -->
+                            <div class="row testimonial animated" data-animation="fadeInUp">
+                                <div class="col-sm-12">
+                                    <blockquote>
+                                        <p>Why didn't I hear about this before? Probably because I spent so much of my time sinking $$$ into [appliance vendor]!"</p>
+                                        <img src="assets/img/matt_ryan.png" alt="Matt Ryan" class="preserve"><br>
+                                        <cite>Matt Ryan<span> <br>Director of Technology<br>Western Springs School District 101</span></cite>
+                                    </blockquote>
+                                </div>
+                                <!-- END TESTIMONIAL -->
+                            </div>
+                        </li>
+                        <li>
+                            <!-- START TESTIMONIAL -->
+                            <div class="row testimonial animated" data-animation="fadeInUp">
+                                <div class="col-sm-12">
+                                    <blockquote>
+                                        <p>This is awesome! I love it! Just set it up in like 5 minutes.</p>
+                                        <img src="assets/img/glenn_walker.png" alt="Glenn Walker" class="preserve"><br>
+                                        <cite>Glenn Walker<span> <br>Director of IT<br>KIPP New Orleans</span></cite>
+                                    </blockquote>
+                                </div>
+                                <!-- END TESTIMONIAL -->
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- END SECTION SPLIT -->
+
+            <!-- START SECTION SPLIT -->
+            <div class="section-split partners ">
+                <div class="container">
+                    <!-- START PARTNERS -->
+                    <div class="row animated" data-animation="fadeInUp">
+						<div class="col-sm-4">
+                         	<p style="text-align:left; font-size:1.3em;">Partners</p>
+                            
+                            <div class="col-sm-7 verizon">
+                                <img alt="Partners Verizon" src="assets/img/verizon.jpg"/>
+                            </div>
+                            <div class="col-sm-5 verizon">
+                                <img alt="Partners Setda" src="assets/img/setda.jpg"/>
+                            </div>
+                           
+                            
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-7">
+                        	<p style="text-align:left; font-size:1.3em;"> As seen on </p>
+                            <div class="col-sm-4 tcrunch">
+                               <img alt="As featured in TechCrunch" src="assets/img/techcrunch.jpg"/>
+                            </div>
+                            <div class="col-sm-3 edsurge">
+                                <img alt="As featured in EdSurge" src="assets/img/edSurge.jpg"/>
+                            </div>
+                            <div class="col-sm-4 edweek">
+                                <img alt="As featured in EdWeek" src="assets/img/educationweek.jpg"/>
+                            </div>
+                            
+                        </div>
+                      
+                  
+                    <!-- END PARTNERS -->
+                    </div>
+                </div>
+            </div>
+            <!-- END SECTION SPLIT -->
+        </section>
+        <!-- END MAIN CONTENT -->
+
+            <!--START LOGIN -->
+            <div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+		<form action = "/app/backend/_loginsso_m" method="post" name="loginForm" id="loginForm">
+                    <div class="google-login col-sm-12 centered">
+                        <img alt="Login to Google Apps Single Sign On" src="http://devwww3.securly.com/assets/img/gafe_logo.png"><br>
+                        <input type="text" name="domain" placeholder="Google Apps Domain" id="cemail" min-length="2" required/>
+                        
+                    </div>  
+                    <br>
+                            <button class="button-inverted green" onclick="document.loginForm.submit();">Submit</button>
+                        
+                </form>
+            </div>
+            <!--END LOGIN -->
+
+            <!--START WHITEPAPER FORM -->
+            <div id='whitepaper_inline' class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+
+                <!--form real content starts here-->
+                <div class="contact_contentarea">
+                    <h2>Sign up for the White Paper</h2>
+
+                    <div class="contact_formarea">
+              
+                       <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="white_paper">
+                                            <input type=hidden name="oid" value="00D70000000Mosy">
+                                            <input type=hidden name="retURL" value="http://devwww3.securly.com/app/thankyou">
+                                            <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="white_paper">
+
+                            <div class="contact_formarea col1">
+                                        <ul>
+					   <li>
+                                                <span class="label">Email</span>
+                                                <input class="text" type="text" name="email" placeholder="eg: admin@unifiedschool.org"/>
+                                            </li>
+                                           <li>
+                                                <span  class="label">Referral Source</span>
+                                                <select id="lead_source" class="text" type="text" name="lead_source" style="width: 240px;"/>
+                                                   <option value="">None</option>
+                                                    <option value="Advertisement">Advertisement</option>
+                                                    <option value="Social Media">Social Media</option>
+                                                    <option value="Web/SEO Content">Web Search</option>
+                                                    <option value="Word of mouth (Buzz)">Word of mouth</option>
+                                                    <option value="Direct Mail">Direct Mail</option>
+                                                    <option value="Magazine">Magazine</option>
+                                                    <option value="Online Forum">Online Forum</option>
+                                                    <option value="Inside/Direct">Sales Rep</option>
+                                                    <option value="RFP">RFP</option>
+                                                    <option value="Affiliate/Reseller/Partner">Affiliate/Reseller/Partner</option>
+                                                    <option value="Open Webinar">Open Webinar</option>
+                                                    <option value="Trade Show">Trade Show</option>
+                                                 </select>
+                                            </li>
+
+                                       </ul>
+                                    </div>
+
+                                    <!--div class="contact_formarea col2">
+                                           <ul>
+                                        </ul>
+                                    </div-->
+
+                                    <div class="submit_panel" >
+                                            <input type="submit" class="button blue requestquote_btn button-inverted" name="submit" value="Submit" onClick="javascript:submit_email('white_paper');" />
+                                    </div>
+                                </form>
+
+
+
+
+
+
+                            </div>
+                        </div>
+                        <!--form real content ends here-->
+                    </div>
+            <!--END WHITEPAPER FORM -->
+
+
+            <!--START NEWSLETTER FORM -->
+            <div id='freetrial_inline' class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+
+                <!--form real content starts here-->
+                <div class="contact_contentarea">
+                    <h2>Sign up for our Newsletter</h2>
+
+                    <div class="contact_formarea">
+              
+                       <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="news_letter">
+                                            <input type=hidden name="oid" value="00D70000000Mosy">
+                                            <input type=hidden name="retURL" value="http://devwww3.securly.com/app/thankyou">
+                                            <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="news_letter">
+
+                            <div class="contact_formarea col1">
+                                        <ul>
+                                            <li>
+                                                <span class="label">Email</span>
+                                                <input class="text" type="text" name="email" placeholder="eg: admin@unifiedschool.org"/>
+                                            </li>
+                                           <li>
+                                                <span  class="label">Referral Source</span>
+                                                <select id="lead_source" class="text" type="text" name="lead_source" style="width: 240px;"/>
+                                                   <option value="">None</option>
+                                                    <option value="Advertisement">Advertisement</option>
+                                                    <option value="Social Media">Social Media</option>
+                                                    <option value="Web/SEO Content">Web Search</option>
+                                                    <option value="Word of mouth (Buzz)">Word of mouth</option>
+                                                    <option value="Direct Mail">Direct Mail</option>
+                                                    <option value="Magazine">Magazine</option>
+                                                    <option value="Online Forum">Online Forum</option>
+                                                    <option value="Inside/Direct">Sales Rep</option>
+                                                    <option value="RFP">RFP</option>
+                                                    <option value="Affiliate/Reseller/Partner">Affiliate/Reseller/Partner</option>
+                                                    <option value="Open Webinar">Open Webinar</option>
+                                                    <option value="Trade Show">Trade Show</option>
+                                                 </select>
+                                            </li>
+
+                                       </ul>
+                                    </div>
+
+                                    <!--div class="contact_formarea col2">
+                                           <ul>
+                                        </ul>
+                                    </div-->
+                                    <div class="submit_panel" >
+                                            <input type="submit" class="button blue requestquote_btn button-inverted" name="submit" value="Submit" onClick="javascript:submit_email('news_letter');" />
+                                    </div>
+                                </form>
+
+
+
+
+
+
+                            </div>
+                        </div>
+                        <!--form real content ends here-->
+                    </div>
+            <!--END NEWSLETTER FORM -->
+
+            <!-- START LEARN MORE -->
+            <div id='learn-more-form' class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+
+                <!--form real content starts here-->
+                <div class="contact_contentarea">
+                    <h2>Learn More</h2>
+
+                    <div class="contact_formarea">
+
+                        <form name="learn_more" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                                    <input type=hidden name="oid" value="00D70000000Mosy">
+                                    <input type=hidden name="retURL" value="http://devwww3.securly.com/app/thankyou">
+                                    <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="learn_more">
+
+                             <div class="contact_formarea col1">
+                                <ul>
+                                    <li>
+                                        <span class="label">First Name</span>
+                                        <input id="first_name" class="text" type="text"  name="first_name" />
+                                    </li>
+                                    <li>
+                                        <span class="label">Last Name</span>
+                                        <input id="last_name" class="text" type="text"  name="last_name" />
+
+                                    </li>
+
+                                    <li>
+                                        <span class="label">Phone Number</span>
+                                        <input id="phone" class="text" type="text" name="phone" placeholder="eg: 1-408-000-2854"/>
+                                    </li>
+                                     <li>
+                                        <span class="label">Work Email</span>
+                                        <input id="email" class="text" type="text" name="email" placeholder="eg: admin@unifiedschool.org"/>
+                                    </li>
+                                   <li>
+                                        <span  class="label">Referral Source</span>
+                                        <select id="lead_source" class="text" type="text" name="lead_source" style="width: 240px; margin-bottom:20px;"/>
+                                           <option value="">None</option>
+                                            <option value="Advertisement">Advertisement</option>
+                                            <option value="Social Media">Social Media</option>
+                                            <option value="Web/SEO Content">Web Search</option>
+                                            <option value="Word of mouth (Buzz)">Word of mouth</option>
+                                            <option value="Direct Mail">Direct Mail</option>
+                                            <option value="Magazine">Magazine</option>
+                                            <option value="Online Forum">Online Forum</option>
+                                            <option value="Inside/Direct">Sales Rep</option>
+                                            <option value="RFP">RFP</option>
+                                            <option value="Affiliate/Reseller/Partner">Affiliate/Reseller/Partner</option>
+                                            <option value="Open Webinar">Open Webinar</option>
+                                            <option value="Trade Show">Trade Show</option>
+                                         </select>
+                                    </li>
+
+                                    <li>
+                                        <span class="label">Square root of 4?</span>
+                                        <input class="text" type="text" name="sqrt"/>
+
+                                    </li>
+                               </ul>
+                            </div>
+
+                            <!--div class="contact_formarea col2">
+                                   <ul>
+                                </ul>
+                            </div-->
+                            <div class="submit_panel" >
+                                    <input type="submit" class="button blue requestquote_btn button-inverted" name="submit" value="Submit" onClick="javascript:submit_email('learn_more');" />
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <!--form real content ends here-->
+        </div>
+    </div>
+
+            <!-- END LEARN MORE -->
+
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHU2q81-hmoEP5UQ0W5qriGM4HYwasY0Y&amp;sensor=false"></script>
+        <script src="js/vendor/retina-1.1.0.min.js"></script>
+        <script src="js/vendor/jquery.easing.1.3.js"></script>
+        <script src="js/vendor/jquery.animate-enhanced.min.js"></script>
+        <script src="js/vendor/jquery.isotope.min.js"></script>
+        <script src="js/vendor/jquery.flexslider-min.js"></script>
+        <script src="js/vendor/jquery.parallax-1.1.3.js"></script>
+        <script src="js/vendor/jquery.placeholder.js"></script>
+        <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+        <script src="js/vendor/waypoints.min.js"></script>
+        <script src="js/vendor/jquery.superslides.min.js"></script>
+        <script src="js/vendor/jquery.fitvids.js"></script>
+        <script src="js/vendor/spin.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.numeric.js"></script>
+        <script src="js/vendor/jquery.validate.min.js"></script>
+        <script src="js/vendor/jquery.form.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="js/vendor/respond.min.js"></script>
+        <![endif]-->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+
+        <!-- START FOOTER -->
+        <footer class="page-footer">
+            <a href="#top" class="to-top icon-arrow-up8"></a>
+            <div class="footer-row container">
+                <div class="row">
+
+                    <div class="col-sm-7 footer-menu">
+                        <div class="widget">
+                            <ul class="link-list">
+                            <li>
+                                <a href="http://securly.zendesk.com" target="_blank">Support</a>
+                            </li>
+                                <li>
+                                    <a href="/contact">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="/news">News</a>
+                                </li>
+                                <li>
+                                    <a href="/resources">Resources</a>
+                                </li>
+                                <li>
+                                    <a href="/about">About</a>
+                                </li>
+                                <li>
+                                    <a href="http://blog.securly.com" target="_blank">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="/terms">Terms</a>
+                                </li>
+                                <li>
+                                    <a href="/privacy">Privacy</a>
+                                </li>
+                            </ul>
+                            <p class="disclaimer">&copy; Copyright Securly Inc, 2014</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 footer-contact">
+                        <div class="widget">
+                            <h4 class="widget-title">Get in touch.</h4>
+                            <address>
+                                <a href="tel:18557328759"><span class="address-item icon-mobile">1-855-SECURLY</span></a>
+                            </address>
+
+                            <p class="social-icons">
+                                <a href="http://twitter.com/securlyinc" class="fa fa-twitter circle-border" target="_blank"></a>
+                                <a href="http://facebook.com/securlyinc" class="fa fa-facebook circle-border" target="_blank"></a>
+                                <a href="http://plus.google.com/116997641020146060034" class="fa fa-google-plus circle-border" target="_blank"></a>
+                                <a href="mailto:sales@securly.com" class="fa fa-envelope-o circle-border" target="_blank"></a>
+                            </p>
+                        </div>
+                    </div>
+        </footer>
+        <!-- END FOOTER -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-31418916-2', 'securly.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+    </body>
+</html>
