@@ -76,10 +76,12 @@
         });
 
         $("#reset-password").submit(function(e){  
-            console.log('click');
+            if ($('#confirm-email').val() != '') {
+                return false;
+            }
             $('.pass-error').remove();
             if($('#password-reset').val() != $('#password-reset-conf').val()) {
-                console.log('Add error maessage');
+                console.log('Add error message');
                 return false;
             };
             var token = getUrlParameter('token');
@@ -93,13 +95,17 @@
                     url: gUrlHome + "/_passwordReset",
                     data: {password: $('#password-reset').val(), token: token},
                     complete: function(xhr, textStatus){ 
+                        console.log(xhr, textStatus, 'status');
                         if(xhr.status == 200) {
                             /*go to login page*/
-                            /*window.location.href('/');*/
+                            window.location.href= '/';
                             /*document.getElementById('login-btn').click();*/
                         } else if (xhr.status == 500) {
                             $('.forgot-password').append('<span class="pass-error">Inncorrect email or password</span>');
                         }
+                    },
+                    success: function(xhr, textStatus){ 
+                        console.log(xhr, textStatus, 'status scuccs');
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
                            
