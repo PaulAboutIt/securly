@@ -62,7 +62,6 @@
                             $('#reset-login').append('<span class="pass-error">an email has been sent to' + $('#cemail').val() + '</span><br><span>Please click the link in that email to reset your password in the next 72 hours.</span><br><button onclick="window.location.reload()">Refresh and Login</button>');
                             $('#reset-password-button').remove();
                             $('.reset-input').remove();
-                            
                         } else if (xhr.status == 500) {
                             $('.forgot-password').append('<span class="pass-error">Inncorrect email or password</span>');
                         }
@@ -81,15 +80,16 @@
             }
             $('.pass-error').remove();
             if($('#password-reset').val() != $('#password-reset-conf').val()) {
-                console.log('Add error message');
+                $('#reset-password').append('<span class="error" style="color:red">Password mismatch</span>');
                 return false;
             };
-            var token = getUrlParameter('token');
-            if(!token) {
-                window.location.href= './app/get-stared';
-            }
+            
             var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
             if (re.test($('#password-reset').val()) && e.target.checkValidity()) {
+                var token = getUrlParameter('token');
+                if(!token) {
+                    window.location.href="/app/#/";
+                }
                 $.ajax({
                     type: "POST",
                     url: gUrlHome + "/_passwordReset",
@@ -98,7 +98,7 @@
                         console.log(xhr, textStatus, 'status');
                         if(xhr.status == 200) {
                             /*go to login page*/
-                            window.location.href= '/';
+                            window.location.href="/app/#/";
                             /*document.getElementById('login-btn').click();*/
                         } else if (xhr.status == 500) {
                             $('.forgot-password').append('<span class="pass-error">Inncorrect email or password</span>');
@@ -111,6 +111,9 @@
                            
                     }
                   });
+            } else if (!re.test($('#parent-password').val())){
+                $('#reset-password').append('<span class="error" style="color:red">Password must contain at least one capital and one lowercase letter along with a number.</span>');
+                
             }
             return false;
         });
@@ -131,7 +134,7 @@
                     complete: function(xhr, textStatus){ 
                         console.log(xhr, textStatus);
                         if(xhr.status == 200) {
-                            window.location.href= '/app/#/getstarted';
+                            window.location.href= '/app/#/';
                         }
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
