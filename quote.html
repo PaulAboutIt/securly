@@ -1,58 +1,10 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<?php
 
-        <title>Securly - Web Filtering 2.0 For Schools</title>
+require_once('includes/utilities.php');
 
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+Utilities::generate_header();
 
-        <link rel="stylesheet" type="text/css" href="css/ss-gizmo.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/icomoon.css">  
-        <link rel="stylesheet" href="css/colors/lime.css">
-        <link rel="stylesheet" href="css/colors/lime.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
-
-        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
-    </head>
-    <body>
-        <!-- START HEADER -->
-        <header id="top" class="page-top">
-            <!-- START HEADER TOP -->
-            <div class="head-top">
-                <div class="container">
-                    <a href="index.html" class="head-logo"></a>
-
-                    <span class="nav-trigger fa fa-bars"></span>
-
-                    <!-- START MAIN NAVIGATION -->
-                    <nav class="main-nav">
-                        <ul>
-                            <!--<li class="active"><a href="index.html">Home</a></li>-->
-                            <li class="nav" aria-haspopup="false">
-                                <a href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="nav" aria-haspopup="true">
-                                <a href="features.html">Features</a>
-                            </li>
-                            <li>
-                                <a href="#" class="login-btn">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- END MAIN NAVIGATION -->
-                </div>
-            </div>
-            <!-- END HEADER TOP -->
+?>
 
             <!-- START PAGE HEADER -->
             <div class="page-head pricing">
@@ -77,16 +29,16 @@
                             <div class="price-line col-sm-4">
                                 <span>$</span><span class="quote-price">0</span><span id="per-year">/year</span><br>
                             </div>    
-                            <a href="signup.html" ><button class="signup-form inverted-button free-trial">Free Trial</button></a><br>
+                            <a href="/signup" ><button class="signup-form inverted-button free-trial">Free Trial</button></a><br>
                             <span class="quote-text">Contact us for details <br>on multi-year discounts</span>
                         </div>
                     </div>
                     <div class="animated col-sm-12 col-md-6 col-md-offset-1 col-sm-offset-0 left" data-animation="fadeInDown">
                         <label>In-School Filtering<br>
-                            <input type="text" id="cemail" class="numeric num-students" min="0" placeholder="Number of Students + Staff">
+                            <input type="text" id="cemail" class="numeric num-students" min="0" placeholder="#Students + #Staff">
                         </label><br>
-                        <label>Take-Home Filtering<br>
-                            <input type="text" id="cemail" class="numeric num-devices" min="0" placeholder="Number of Devices">
+                        <label>Anywhere Filtering<br>
+                            <input type="text" id="cemail" class="numeric num-devices" min="0" placeholder="#Devices">
                         </label><br>
                         <button class="get-quote">Calculate</button>
                         <span class="big-right-arrow">▻</span>
@@ -99,7 +51,7 @@
                             <div class="price-line col-sm-4">
                                 <span>$</span><span class="quote-price">0</span><span id="per-year">/year</span><br>
                             </div>    
-                            <a href="signup.html" ><button class="signup-form inverted-button free-trial">Free Trial</button></a><br>
+                            <a href="/signup" ><button class="signup-form inverted-button free-trial">Free Trial</button></a><br>
                             <span class="quote-text">Contact us for details <br>on multi-year discounts</span>
                         </div>
                     </div>
@@ -107,48 +59,6 @@
             </div>
         </section>
            
-
-        <!-- START FOOTER -->
-        <footer class="page-footer quotes-footer">
-            <div class="container footer-row">
-                <div class="row">
-                    
-                    <div class="col-sm-7 footer-menu">
-                        <div class="widget">
-                            <ul class="link-list">
-  
-                                <li>
-                                    <a href="news.html">News</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <a href="terms.html">Terms</a>
-                                </li>
-                                <li>
-                                    <a href="privacy.html">Privacy</a>
-                                </li>
-                            </ul>
-                            <p class="disclaimer">&copy; Copyright Securly inc, 2014</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-5 footer-contact">
-                        <div class="widget">
-                            <h4 class="widget-title">Get in touch.</h4>
-                            <address>
-                                <a href="tel:18557328759"><span class="address-item icon-mobile">1-855-SECURLY</span></a>
-                            </address>
-
-                            <p class="social-icons">
-                                <a href="http://twitter.com" class="fa fa-twitter circle-border" target="_blank"></a>
-                                <a href="http://facebook.com" class="fa fa-facebook circle-border" target="_blank"></a>
-                                <a href="http://google.com" class="fa fa-google-plus circle-border" target="_blank"></a>
-                                <a href="mailto:support@securly.com" class="fa fa-envelope-o circle-border" target="_blank"></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
                 <div id="signup-form" class="col-sm-10 col-sm-offset-1 mfp-hide">
                 <h3>School Information</h3>
@@ -163,11 +73,11 @@
                     </div>
                     <div class="check col-sm-5">
                         <input type="checkbox" id="c1" class="th-check" name="ccTakeHome" />
-                        <label for="c1"><span></span>Take-Home Filtering</label>
+                        <label for="c1"><span></span>Anywhere Filtering</label>
                     </div>
                     <div class="col-sm-6 check">
                         <input type="checkbox" id="c2" name="ccInSchool" />
-                        <label for="c2"><span></span>IN-School Filtering</label>
+                        <label for="c2"><span></span>In-School Filtering</label>
                     </div>
                     <div class="take-home-options col-sm-12">
                         <div class="col-sm-3 small-check">
@@ -204,22 +114,22 @@
                     </div>
                     <div class="col-sm-10 signup-buttons">    
                         <button type="submit" class="signup-button">Sign up</button>
-                        <a href="index.html"><span class="cancel">Cancel</span></a>
+                        <a href="/"><span class="cancel">Cancel</span></a>
                     </div>
                 </form>
             </div>
             </div>
             <div id="login" class="mfp-hide col-sm-8 col-sm-offset-2 centered">
                 <div class="google-login col-sm-12 centered">
-                    <img src="http://www.securly.com/images/gafe_logo.png"><br>
+                    <img src="http://devwww4.securly.com/assets/img/gafe_logo.png"><br>
                     <input type="text" placeholder="Google Apps ID"/>
                     <a href="#login"><br>
                         <button class="button-inverted green">Submit</button>
                     </a>
                 </div>  
             </div>
-        </footer>
-        <!-- END FOOTER -->
+
+
 
         <script src="js/vendor/jquery-1.11.0.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -244,5 +154,13 @@
         <![endif]-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+<?php
+
+        Utilities::generate_footer();
+
+?>
+
+
     </body>
 </html>

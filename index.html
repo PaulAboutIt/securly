@@ -1,60 +1,216 @@
+
+        <?php
+
+require_once('includes/utilities.php');
+
+Utilities::xs_hdlr();
+
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+	<base href="/">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>Securly - Web Filtering 2.0 for Schools</title>
+        <title>Securly - Web Filtering 2.0 For Schools & Families</title>
 
-        <meta name="description" content="">
+        <meta name="description" content="Securly is a cloud based web filtering & web-analytics engine purpose built for K-12 schools designed to provide seamless web filtering service for chromebook filtering and take home iPad.">
+
+	<META NAME="KEYWORDS" CONTENT="Securly, SECURLY, web analytics, social media analytics, parental control, parental controls, school, block youtube, block facebook, block porn, block adult, web filter, webfiltering, Chromebook, Chromebooks,K-12, K12">	
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" href="css/ss-gizmo.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/icomoon.css">  
+        <link rel="stylesheet" href="css/icomoon.css">
         <link rel="stylesheet" href="css/colors/lime.css">
         <link rel="stylesheet" href="css/colors/lime.css">
         <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/font-awesome.css">
+
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
-        <script>
-            var role = -1;
-        </script>
+        <style>
+        /*COMING SOON BANNER*/
+
+.comingsoon_banner {
+	width:100%;
+	min-height:55px;
+	height:auto;
+	background:#2d3339 !important;
+}
+
+.head-top.cmbanner {
+	padding-top:20px;
+}
+
+.head-top .cm_container {
+    position: relative;
+    display: table;
+    margin:0 auto;
+}
+
+.head-top .cm_container p {
+    color:#bbbbbb;
+    text-align:left;
+    margin:-3px 0 0 0;
+    padding:0 0 0 5%;
+    font-size:1.2em;
+    float:left;
+}
+
+.head-top .cm_container span.logo_name {
+    font-weight:bold;
+}
+
+.head-top .cm_container span.free {
+    font-weight:bold;
+    font-style:italic;
+}
+
+.signup_container {
+    width:auto;
+    height:auto;
+    float:left;
+}
+
+.inside_signup {
+    width:100%;
+    position:relative;	
+}
+
+.inside_signup .signupcontainer {
+    width:600px;
+    margin:0 auto;
+}
+.signup-text{
+    width:400px;
+    height:33px !important;
+    float:left !important;
+    background:#0d0f11 !important;
+    margin:-10px 0 0 30px !important;    
+    border-radius: 5px 0 0 5px !important;
+    border:none !important;
+    box-shadow:none !important;
+    color:#FEF8F8 !important;
+    font-size:1em !important;
+    padding:0 5px 0 7px !important;
+    line-height:40px !important;
+}
+
+.invited-button {
+    width:auto;
+    height:33px !important;
+    float:left !important;
+    background:#328879 !important;
+    margin:-10px 0 0 -3px !important;
+    border-radius: 5px !important;
+    font-size: 14px !important;
+    line-height: normal !important;
+    padding: 10px 20px 0 20px !important;
+    font-family: "HelveticaNeueLT Pro 45 Lt" !important;
+    text-align:center !important;
+    color:#FFF!important;
+    text-decoration:none !important;		
+}
+
+.invited-button:hover {
+    background:#42bca5;
+    text-decoration:none;
+}
+
+.head-top .cm_container a:link, .head-top .cm_container a:visited, .head-top .cm_container a:hover {
+    color:#45bbf9;
+    text-decoration:none;
+}
+        </style>
+        
     </head>
     <body>
+
+<script>
+function submit_email(type)
+{
+
+var firstName = "";
+var lastName = "";
+var phone = "";
+var sqrt = "";
+var ipaddress = "";
+var domain = "";
+var email = "";
+var lead_source = "";
+var promo= "";
+
+if (type == 'freemium_invite')
+{
+        email = document.forms[type]["email"].value;
+        var url = encodeURI("backend/_sendemail?req="+type+"&fn="+firstName+"&ln="+lastName+"&phone="+phone+"&email="+email+"&lead_source="+lead_source+"&ipaddress="+ipaddress+"&domain="+domain+"&sqrt="+sqrt+"&promo="+promo);
+
+
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET", url, false);
+        xmlhttp.send();
+        return;
+}
+
+if (type == 'learn_more')
+{
+        firstName = document.forms[type]["first_name"].value;
+        lastName = document.forms[type]["last_name"].value;
+        phone = document.forms[type]["phone"].value;
+        sqrt = document.forms[type]["sqrt"].value;
+}
+
+if (type == 'free_trial')
+{
+        ipaddress = document.forms[type]["00N70000003Rb1w"].value;
+        domain = document.forms[type]["00N70000003Rb21"].value;
+}
+
+        email = document.forms[type]["email"].value;
+        lead_source = document.forms[type]["lead_source"].value;
+
+        var url = encodeURI("backend/_sendemail?req="+type+"&fn="+firstName+"&ln="+lastName+"&phone="+phone+"&email="+email+"&lead_source="+lead_source+"&ipaddress="+ipaddress+"&domain="+domain+"&sqrt="+sqrt+"&promo="+promo);
+
+
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET", url, false);
+        xmlhttp.send();
+
+}
+</script>
+
         <!-- START HEADER -->
         <header id="top" class="page-top">
             <!-- START HEADER TOP -->
-            <div class="head-top">
+            <div class="head-top" style="top:67px;">
                 <div class="container">
-                    <a href="index.html" class="head-logo">
-                        <!--<img src="assets/img/logo.svg" alt="Securly" height="30px">-->
-                    </a>
+                    <a href="/" class="head-logo"></a>
 
                     <span class="nav-trigger fa fa-bars"></span>
 
                     <!-- START MAIN NAVIGATION -->
                     <nav class="main-nav">
                         <ul>
-                            <!--<li class="active"><a href="index.html">Home</a></li>-->
-                            <li class="nav" aria-haspopup="false">
+                           <li class="nav" aria-haspopup="true">
                                 <a href="parents.html">Parents</a>
                             </li>
-                            <li class="nav" aria-haspopup="false">
-                                <a href="features.html">Features</a>
+                            <li class="nav" aria-haspopup="true">
+                                <a href="/allfeatures">Features</a>
                             </li>
-                            <li class="nav" aria-haspopup="false">
-                                <a href="resources">Resources</a>
+                            <li class="nav" aria-haspopup="true">
+                                <a href="/resources">Resources</a>
                             </li>
-                            <li class="nav" aria-haspopup="false">
-                                <a href="news.html">News</a>
+                            <li class="nav" aria-haspopup="true">
+                                <a href="/news">News</a>
                             </li>
-                            <li class="nav" aria-haspopup="false">
-                                <a href="http://blog.securly.com/" target="_blank">Blog</a>
+                            <li class="nav" aria-haspopup="true">
+                                <a href="http://blog.securly.com" target="_blank">Blog</a>
                             </li>
                             <li>
                                 <a href="#" class="login-btn">Login</a>
@@ -70,6 +226,7 @@
                                     <li><a href="parentsignup.html"><i class="ss ss-home"></i>Parent</a></li>
                                 </ul>
                             </li>
+                            
                         </ul>
                     </nav>
                     <!-- END MAIN NAVIGATION -->
@@ -77,10 +234,33 @@
             </div>
             <!-- END HEADER TOP -->
 
+                <!-- Coming Soon -->
+
+        <div class="comingsoon_banner">
+          <div class="head-top cmbanner">
+                <div class="cm_container">
+                    <div class="signup_container col-sm-6">
+                            <p>Yes. You heard right. <a href="/features/free"><span class="logo_name">Securly</span><span class="free">Free</span> is coming soon!</a></p>
+                    </div>
+                    <div class="signup_container col-sm-6">
+                     	<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="freemium_invite">
+                                            <input type=hidden name="oid" value="00D70000000Mosy">
+                                            <input id="hostName" type=hidden name="retURL" value="http://devwww4.securly.com/features/freethankyou">
+                                            <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="freemium_invite">
+
+                            <input type="text" name="email" placeholder="Your Email" style="height:33px"class="signup-text">
+                            <a class="invited-button" href="javascript:;" onclick="javascript:submit_email('freemium_invite');document.freemium_invite.submit();">Get Invited!</a>
+                        </form>
+                    </div>
+                </div>
+          </div>
+        </div>
+
+        
             <!-- START MAIN SLIDER -->
             <div id="main-superslides" class="main-slider superslides">
                 <div class="video-container">
-                    <video autoplay="true" loop="true" poster="assets/video/hero.jpg" class="desktop-only">
+                    <video autoplay loop poster="assets/video/hero.jpg" class="desktop-only">
                         <source src="assets/video/hero.mp4" type="video/mp4"/>
                         <source src="assets/video/hero.webm" type="video/webm"/>
                         <source src="assets/video/hero.ogv" type="video/ogg"/>
@@ -94,7 +274,7 @@
                             </h2>
                             <button href="signup.html" class="get-started" data-animation="bounceIn">Get Started - Free Forever!</button>
                             <div class="parent-info">
-                               <img src="assets/img/parents_icon.svg" class="parents-icon"/>
+                               <img src="assets/img/parents_icon.png" class="parents-icon"/>
                                 <h3>Parents</h3>
                                 <p>Shape and secure <br>your kids online education</p>
                                 <a href="parents.html">
@@ -123,45 +303,47 @@
            
 
             <!-- START SECTION SPLIT -->
-            <div class="section-split features">
+            <div class="section-split features" style="background: #FFF;">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 centered animated" data-animation="fadeInLeft">
                             <br>
-                            <p><a href="https://vimeo.com/84128173" class="popup-iframe"><img src="assets/img/feature-list1.jpg" alt="Play video"></a></p>
+                            <p><a href="/features/anydeviceanywhere"><img style="background: #fff;" alt="Cloud based web filtering and analytics for chromebooks, ipads, windows and macs" src="assets/img/feature-list1-whitebg.png"></a></p>
                             <br>
                         </div>
                         <div class="col-sm-5 col-sm-offset-1 animated" data-animation="fadeInRight">
-                            <h2 class="feature-title">Any Device. Anywhere.</h2>
+			    <a href="/features/anydeviceanywhere" class="learn-more">
+	                            <h2 class="feature-title">Any Device. Anywhere.</h2>
+			    </a>
                             <br>
                             <!-- START FEATURE -->
                             <div class="feature-box short fa fa-cloud">
-                                <h4>Unified In-school & Take-home <br>Cloud based Filtering</h4>
-                                <p>Easy to use with intuitive UI, makes it easier for sales associates to operate the POS.</p>
+                                <h4>Cloud-based + Unified Filtering</h4>
+                                <p>Delivered through the cloud, Securly provides both in-school and take-home filtering through the same admin console.</p>
                             </div>
                             <!-- END FEATURE -->
 
                             <!-- START FEATURE -->
                             <div class="feature-box short chrome-icon">
                                 <h4>1:1 Chromebooks</h4>
-                                <p>Securly is the first and only web-filter to allow zero-touch filtering of 1:1 take home Chromebooks. Policy is applied seamlessly based on the user.</p>
+                                <p>Zero-touch filtering of 1:1 take home Chromebooks using a Chrome extension that takes seconds to deploy. No proxying. No SSL certificates.</p>
                             </div>
                             <!-- END FEATURE -->
 
                             <!-- START FEATURE -->
                             <div class="feature-box short fa fa-laptop">
-                                <h4>1:1 Laptops and Tablets</h4>
-                                <p>Securly provides ubiquitous protection of take-home iPad, Windows, Mac, Android and Chromebook devices.</p>
+                                <h4>1:1 iPads, Windows, & Macs</h4>
+                                <p>Support for any heterogeneous mix of 1:1 devices including iPads, Windows, Macs, and Android/Nexus tablets.</p>
                             </div>
                             <!-- END FEATURE -->
 
                             <!-- START FEATURE -->
                             <div class="feature-box short fa fa-home">
                                 <h4>Take-home Policies</h4>
-                                <p>Securly is the first and the only web-filter to provide relaxed policies on take-home 1:1 devices when the devices are off school premises.</p>
+                                <p>Location based policies for take-home 1:1 devices when the devices are off school premises.</p>
                             </div>
                             <!-- END FEATURE -->
-                            <a href="safe-search.html" class="learn-more">Learn More <span class="fa fa-arrow-right"></span></a>
+                            <a href="/features/anydeviceanywhere" class="learn-more">Learn More <span class="fa fa-arrow-right"></span></a>
                         </div>
                     </div>
                 </div>
@@ -169,16 +351,16 @@
                     <div class="row">
                         <div class="col-sm-6 centered animated right-feature" data-animation="fadeInRight">
                             <br>
-                            <p class="safe-youtube"><a href="safe-search.html"><img src="assets/img/feature-list-items4.jpg"/></a></p>
+                            <p class="safe-youtube"><a href="/features/safesearchyoutube"><img alt="Safe Google, Bing and Yahoo Search and Safe YouTube" src="assets/img/feature-list-items1.jpg"/></a></p>
                             <br>
                         </div>
                         <div class="col-sm-5 col-sm-offset-1 animated" data-animation="fadeInLeft">
                             <div class="feature-box">
-                                <a href="safe-search.html" class="learn-more">
-                                    <h4 class="feature-title">Safe Search and Youtube</h4>
+                                <a href="/features/safesearchyoutube" class="learn-more">
+                                    <h2 class="feature-title">Safe Search and Youtube</h2>
                                 </a>    
-                                <p>Admins can optionally enforce the safety-mode on YouTube to provide an open but safe environment where videos flagged by the YouTube community are filtered out.</p>
-                                <a href="safe-search.html" class="learn-more">Learn More <span class="fa fa-arrow-right"></span></a>
+                                <p>Admins can optionally enforce the safety-mode on Google, Bing and Yahoo search engines. For YouTube, schools can have an open but safe environment where videos flagged by the YouTube community are filtered out.</p>
+                                <a href="/features/safesearchyoutube" class="learn-more">Learn More <span class="fa fa-arrow-right"></span></a>
                             </div>
                         </div> 
                     </div>
@@ -189,11 +371,11 @@
                                 <div class="row">
                                      <div class="col-sm-6 centered animated" data-animation="fadeInLeft">
                                         <br>
-                                        <p><img src="assets/img/feature-list6.jpg" alt="Granular Policies"></p>
+                                        <p><a href="/features/granulark12policies"><img src="assets/img/feature-list6.jpg" alt="Granular Policies"></a></p>
                                         <br>
                                     </div>
                                     <div class="col-sm-5 col-sm-offset-1 animated" data-animation="fadeInRight">
-                                        <a href="safe-search.html" class="learn-more">
+                                        <a href="/features/granulark12policies" class="learn-more">
                                             <h2 class="feature-title">Granular K-12 Policies.</h2>
                                         </a>
                                         <br>
@@ -207,24 +389,24 @@
                                         <!-- START FEATURE -->
                                         <div class="feature-box short ss-users">
                                             <h4>Per User Policies</h4>
-                                            <p>Easy to use with intuitive UI, makes it easier for sales associates to operate the POS.</p>
+                                            <p>Through the GApps Single Sign On, Securly provides policies mapped to individual Organizational Units.</p>
                                         </div>
                                         <!-- END FEATURE -->
 
                                         <!-- START FEATURE -->
                                         <div class="feature-box short fa fa-list-ul">
                                             <h4>Granular White & Black Lists</h4>
-                                            <p>Securly provides downloadable trail of student activity and teacher whitelisting for offline analysis.</p>
+                                            <p>White and Black lists can be created for entire district, individual schools or even individual Org Units. </p>
                                         </div>
                                         <!-- END FEATURE -->
 
                                         <!-- START FEATURE -->
                                         <div class="feature-box short fa ss-lock">
                                             <h4>Whitelist-only Mode</h4>
-                                            <p>Easy to use with intuitive UI, makes it easier for sales associates to operate the POS.` </p>
+                                            <p>Admins can create whitelisted environments for certain Org Units (e.g. for online tests or elementary students) for added security.</p>
                                         </div>
                                         <!-- END FEATURE -->
-                                        <a href="safe-search.html" class="learn-more">Learn More <span class="fa fa-arrow-right"></span></a>
+                                        <a href="/features/granulark12policies" class="learn-more">Learn More <span class="fa fa-arrow-right"></span></a>
                                     </div>
                                 </div>
                                 <br><br>
@@ -237,18 +419,20 @@
                         
                         <div class="col-sm-4 animated centered col-sm-offset-4" data-animation="fadeInUp">
                             <div class="feature-box centered">
-                                <h4 class="feature-title">Powerful Student Achievement Analytics</h4>
-                                <p>Securly protects students on computers throughout the school while giving them safe access to 21st century learning tools like YouTube, Google and Wikipedia.</p>
-                                <a href="safe-search.html" class="learn-more">Learn More <span class="fa fa-arrow-right"></span></a>
+				 <a href="/features/achievementanalytics" class="learn-more">
+	                                <h4 class="feature-title">Powerful Student Achievement Analytics</h4>
+				 </a>
+                                <p>Cloud based Big Data analytics designed to improve student productivity and achievement. Admins and Educators can now analyze student activity across educational sites and time sinks, in-school and at-home, across all school devices.</p>
+                                <a href="/features/achievementanalytics" class="learn-more">Learn More <span class="fa fa-arrow-right"></span></a>
                             </div>
                         </div> 
              
-                        <p><img class="full-width" src="assets/img/feature-list-items8.jpg"/></p>
+                        <p><a href="/features/achievementanalytics"><img class="full-width" alt="Achievement Analytics" src="assets/img/feature-list-items8.jpg"/></a></p>
              
                     </div>
                     <!-- END FEATURE -->
 
-                <a href="features.html" rel="" title="click to see more features"> 
+                <a href="/allfeatures" rel="" title="click to see more features"> 
                     <div class="centered more-features">
                         <div class="fa fa-arrow-right circle-border"></div><br>
                         <span>More Features</span>
@@ -329,8 +513,8 @@
                                 <div class="col-sm-12">
 
                                     <blockquote>
-                                        <p>Securly is hands down the best web-filter for K-12. It is very easy to use and even easier to implement. I am happy to report that Securly exceeded expectations.</p>
-                                        <img src="assets/img/testimonial1.png" alt="Brian Sullivan" class="preserve"><br>
+                                        <p>Securly is hands down the best web-filter for K-12. It is very easy to use and even easier to implement.</p>
+                                        <img src="assets/img/brian_sullivan.png" alt="Brian Sullivan" class="preserve" style="background-color: red; height: 100px; width: 100px; border-radius:60px; -moz-border-radius:60px; -webkit-border-radius:60px;" ><br>
                                         <cite>Brian Sullivan<span> <br>Senior Systems Administrator<br>Aspire Public Schools</span></cite>
                                     </blockquote>
                                 </div>
@@ -342,9 +526,9 @@
                             <div class="row testimonial animated" data-animation="fadeInUp">
                                 <div class="col-sm-12">
                                     <blockquote>
-                                        <p>I too think this is an amazing product and would suggest it for any school using internet technology.</p>
-                                        <img src="assets/img/testimonial2.png" alt="Billy Sullivan" class="preserve"><br>
-                                        <cite>Brian Sullivan<span> <br>Senior Systems Administrator<br>Aspire Public Schools</span></cite>
+                                        <p>When we pulled our appliance and cut in Securly, multiple users actually asked me - "Wow Tim how did you make the network so much faster?"</p>
+                                        <img src="/assets/img/tim_white.png" alt="Tim White" class="preserve"><br>
+                                        <cite>Tim White<span> <br>Director of Technology<br>Webb City R-VII School District</span></cite>
                                     </blockquote>
                                 </div>
                                 <!-- END TESTIMONIAL -->
@@ -355,14 +539,41 @@
                             <div class="row testimonial animated" data-animation="fadeInUp">
                                 <div class="col-sm-12">
                                     <blockquote>
-                                        <p>If you act now we will throw in an extra securly for the same price. But that's not all, we also have a juicer and knife set.</p>
-                                        <img src="assets/img/testimonial2.png" alt="Billy Sullivan" class="preserve"><br>
-                                        <cite>Brian Sullivan<span> <br>Senior Systems Administrator<br>Aspire Public Schools</span></cite>
+                                        <p>Securly has transformed the way we use technology and has opened up the Internet to be a wonderful and fantastic learning tool while keeping our kids safe.</p>
+                                        <img src="assets/img/gary_spracklen.png" alt="Gary Spracklen" class="preserve"><br>
+                                        <cite>Gary Spracklen<span><br>Director of Digital Learning and Innovation<br>IPACA (UK)</span></cite>
                                     </blockquote>
                                 </div>
                                 <!-- END TESTIMONIAL -->
                             </div>
                         </li>
+                        <li>
+                            <!-- START TESTIMONIAL -->
+                            <div class="row testimonial animated" data-animation="fadeInUp">
+                                <div class="col-sm-12">
+                                    <blockquote>
+                                        <p>Why didn't I hear about this before? Probably because I spent so much of my time sinking $$$ into [appliance vendor]!"</p>
+                                        <img src="assets/img/matt_ryan.png" alt="Matt Ryan" class="preserve"><br>
+                                        <cite>Matt Ryan<span> <br>Director of Technology<br>Western Springs School District 101</span></cite>
+                                    </blockquote>
+                                </div>
+                                <!-- END TESTIMONIAL -->
+                            </div>
+                        </li>
+                        <li>
+                            <!-- START TESTIMONIAL -->
+                            <div class="row testimonial animated" data-animation="fadeInUp">
+                                <div class="col-sm-12">
+                                    <blockquote>
+                                        <p>This is awesome! I love it! Just set it up in like 5 minutes.</p>
+                                        <img src="assets/img/glenn_walker.png" alt="Glenn Walker" class="preserve"><br>
+                                        <cite>Glenn Walker<span> <br>Director of IT<br>KIPP New Orleans</span></cite>
+                                    </blockquote>
+                                </div>
+                                <!-- END TESTIMONIAL -->
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -376,13 +587,13 @@
 
                         <div class="col-sm-12">
                             <div class="col-sm-4 tcrunch">
-                                <img src="assets/img/techcrunch.jpg"/>
+                                <img alt="As seen on TechCrunch" src="assets/img/techcrunch.jpg"/>
                             </div>
                             <div class="col-sm-4 edsurge">
-                                <img src="assets/img/edSurge.jpg"/>
+                                <img alt="As featured in EdSurge" src="assets/img/edSurge.jpg"/>
                             </div>
                             <div class="col-sm-4 edweek">
-                                <img src="assets/img/educationweek.jpg"/>
+                                <img alt="As featured in EdWeek" src="assets/img/educationweek.jpg"/>
                             </div>
                             
                         </div>
@@ -394,55 +605,22 @@
         </section>
         <!-- END MAIN CONTENT -->
 
-        <!-- START FOOTER -->
-        <footer class="page-footer">
-            <a href="#top" class="to-top icon-arrow-up8"></a>
-            <div class="footer-row container">
-                <div class="row">
-                    
-                    <div class="col-sm-7 footer-menu">
-                        <div class="widget">
-                            <ul class="link-list">
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="news.html">News</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <a href="terms.html">Terms</a>
-                                </li>
-                                <li>
-                                    <a href="privacy.html">Privacy</a>
-                                </li>
-                            </ul>
-                            <p class="disclaimer">&copy; Copyright Securly inc, 2014</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-5 footer-contact">
-                        <div class="widget">
-                            <h4 class="widget-title">Get in touch.</h4>
-                            <address>
-                                <a href="tel:18557328759"><span class="address-item icon-mobile">1-855-SECURLY</span></a>
-                            </address>
-
-                            <p class="social-icons">
-                                <a href="http://twitter.com" class="fa fa-twitter circle-border" target="_blank"></a>
-                                <a href="http://facebook.com" class="fa fa-facebook circle-border" target="_blank"></a>
-                                <a href="http://google.com" class="fa fa-google-plus circle-border" target="_blank"></a>
-                                <a href="mailto:support@securly.com" class="fa fa-envelope-o circle-border" target="_blank"></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!--START OLD SCHOOL LOGIN -->
+            <!--<div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+		<form action = "/app/backend/_loginsso_m" method="post" name="loginForm" id="loginForm">
+                    <div class="google-login col-sm-12 centered">
+                        <img alt="Login to Google Apps Single Sign On" src="http://devwww4.securly.com/assets/img/gafe_logo.png"><br>
+                        <input type="text" name="domain" placeholder="Google Apps Domain" id="cemail" min-length="2" required/>
+                        
+                    </div>  
+                    <br>
+                            <button class="button-inverted green" onclick="document.loginForm.submit();">Submit</button>
+                        
+                </form>
+            </div>-->
+            <!--END OLD SCHOOL LOGIN -->
             
-            <!--####################### START POPUP MODULES #######################-->
-            
-            <!--START LOGIN -->
+            <!--START PARENT LOGIN -->
             <div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
                 <div id="normal-login">
                    <h3>Login to your Securly Account</h3>
@@ -467,7 +645,7 @@
                     </form>
                 </div>
             </div>
-            <!--END LOGIN -->
+            <!--END PARENT LOGIN -->
             
             <!--START SIGNUP POPUP -->
             <div id="sign-up" class="mfp-hide col-sm-4 col-sm-offset-4">
@@ -500,23 +678,14 @@
 
                     <div class="contact_formarea">
               
-                       <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="free_trial">
+                       <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="white_paper">
                                             <input type=hidden name="oid" value="00D70000000Mosy">
-                                            <input type=hidden name="retURL" value="http://www.securly.com/thankyou">
-                                            <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="free_trial">
+                                            <input type=hidden name="retURL" value="http://devwww4.securly.com/app/thankyou">
+                                            <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="white_paper">
 
                             <div class="contact_formarea col1">
                                         <ul>
-                                            <li>
-                                                <span class="label">Google Apps Domain</span>
-                                                <input class="text" type="text" id="00N70000003Rb21" maxlength="255" name="00N70000003Rb21" placeholder="eg: unifiedschool.com" />
-                                                
-                                            </li>
-                                             <li>
-                                                <span class="label">IP Addresses</span>
-                                                <input class="text" type="text" id="00N70000003Rb1w" maxlength="255" name="00N70000003Rb1w" placeholder="eg: 200.167.3.23, 200.167.32.45"/>
-                                            </li>
-                                            <li>
+					   <li>
                                                 <span class="label">Email</span>
                                                 <input class="text" type="text" name="email" placeholder="eg: admin@unifiedschool.org"/>
                                             </li>
@@ -546,16 +715,11 @@
                                            <ul>
                                         </ul>
                                     </div-->
+
                                     <div class="submit_panel" >
-                                            <input type="submit" class="button blue requestquote_btn button-inverted" name="submit" value="Submit" onClick="javascript:submit_email('free_trial');" />
+                                            <input type="submit" class="button blue requestquote_btn button-inverted" name="submit" value="Submit" onClick="javascript:submit_email('white_paper');" />
                                     </div>
                                 </form>
-
-
-
-
-
-
                             </div>
                         </div>
                         <!--form real content ends here-->
@@ -572,21 +736,13 @@
 
                     <div class="contact_formarea">
               
-                       <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="free_trial">
+                       <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="news_letter">
                                             <input type=hidden name="oid" value="00D70000000Mosy">
-                                            <input type=hidden name="retURL" value="http://www.securly.com/thankyou">
-                                            <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="free_trial">
+                                            <input type=hidden name="retURL" value="http://devwww4.securly.com/app/thankyou">
+                                            <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="news_letter">
 
                             <div class="contact_formarea col1">
                                         <ul>
-                                            <li>
-                                                <span class="label">Google Apps Domain</span>
-                                                <input class="text" type="text" id="00N70000003Rb21" maxlength="255" name="00N70000003Rb21" placeholder="eg: unifiedschool.com"/>
-                                            </li>
-                                             <li>
-                                                <span class="label">IP Addresses</span>
-                                                <input class="text" type="text" id="00N70000003Rb1w" maxlength="255" name="00N70000003Rb1w" placeholder="eg: 200.167.3.23, 200.167.32.45"/>
-                                            </li>
                                             <li>
                                                 <span class="label">Email</span>
                                                 <input class="text" type="text" name="email" placeholder="eg: admin@unifiedschool.org"/>
@@ -612,16 +768,14 @@
 
                                        </ul>
                                     </div>
-
                                     <!--div class="contact_formarea col2">
                                            <ul>
                                         </ul>
                                     </div-->
                                     <div class="submit_panel" >
-                                            <input type="submit" class="button blue requestquote_btn button-inverted" name="submit" value="Submit" onClick="javascript:submit_email('free_trial');" />
+                                            <input type="submit" class="button blue requestquote_btn button-inverted" name="submit" value="Submit" onClick="javascript:submit_email('news_letter');" />
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                         <!--form real content ends here-->
@@ -639,7 +793,7 @@
 
                         <form name="learn_more" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
                                     <input type=hidden name="oid" value="00D70000000Mosy">
-                                    <input type=hidden name="retURL" value="http://www.securly.com/thankyou">
+                                    <input type=hidden name="retURL" value="http://devwww4.securly.com/app/thankyou">
                                     <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="learn_more">
 
                              <div class="contact_formarea col1">
@@ -738,5 +892,13 @@
         <![endif]-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+<?php
+
+	Utilities::generate_footer();
+
+?>
+
+
     </body>
 </html>

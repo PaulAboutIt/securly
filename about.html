@@ -1,64 +1,14 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<?php
 
-        <title>Securly - Web Filtering 2.0 For Schools</title>
+require_once('includes/utilities.php');
 
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+Utilities::generate_header();
 
-        <link rel="stylesheet" type="text/css" href="css/ss-gizmo.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/icomoon.css">  
-        <link rel="stylesheet" href="css/colors/lime.css">
-        <link rel="stylesheet" href="css/colors/lime.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
-
-        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
-    </head>
-    <body>
-        <!-- START HEADER -->
-        <header id="top" class="page-top">
-            <!-- START HEADER TOP -->
-            <div class="head-top">
-                <div class="container">
-                    <a href="index.html" class="head-logo"></a>
-
-                    <span class="nav-trigger fa fa-bars"></span>
-
-                    <!-- START MAIN NAVIGATION -->
-                    <nav class="main-nav">
-                        <ul>
-                            <!--<li class="active"><a href="index.html">Home</a></li>-->
-                            <li class="nav" aria-haspopup="false">
-                                <a href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="nav" aria-haspopup="true">
-                                <a href="features.html">Features</a>
-                            </li>
-                            <li>
-                                <a href="#" class="login-btn">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- END MAIN NAVIGATION -->
-                </div>
-            </div>
-            <!-- END HEADER TOP -->
-
+?>
             <!-- START PAGE HEADER -->
             <div class="page-head team">
                 <div class="container">
-                    <h2 class="page-title animated" data-animation="fadeInDown">Team</h2>
-                    <h3 class="page-subtitle animated" data-animation="fadeInUp">Meet our dedicated team of professionals.</h3>
+                    <h2 class="page-title animated" data-animation="fadeInDown">About Us</h2>
                 </div>
             </div>
             <!-- END PAGE HEADER -->
@@ -112,17 +62,17 @@
         <!-- START MAIN CONTENT -->
         <section id="main" class="page-content">
             <div class="container">
-                <h3 class="section-title about">Our humble, but talented team</h3>
+                <h3 class="section-title about">Enterprise Security meets K-12</h3>
                 <div class="row">
                     <div class="col-sm-6 animated" data-animation="fadeInDown">
                         <!-- START EMPLOYEE -->
                         <div class="employee">
-                            <img src="assets/img/Vinay.jpg" alt="Vinay Mahadik" class="founder employee-image">
+                            <img src="assets/img/Vinay.png" alt="Vinay Mahadik" class="founder employee-image">
                             <h3 class="employee-name">Vinay<br> Mahadik</h3>
-                            <h5 class="employee-title">Co-Founder</h5>
-                            <p>Ex – Sr R&amp;D Manager @ McAfee</p>
+                            <h5 class="employee-title">Co-Founder/CEO</h5>
+                            <p>Vinay has over 12 years of experience in the network security space working at Qualys as a vulnerability engineer and later at McAfee as a senior manager leading the next generation firewall, botnet and intrusion prevention teams and was the primary inventor on several patents there. He and his wife spend most of their free time running after their three year old. He loves cars, electronica and tropical islands. Vinay holds a Masters in Network Security from NCState, and an MBA from The Wharton School.</p>
                             <p class="employee-social founder">
-                                <a href="#" target="_blank">LinkedIn</a>
+                                <a href="http://www.linkedin.com/in/revengg/" target="_blank">LinkedIn</a>
                             </p>
                         </div>
                         <!-- END EMPLOYEE -->
@@ -132,10 +82,10 @@
                         <div class="employee">
                             <img src="assets/img/Bharath.jpg" alt="Bharath Madhusudan" class="founder employee-image">
                             <h3 class="employee-name">Bharath<br> Madhusudan</h3>
-                            <h5 class="employee-title">Co-Founder</h5>
-                            <p>Ex – Architect @ Huawei-Symantec</p>
+                            <h5 class="employee-title">Co-Founder/CTO</h5>
+                            <p>Bharath has over 10 years experience in the network security space. Most recently he was an architect at Huawei-Symantec where he designed the application firewall and intrusion prevention components of their next-gen security product. His passions include travel (countries visited include Syria and Cambodia) and learning languages (intermediate Mandarin and able to read 1000 characters). He holds a Masters in Network Security from Washington University.</p>
                             <p class="employee-social founder">
-                                <a href="#" target="_blank">LinkedIn</a>
+                                <a href="http://www.linkedin.com/in/bmadhusudan" target="_blank">LinkedIn</a>
                             </p>
                         </div>
                         <!-- END EMPLOYEE -->
@@ -145,49 +95,10 @@
                         <div class="employee">
                             <img src="assets/img/Awais.jpg" alt="Awais" class="employee-image">
                             <h3 class="employee-name">Awais</h3>
-                            <h5 class="employee-title">Worker</h5>
-                            <p>This lexicon covers much of cracker slang (which is often called “leet-speak”) so the news reader will be able to understand both what leaks out of the cracker underground and the occasional ironic use by hackers.</p>
+                            <h5 class="employee-title">Director of Demand Generation</h5>
+                            <p>Awais is a former math teacher with ten years of experience in education, including work with Khan Academy and Chegg. Awais received his MBA from the Berkeley Haas School of Business.</p>
                             <p class="employee-social">
-                                <a href="#" target="_blank">LinkedIn</a>
-                            </p>
-                        </div>
-                        <!-- END EMPLOYEE -->
-                    </div>
-                    <div class="col-sm-3 animated" data-animation="fadeInDown" data-animation-delay="300">
-                        <!-- START EMPLOYEE -->
-                        <div class="employee">
-                            <img src="assets/img/Due.jpg" alt="Due" class="employee-image">
-                            <h3 class="employee-name">Due</h3>
-                            <h5 class="employee-title">Worker</h5>
-                            <p>It has also been suggested that anthropomorphizing complex systems is actually an expression of humility, a way of acknowleging that simple rules we do understand (or that we invented) to emergent.</p>
-                            <p class="employee-social">
-                                <a href="#" target="_blank">LinkedIn</a>
-                            </p>
-                        </div>
-                        <!-- END EMPLOYEE -->
-                    </div>
-                    <div class="col-sm-3 animated" data-animation="fadeInDown" data-animation-delay="600">
-                        <!-- START EMPLOYEE -->
-                        <div class="employee">
-                            <img src="assets/img/Greg.jpg" alt="Greg" class="employee-image">
-                            <h3 class="employee-name">Greg</h3>
-                            <h5 class="employee-title">Worker</h5>
-                            <p>The key to understanding this kind of usage is that it isn't done in a naive way; hackers don't personalize their stuff in the sense of feeling empathy with it, nor do they mystically believe that the work.</p>
-                            <p class="employee-social">
-                                <a href="#" target="_blank">LinkedIn</a>
-                            </p>
-                        </div>
-                        <!-- END EMPLOYEE -->
-                    </div>
-                    <div class="col-sm-3 animated" data-animation="fadeInDown" data-animation-delay="900">
-                        <!-- START EMPLOYEE -->
-                        <div class="employee">
-                            <img src="assets/img/Maurice.jpg" alt="Maurice" class="employee-image">
-                            <h3 class="employee-name">Maurice</h3>
-                            <h5 class="employee-title">Customer Care</h5>
-                            <p>At first glance, to anyone who understands how these programs actually work, this seems like an absurdity. As hackers are among the people who know best how these phenomena work, it seems odd.</p>
-                            <p class="employee-social">
-                                <a href="#" target="_blank">LinkedIn</a>
+                                <a href="http://www.linkedin.com/in/awaisahsan" target="_blank">LinkedIn</a>
                             </p>
                         </div>
                         <!-- END EMPLOYEE -->
@@ -197,10 +108,49 @@
                         <div class="employee">
                             <img src="assets/img/Peter.jpg" alt="Peter" class="employee-image">
                             <h3 class="employee-name">Peter</h3>
-                            <h5 class="employee-title">Worker</h5>
-                            <p>This lexicon covers much of cracker slang (which is often called “leet-speak”) so the news reader will be able to understand both what leaks out of the cracker underground and the occasional ironic use by hackers.</p>
+                            <h5 class="employee-title">Generalist Software Hacker</h5>
+                            <p>Peter brings several years of rigorous coding expertise to Securly. When he is not blowing our minds with his CS skills, he is doing that with his foosball chops!</p>
                             <p class="employee-social">
-                                <a href="#" target="_blank">LinkedIn</a>
+                                <a href="http://www.linkedin.com/pub/peter-belau/0/309/510" target="_blank">LinkedIn</a>
+                            </p>
+                        </div>
+                        <!-- END EMPLOYEE -->
+                    </div>
+                    <div class="col-sm-3 animated" data-animation="fadeInDown" data-animation-delay="300">
+                        <!-- START EMPLOYEE -->
+                        <div class="employee">
+                            <img src="assets/img/Due.jpg" alt="Due" class="employee-image">
+                            <h3 class="employee-name">Due</h3>
+                            <h5 class="employee-title">Generalist Software Hacker</h5>
+                            <p>Due is a full stack web developer who handles design, html/css, and jquery - at the one end, to backend php and big-data analytics - at the other.</p>
+                            <p class="employee-social">
+                                <a href="http://www.linkedin.com/in/duenguyen" target="_blank">LinkedIn</a>
+                            </p>
+                        </div>
+                        <!-- END EMPLOYEE -->
+                    </div>
+                    <div class="col-sm-3 animated" data-animation="fadeInDown" data-animation-delay="600">
+                        <!-- START EMPLOYEE -->
+                        <div class="employee">
+                            <img src="assets/img/Greg.jpg" alt="Greg" class="employee-image">
+                            <h3 class="employee-name">Greg</h3>
+                            <h5 class="employee-title">Sales Development Executive</h5>
+                            <p>After spending 13 years in sales and product development with Addison-Wesley Longman, Greg spent 12 amazing years at Apple Inc in Education Sales. Greg came to Securly in early 2014 after working at Blackboard.</p>
+                            <p class="employee-social">
+                                <a href="http://www.linkedin.com/in/gngardner" target="_blank">LinkedIn</a>
+                            </p>
+                        </div>
+                        <!-- END EMPLOYEE -->
+                    </div>
+                    <div class="col-sm-3 animated" data-animation="fadeInDown" data-animation-delay="900">
+                        <!-- START EMPLOYEE -->
+                        <div class="employee">
+                            <img src="assets/img/Maurice.jpg" alt="Maurice" class="employee-image">
+                            <h3 class="employee-name">Maurice</h3>
+                            <h5 class="employee-title">Technical Support Ninja</h5>
+                            <p>Supporting diverse technical environments for 17 years, Maurice does not believe in if, try, can't, almost or maybe. Looking for a company that never drafts new ideas with old thoughts he found Securly. Living life with no regrets he is always looking for his next adventure.</p>
+                            <p class="employee-social">
+                                <a href="http://linkedin.com/in/mauricemcclain" target="_blank">LinkedIn</a>
                             </p>
                         </div>
                         <!-- END EMPLOYEE -->
@@ -210,10 +160,23 @@
                         <div class="employee">
                             <img src="assets/img/Amar.jpg" alt="Amar" class="employee-image">
                             <h3 class="employee-name">Amar</h3>
-                            <h5 class="employee-title">Lead Designer</h5>
-                            <p>It has also been suggested that anthropomorphizing complex systems is actually an expression of humility, a way of acknowleging that simple rules we do understand (or that we invented) can lead to emergent.</p>
+                            <h5 class="employee-title">Quality Assurance Ninja</h5>
+                            <p>A recent addition to Securly, Amar brings rigorous QA testing and process to our agile startup. Amar is a full stack QA engineer who covers QC on our website and filtering - at the one end, to performing penetration testing of the entire system - on the other.</p>
                             <p class="employee-social">
-                                <a href="#" target="_blank">LinkedIn</a>
+                                <a href="http://www.linkedin.com/in/amarpatekar" target="_blank">LinkedIn</a>
+                            </p>
+                        </div>
+                        <!-- END EMPLOYEE -->
+                    </div>
+                    <div class="col-sm-3 animated" data-animation="fadeInDown" data-animation-delay="900">
+                        <!-- START EMPLOYEE -->
+                        <div class="employee">
+                            <img src="assets/img/Noel.png" alt="Noel" class="employee-image">
+                            <h3 class="employee-name">Noel</h3>
+                            <h5 class="employee-title">Sales Development Executive</h5>
+			    <p>It was love at first sight when Noel met Securly. With a passion for education and over 15 years in the EdTech sector, Noel enjoys providing schools with the tools they need to provide a seamless and enriched educational experience.</p>
+                            <p class="employee-social">
+                                <a href="http://ca.linkedin.com/in/noelforst/" target="_blank">LinkedIn</a>
                             </p>
                         </div>
                         <!-- END EMPLOYEE -->
@@ -224,54 +187,30 @@
             <!-- START SECTION SPLIT -->
             <div class="section-split animated" data-animation="fadeInUp">
                 <div class="container">
-                    <h3 class="title-tinted">Get to know our team with some fun facts!</h3>
+                    <h3 class="title-tinted">Securly described in a few words!</h3>
                     <p>&nbsp;</p>
                     <div class="row">
                         <div class="col-sm-4">
                             <!-- START BOX -->
                             <div class="box">
-                                <h5 class="subtitle">Industry Leaders</h5>
-                                <p>The mind-set behind this tendency thus demands examination.</p>
+                                <h5 class="subtitle">Enterprise Security Experts</h5>
+                                <p>Architects from McAfee & Huawei-Symantec.</p>
                             </div>
                             <!-- END BOX -->
                         </div>
                         <div class="col-sm-4">
                             <!-- START BOX -->
                             <div class="box">
-                                <h5 class="subtitle">Lovers of design &amp; code</h5>
-                                <p>The self-taught hacker is often considered to be motivated.</p>
+                                <h5 class="subtitle">Elegance trumps Bloat</h5>
+                                <p>"A product that needs a manual is DoA."</p>
                             </div>
                             <!-- END BOX -->
                         </div>
                         <div class="col-sm-4">
                             <!-- START BOX -->
                             <div class="box">
-                                <h5 class="subtitle">Have you seen our office cat?</h5>
-                                <p>They tend to be attracted by challenges and excited by toys.</p>
-                            </div>
-                            <!-- END BOX -->
-                        </div>
-                        <div class="col-sm-4">
-                            <!-- START BOX -->
-                            <div class="box">
-                                <h5 class="subtitle">Did we mention we love coffee?</h5>
-                                <p>Hackers appear to wear black more because it goes with everything.</p>
-                            </div>
-                            <!-- END BOX -->
-                        </div>
-                        <div class="col-sm-4">
-                            <!-- START BOX -->
-                            <div class="box">
-                                <h5 class="subtitle">Our secret: teamwork</h5>
-                                <p>Contrary to stereotype, hackers are not intellectually narrow.</p>
-                            </div>
-                            <!-- END BOX -->
-                        </div>
-                        <div class="col-sm-4">
-                            <!-- START BOX -->
-                            <div class="box">
-                                <h5 class="subtitle">We like to keep meetings informal</h5>
-                                <p>Since the late Seventies backpacks have been more common.</p>
+                                <h5 class="subtitle">Did we mention we love foosball?</h5>
+                                <p>Our cure for stress and tendonitis :)</p>
                             </div>
                             <!-- END BOX -->
                         </div>
@@ -282,65 +221,17 @@
         </section>
         <!-- END MAIN CONTENT -->
 
-        <!-- START FOOTER -->
-        <footer class="page-footer">
-            <a href="#top" class="to-top icon-arrow-up8"></a>
-            <div class="footer-row container">
-                <div class="row">
-                    
-                    <div class="col-sm-7 footer-menu">
-                        <div class="widget">
-                            <ul class="link-list">
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="news.html">News</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <a href="terms.html">Terms</a>
-                                </li>
-                                <li>
-                                    <a href="privacy.html">Privacy</a>
-                                </li>
-                            </ul>
-                            <p class="disclaimer">&copy; Copyright Securly inc, 2014</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-5 footer-contact">
-                        <div class="widget">
-                            <h4 class="widget-title">Get in touch.</h4>
-                            <address>
-                                <a href="tel:18557328759"><span class="address-item icon-mobile">1-855-SECURLY</span></a>
-                            </address>
-
-                            <p class="social-icons">
-                                <a href="http://twitter.com" class="fa fa-twitter circle-border" target="_blank"></a>
-                                <a href="http://facebook.com" class="fa fa-facebook circle-border" target="_blank"></a>
-                                <a href="http://google.com" class="fa fa-google-plus circle-border" target="_blank"></a>
-                                <a href="mailto:support@securly.com" class="fa fa-envelope-o circle-border" target="_blank"></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-
-                
-            </div>
             <div id="login" class="mfp-hide col-sm-8 col-sm-offset-2 centered">
                 <div class="google-login col-sm-12 centered">
-                    <img src="http://www.securly.com/images/gafe_logo.png"><br>
+                    <img src="http://devwww4.securly.com/assets/img/gafe_logo.png"><br>
                     <input type="text" placeholder="Google Apps ID"/>
                     <a href="#login"><br>
                         <button class="button-inverted green">Submit</button>
                     </a>
                 </div>  
             </div>
-        </footer>
-        <!-- END FOOTER -->
+
+
 
         <script src="js/vendor/jquery-1.11.0.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -365,5 +256,13 @@
         <![endif]-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+<?php
+
+        Utilities::generate_footer();
+
+?>
+
+
     </body>
 </html>

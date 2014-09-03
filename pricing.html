@@ -1,59 +1,10 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<?php
 
-        <title>Securly - Web Filtering 2.0 For Schools</title>
+require_once('includes/utilities.php');
 
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+Utilities::generate_header();
 
-        <link rel="stylesheet" type="text/css" href="css/ss-gizmo.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/icomoon.css">  
-        <link rel="stylesheet" href="css/colors/lime.css">
-        <link rel="stylesheet" href="css/colors/lime.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
-
-        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
-    </head>
-    <body>
-        <!-- START HEADER -->
-        <header id="top" class="page-top">
-            <!-- START HEADER TOP -->
-            <div class="head-top">
-                <div class="container">
-                    <a href="index.html" class="head-logo"></a>
-
-                    <span class="nav-trigger fa fa-bars"></span>
-
-                    <!-- START MAIN NAVIGATION -->
-                    <nav class="main-nav">
-                        <ul>
-                            <!--<li class="active"><a href="index.html">Home</a></li>-->
-                            <li class="nav" aria-haspopup="false">
-                                <a href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="nav" aria-haspopup="true">
-                                <a href="features.html">Features</a>
-                            </li>
-                            <li>
-                                <a href="#" class="login-btn">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- END MAIN NAVIGATION -->
-                </div>
-            </div>
-            <!-- END HEADER TOP -->
-
+?>
             <!-- START PAGE HEADER -->
             <div class="page-head pricing">
                 <div class="container">
@@ -71,7 +22,7 @@
                     <div class="col-sm-5 animated col-sm-offset-1" data-animation="fadeInDown">
                         <ul class="pricing-table">
                             <li class="pricing-edition">
-                                In-School<br> Filtering
+                                In-School Filtering
                             </li>
                             <li class="pricing-price">
                                 <span>$</span>
@@ -79,17 +30,17 @@
                                 <h4>/user/year</h4>
                             </li>
                             <br>
+			    <li>Secures all devices within the school premises.</li>
                             <li>No Hardware. No Software.</li>
-                            <li>Whitelisting by Teachers.</li>
-                            <li>Zero touch onboarding & Zero sign-on auditing</li>
+                            <li>5 mins setup via DNS forwarder settings.</li>
                             <br>
-                            <li><a href="signup.html" ><button href="signup.html" class="inverted-button green">Free Trial</button></a></li>
+                            <li><a href="/signup" ><button href="/signup" class="inverted-button green">Free Trial</button></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-5 animated" data-animation="fadeInDown" data-animation-delay="300">
                         <ul class="pricing-table">
                             <li class="pricing-edition blue-edition">
-                                Take-Home<br> Filtering
+                                Anywhere Filtering<br>
                             </li>
                             <li class="pricing-price blue-price">
                                 <span>$</span>
@@ -97,11 +48,11 @@
                                 <h4>/user/year</h4>
                             </li>
                             <br>
+                            <li>Secures 1:1 tablets & laptops everywhere.</li>
                             <li>No Hardware. No Software.</li>
-                            <li>Whitelisting by Teachers.</li>
-                            <li>Zero touch onboarding & Zero sign-on auditing</li>
+                            <li>5 mins setup via GAFE, MDM, or Active Directory.</li>
                             <br>
-                            <li><a href="signup.html" ><button href="signup.html" class="signup-form inverted-button free-trial">Free Trial</button></a></li>
+                            <li><a href="/signup" ><button href="/signup" class="signup-form inverted-button free-trial">Free Trial</button></a></li>
                         </ul>
                     </div>
                 </div>   
@@ -109,7 +60,7 @@
                     <h1>Volume Discount Calculator</h1>
                     <span>Get an instant quote by clicking the button below.</span>
                     <br>
-                    <a href="quote.html"><button class="inverted-button get-quote">Get Quote</button></a>
+                    <a href="/quote"><button class="inverted-button get-quote">Get Quote</button></a>
                 </div>  
             </div>
             <br>
@@ -118,91 +69,34 @@
                 <h2 class="section-title">Frequently asked questions</h2>
                 <div class="row">
                     <div class="col-sm-4">
-                        <h4 class="subtitle">How long are your contracts?</h4>
-                        <p>Now this happened some years before the spread of home computers, and computer terminals were not a familiar sight to the average person. When the two friends got to the hospital, a guard stopped them.</p>
+                        <h4 class="subtitle">What discounts to you offer?</h4>
+                        <p>We offer volume and multi-year discounts. Please use the Get Quote button to estimate the volume discount. The multi-year discount gets you a third year for the price of two.</p>
                     </div>
                     <div class="col-sm-4">
-                        <h4 class="subtitle">What are the advantages?</h4>
-                        <p>All contributions and suggestions about the Jargon File will be considered donations to be placed in the public domain as part of this File, and may be used in subsequent paper editions.</p>
+                        <h4 class="subtitle">Why do you have a $1200 minimum?</h4>
+                        <p>All our customers receive equally high quality support regardless of their size. To justify the annual support costs for the smallest of schools or pilots, we use an annual minimum of $1200.</p>
                     </div>
                     <div class="col-sm-4">
-                        <h4 class="subtitle">Do I need another provider?</h4>
-                        <p>It is OK to submit items of jargon you have originated if they have spread to the point of being used by people who are not personally acquainted with you. We prefer items to be attested by independent.</p>
+                        <h4 class="subtitle">Do you charge extra for any add-on sevices?</h4>
+                        <p>We have no hidden or add-on costs. Support and analytics are included in the price you pay for filtering.</p>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h4 class="subtitle">Can I install it on my server?</h4>
-                        <p>The guard got out his list of things that patients were permitted to have in their rooms: TV, radio, electric razor, typewriter, tape player, ... no computer terminals. Computer terminals weren't on the list, so the guard wouldn't let it in. Rules are rules, you know.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h4 class="subtitle">How do I sign up?</h4>
-                        <p>We are looking to expand the File's range of technical specialties covered. There are doubtless rich veins of jargon yet untapped in the scientific computing, graphics, and networking hacker communities; also in numerical analysis, computer architectures.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h4 class="subtitle">How do I cancel my subscription?</h4>
-                        <p>All contributions and suggestions about the Jargon File will be considered donations to be placed in the public domain as part of this File, and may be used in subsequent paper editions. Submissions may be edited for accuracy, clarity and concision.</p>
-                    </div>
-                </div>
             </div>
         </section>
         <!-- END MAIN CONTENT -->
 
-        <!-- START FOOTER -->
-        <footer class="page-footer">
-            <div class="footer-row container">
-                <div class="row">
-                    
-                    <div class="col-sm-7 footer-menu">
-                        <div class="widget">
-                            <ul class="link-list">
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="news.html">News</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <a href="terms.html">Terms</a>
-                                </li>
-                                <li>
-                                    <a href="privacy.html">Privacy</a>
-                                </li>
-                            </ul>
-                            <p class="disclaimer">&copy; Copyright Securly inc, 2014</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-5 footer-contact">
-                        <div class="widget">
-                            <h4 class="widget-title">Get in touch.</h4>
-                            <address>
-                                <a href="tel:18557328759"><span class="address-item icon-mobile">1-855-SECURLY</span></a>
-                            </address>
 
-                            <p class="social-icons">
-                                <a href="http://twitter.com" class="fa fa-twitter circle-border" target="_blank"></a>
-                                <a href="http://facebook.com" class="fa fa-facebook circle-border" target="_blank"></a>
-                                <a href="http://google.com" class="fa fa-google-plus circle-border" target="_blank"></a>
-                                <a href="mailto:support@securly.com" class="fa fa-envelope-o circle-border" target="_blank"></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>                
-            </div>
             <div id="login" class="mfp-hide col-sm-8 col-sm-offset-2 centered">
                 <div class="google-login col-sm-12 centered">
-                    <img src="http://www.securly.com/images/gafe_logo.png"><br>
+                    <img src="http://devwww4.securly.com/assets/img/gafe_logo.png"><br>
                     <input type="text" placeholder="Google Apps ID"/>
                     <a href="#login"><br>
                         <button class="button-inverted green">Submit</button>
                     </a>
                 </div>  
             </div>
-        </footer>
+
         
         <!-- END FOOTER -->
 
@@ -229,5 +123,12 @@
         <![endif]-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+<?php
+
+        Utilities::generate_footer();
+
+?>
+
     </body>
 </html>

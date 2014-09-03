@@ -79,8 +79,10 @@
 .parents-icon {
     position: absolute;
     width: 85px !important;
+    height: 85px !important;
+    min-height: 85px !important;
     right: 20px;
-    top: -235px;
+    top: 20px;
 }
 .sign-up-school {
     height: 290px;
@@ -189,10 +191,12 @@
 .video-container {
     height: 520px;
 }
+
 .video-container img {
     width: 100%;
     min-height: 600px;
 }
+
 .hero-img {
     background: url('../assets/video/hero.jpg');
     background-size: cover;
@@ -235,8 +239,7 @@
 
 .contact_contentarea h2 {
     color: #fff;
-    margin: 0px auto;
-    max-width: 200px;
+    margin-left: 20px;
 }
 
 .contact_formarea li {
@@ -936,7 +939,7 @@ label.custom-select {
     color: #fff;
     font-size: 4em;
     margin: 30px auto 0px;
-    font-family: 'HelveticaNeueLT Std UltLt' sans-serif;
+    font-family: 'HelveticaNeueLT Std UltLt', sans-serif;
 }
 
 /* TESTIMONIAL STYLES =======*/
@@ -1052,6 +1055,10 @@ label.custom-select {
     border-radius: 3px;
 }
 
+.video.feature img {
+	background:none;	
+}
+
 .page-content.feature {
     margin: -30px auto 30px;
     padding-right: 0px;
@@ -1139,6 +1146,12 @@ label.custom-select {
 .white-row {
     background: #fff;
 }
+
+
+
+
+
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -1303,7 +1316,6 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     font-size: 72px;
     letter-spacing: 5px;
-    text-transform: uppercase;
     line-height: 82px;
 }
 
@@ -2316,10 +2328,12 @@ body,
 .main-nav ul .has-subnav > a:after {
     font-family: 'icomoon';
     content: "\e25e";
+
     position: absolute;
     top: 7px;
     right: 8px;
     margin-left: 6px;
+
     speak: none;
     color: #ddd;
     font-size: 8px;
@@ -2327,8 +2341,10 @@ body,
     font-variant: normal;
     text-transform: none;
     line-height: normal;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
     -webkit-transition: all 0.1s ease-in;
     -moz-transition: all 0.1s ease-in;
     -ms-transition: all 0.1s ease-in;
@@ -4494,9 +4510,9 @@ button.mfp-close, button.mfp-arrow {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
-  /*display: none;*/
+  display: none;
   outline: none;
-  padding: 10px;
+  padding: 0;
   z-index: 1046;
   -webkit-box-shadow: none;
   box-shadow: none; }
@@ -5217,6 +5233,7 @@ img.mfp-img {
         -moz-opacity: 1;
         -khtml-opacity: 1;
         opacity: 1;
+
         -moz-transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
         -o-transform: translate3d(0, 0, 0);
@@ -5952,4 +5969,55 @@ img.mfp-img {
     h3 {
         page-break-after: avoid;
     }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 1200px) { 
+		.signup_container.col-sm-6 {
+			width:auto;
+			height:auto;
+			float:none;
+			margin:-10px auto 0;
+		} 
+		.head-top .cm_container p {
+			float:none !important;
+			text-align:center !important;
+		}
+		
+		.signup_container .signup.text{
+			text-align:left;	
+		}
+		.comingsoon_banner {
+			height:90px;	
+		}
+		
+}
+
+@media (max-width: 767px) { 
+	.signup_container .signup.text{
+			width:200px;
+		}
+}
+
+@media (max-width: 460px) { 
+	.signup_container.col-sm-6 {
+			width:auto;
+			height:auto;
+			float:none;
+			margin:-15px auto 0;
+		} 
+	.signup_container .signup.text{
+			width:150px !important;
+			min-width:inherit;
+		}
+	.invited-button {
+
+		padding: 10px 10px 0 10px;
+	}
+	.head-top .cm_container p {
+		font-size:1em;
+	}
+	.comingsoon_banner {
+			height:100px;	
+		}
 }

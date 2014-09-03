@@ -1,60 +1,11 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
-<html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<?php
 
-        <title>Securly - Web Filtering 2.0 For Schools</title>
+require_once('includes/utilities.php');
 
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+Utilities::generate_header();
 
-        <link rel="stylesheet" type="text/css" href="css/ss-gizmo.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-combobox.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/icomoon.css">  
-        <link rel="stylesheet" href="css/colors/lime.css">
-        <link rel="stylesheet" href="css/colors/lime.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
+?>
 
-        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
-    </head>
-    <body>
-        <!-- START HEADER -->
-        <header id="top" class="page-top">
-            <!-- START HEADER TOP -->
-            <div class="head-top">
-                <div class="container">
-                    <a href="index.html" class="head-logo"></a>
-
-                    <span class="nav-trigger fa fa-bars"></span>
-
-                    <!-- START MAIN NAVIGATION -->
-                    <nav class="main-nav">
-                        <ul>
-                            <!--<li class="active"><a href="index.html">Home</a></li>-->
-                            <li class="nav" aria-haspopup="false">
-                                <a href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="nav" aria-haspopup="true">
-                                <a href="features.html">Features</a>
-                            </li>
-                            <li>
-                                <a href="#" class="login-btn">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- END MAIN NAVIGATION -->
-                </div>
-            </div>
-            <!-- END HEADER TOP -->
             <!-- START PAGE HEADER -->
             <div class="page-head pricing">
                 <div class="container">
@@ -69,20 +20,70 @@
 		<section id="main" class="page-content signup-page">
             <div class="container">
                 <div class="row">
+
+<script>
+function submit_email(type)
+{
+
+var firstName = "";
+var lastName = "";
+var phone = "";
+var sqrt = "";
+var ipaddress = "";
+var domain = "";
+var email = "";
+var lead_source = "";
+var promo= "";
+var ccTakeHome = "";
+var ccInSchool = "";
+var ccWindows = "";
+var ccAndroid = "";
+var ccChromebook = "";
+var ccMacbook = "";
+var ccIPad = "";
+
+
+        ipaddress = document.forms[type]["00N70000003Rb1w"].value;
+        domain = document.forms[type]["00N70000003Rb21"].value;
+        email = document.forms[type]["email"].value;
+        lead_source = document.forms[type]["lead_source"].value;
+	ccTakeHome = document.forms[type]["ccTakeHome"].checked;
+	ccInSchool = document.forms[type]["ccInSchool"].checked;
+        ccWindows = document.forms[type]["ccWindows"].checked;
+        ccAndroid = document.forms[type]["ccAndroid"].checked;
+        ccChromebook = document.forms[type]["ccChromebook"].checked;
+        ccMacbook = document.forms[type]["ccMacbook"].checked;
+        ccIPad = document.forms[type]["ccIPad"].checked;
+
+        var url = encodeURI("backend/_sendemail?req="+type+"&fn="+firstName+"&ln="+lastName+"&phone="+phone+"&email="+email+"&lead_source="+lead_source+"&ipaddress="+ipaddress+"&domain="+domain+"&sqrt="+sqrt+"&promo="+promo+"&ccTakeHome="+ccTakeHome+"&ccInSchool="+ccInSchool+"&ccWindows="+ccWindows+"&ccAndroid="+ccAndroid+"&ccChromebook="+ccChromebook+"&ccMacbook="+ccMacbook+"&ccIPad="+ccIPad);
+
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET", url, false);
+        xmlhttp.send();
+
+}
+</script>
+
+
 					<div id="signup-form" class="col-sm-10 col-sm-offset-1">
 			            <h3>School Information</h3>
-			            <form action="signup-form.php" method="post">
-			                <input placeholder="Google Apps Domain" class="col-sm-10 col-md-6" id="cemail" name="gapps" minlength="2" type="text" required/>
+	                            <form name="free_trial" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            	                            <input type=hidden name="oid" value="00D70000000Mosy">
+                	                    <input type=hidden name="retURL" value="http://devwww4.securly.com/app/thankyou">
+                        	            <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="free_trial">
+
+
+			                <input placeholder="Google Apps Domain" class="col-sm-10 col-md-6" id="cemail" name="00N70000003Rb21" minlength="2" type="text" required/>
 			                <input placeholder="Email Address" class="col-sm-10 col-md-6" id="cemail" type="email" name="email" required/>
 			                <div class="col-sm-12">
-			                    <input placeholder="IP Addresses" class="ipadd col-sm-10" id="cemail" type="ipaddress" name="ipadd" required/>
+			                    <input placeholder="IP Addresses" class="ipadd col-sm-10" id="cemail" type="ipaddress" name="00N70000003Rb1w" required/>
 			                    <div class="bubble col-sm-2 hidden desktop-only">
 			                        <span>List of ip addresses separated by comma</span>
 			                    </div>
 			                </div>
 			                <div class="check col-sm-5">
 			                    <input type="checkbox" id="c1" class="th-check" name="ccTakeHome" />
-			                    <label for="c1"><span></span>Take-Home Filtering</label>
+			                    <label for="c1"><span></span>Anywhere Filtering</label>
 			                </div>
                             <!--BEGIN HIDDEN CHECKBOXES-->
                             <div class="take-home-options col-sm-12">
@@ -101,7 +102,11 @@
                                 <div class="col-sm-3 small-check">
                                     <input type="checkbox" id="c2-4" name="ccMacbook" />
                                     <label for="c2-4"><span></span>Macbook</label>
-                                </div>    			                
+                                </div>    			           
+                                <div class="col-sm-3 small-check">
+                                    <input type="checkbox" id="c2-5" name="ccIPad" />
+                                    <label for="c2-5"><span></span>Ipad</label>
+                                </div>     
 			                </div>
                             <!--END HIDDEN CHECKBOXES-->
                             <div class="col-sm-6 check">
@@ -110,13 +115,20 @@
                             </div>
 			                <div class="col-sm-12 sources">    
 			                    <label class="custom-select">
-			                        <select name="source" class="combobox">
-			                            <option>Source</option>
-			                            <option>Google</option>
-			                            <option>News</option>
-			                            <option>Conference</option>
-			                            <option>Co-Worker</option>
-			                            <option>Other</option>
+			                        <select name="lead_source" class="combobox">
+                                       <option value="">None</option>
+                                        <option value="Advertisement">Advertisement</option>
+                                        <option value="Social Media">Social Media</option>
+                                        <option value="Web/SEO Content">Web Search</option>
+                                        <option value="Word of mouth (Buzz)">Word of mouth</option>
+                                        <option value="Direct Mail">Direct Mail</option>
+                                        <option value="Magazine">Magazine</option>
+                                        <option value="Online Forum">Online Forum</option>
+                                        <option value="Inside/Direct">Sales Rep</option>
+                                        <option value="RFP">RFP</option>
+                                        <option value="Affiliate/Reseller/Partner">Affiliate/Reseller/Partner</option>
+                                        <option value="Open Webinar">Open Webinar</option>
+                                        <option value="Trade Show">Trade Show</option>
 			                        </select>
 			                    </label>    
 			                    <div class="bubble hidden desktop-only">
@@ -124,8 +136,8 @@
 			                    </div>
 			                </div>
 			                <div class="col-sm-10 signup-buttons">    
-			                    <button type="submit" class="signup-button">Sign up</button>
-			                    <a href="index.html"><span class="cancel">Cancel</span></a>
+			                    <button type="submit" class="signup-button" onClick="javascript:submit_email('free_trial');">Sign up</button>
+			                    <a href="/"><span class="cancel">Cancel</span></a>
 			                </div>
 			            </form>
 			        </div>
@@ -133,62 +145,20 @@
 			    </div>
 			</div>
         </section>
-		<!-- START FOOTER -->
-        <footer class="page-footer">
-            <div class="footer-row container">
-                <div class="row">
-                    
-                    <div class="col-sm-7 footer-menu">
-                        <div class="widget">
-                            <ul class="link-list">
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="news.html">News</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <a href="terms.html">Terms</a>
-                                </li>
-                                <li>
-                                    <a href="privacy.html">Privacy</a>
-                                </li>
-                            </ul>
-                            <p class="disclaimer">&copy; Copyright Securly inc, 2014</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-5 footer-contact">
-                        <div class="widget">
-                            <h4 class="widget-title">Get in touch.</h4>
-                            <address>
-                                <a href="tel:18557328759"><span class="address-item icon-mobile">1-855-SECURLY</span></a>
-                            </address>
 
-                            <p class="social-icons">
-                                <a href="http://twitter.com" class="fa fa-twitter circle-border" target="_blank"></a>
-                                <a href="http://facebook.com" class="fa fa-facebook circle-border" target="_blank"></a>
-                                <a href="http://google.com" class="fa fa-google-plus circle-border" target="_blank"></a>
-                                <a href="mailto:support@securly.com" class="fa fa-envelope-o circle-border" target="_blank"></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>                
-            </div>
+
             <div id="login" class="mfp-hide col-sm-8 col-sm-offset-2 centered">
                 <div class="google-login col-sm-12 centered">
-                    <img src="http://www.securly.com/images/gafe_logo.png"><br>
+                    <img src="http://devwww4.securly.com/assets/img/gafe_logo.png"><br>
                     <input type="text" placeholder="Google Apps ID"/>
                     <a href="#login"><br>
                         <button class="button-inverted green">Submit</button>
                     </a>
                 </div>  
             </div>
-        </footer>
+
         
-        <!-- END FOOTER -->
+
         <script src="js/vendor/jquery-1.11.0.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHU2q81-hmoEP5UQ0W5qriGM4HYwasY0Y&amp;sensor=false"></script>
@@ -219,5 +189,13 @@
                     $('.combobox').selectpicker({style: '', dropupAuto: false, });  
             })();
         </script>
+
+
+<?php
+
+        Utilities::generate_footer();
+
+?>
+
     </body>
 </html>

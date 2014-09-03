@@ -1,59 +1,10 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<?php
 
-        <title>Securly - Web Filtering 2.0 For Schools</title>
+require_once('includes/utilities.php');
 
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+Utilities::generate_header();
 
-        <link rel="stylesheet" type="text/css" href="css/ss-gizmo.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/icomoon.css">  
-        <link rel="stylesheet" href="css/colors/lime.css">
-        <link rel="stylesheet" href="css/colors/lime.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
-
-        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
-    </head>
-    <body>
-        <!-- START HEADER -->
-        <header id="top" class="page-top">
-            <!-- START HEADER TOP -->
-            <div class="head-top">
-                <div class="container">
-                    <a href="index.html" class="head-logo"></a>
-
-                    <span class="nav-trigger fa fa-bars"></span>
-
-                    <!-- START MAIN NAVIGATION -->
-                    <nav class="main-nav">
-                        <ul>
-                            <!--<li class="active"><a href="index.html">Home</a></li>-->
-                            <li class="nav" aria-haspopup="false">
-                                <a href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="nav" aria-haspopup="true">
-                                <a href="features.html">Features</a>
-                            </li>
-                            <li>
-                                <a href="#" class="login-btn">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- END MAIN NAVIGATION -->
-                </div>
-            </div>
-            <!-- END HEADER TOP -->
-
+?>
             <!-- START PAGE HEADER -->
             <div class="page-head pricing">
                 <div class="container">
@@ -76,7 +27,7 @@
                             <!-- START BOX -->
                             <div class="box icon-box animated" data-animation="fadeInRight">
                                 <span class="icon icon-pen"></span>
-                                <h4 class="detail-title">Email us: <a href="mailto:support@securly.com">support@securly.com</a></h4>
+                                <h4 class="detail-title">Email us: <a href="mailto:sales@securly.com">sales@securly.com</a></h4>
                                 <p>We answer within 24h</p>
                             </div>
                             <!-- END BOX -->
@@ -87,7 +38,7 @@
                                 <span class="icon icon-bubble-dots"></span>
                                 <h4 class="detail-title">Call us: 1-855-SECURLY</h4>
                                 <h4 class="detail-title">Fax us: 1-855-SCRLYFX</h4>
-                                <p>Weekdays 8am - 6pm PST</p>
+                                <p>Weekdays 7am - 5pm PST</p>
                             </div>
                             <!-- END BOX -->
                         </div>
@@ -110,18 +61,18 @@
                 <div class="row">
                     <div class="col-sm-4 animated" data-animation="fadeInLeft">
                         <h3 class="subtitle">Visit Securly</h3>
-                        <p>Our team is based in the center of web innovation. Our proximity to the Bay Area and Silicon Valley means the worlds top tech talent is all around us.</p>
-                        <p><strong>Address</strong><em>: 2901 Tasman Drive,<br> Suite #107,<br> Santa Clara, CA 95054</em> <br>
+                        <p>We are located at the heart of the Silicon Valley in a bright and airy office.</p>
+                        <p><strong>Address</strong><em>:<br>2901 Tasman Drive,<br> Suite #107,<br> Santa Clara, CA 95054</em> <br>
                         <strong>Telephone</strong><em>: 1-855-SECURLY</em> <br>
                         <strong>Fax</strong><em>: 1-855-SCRLYFX</em> <br>
-                        <strong>Email</strong><em>: <a href="mailto:support@securly.com">support@securly.com</a></em></p>
+                        <strong>Email</strong><em>: <a href="mailto:sales@securly.com">sales@securly.com</a></em></p>
                     </div>
                     <div class="col-sm-8 animated" data-animation="fadeInRight">
                         <h3 class="subtitle">Send us a message.</h3>
                         
 
                         <!-- START CONTACT FORM -->
-                        <form id="contactForm" class="form clearfix" method="post" action="mail-form.php">
+                        <form id="contactForm" class="form clearfix" method="post" action="/backend/_contact">
                         <div class="row">
                             <div class="col-sm-6">
                                 <p class="input-field icon-user2"><input type="text" name="name" id="name" placeholder="Your name *" required /></p>
@@ -153,65 +104,15 @@
         </section>
         <!-- END MAIN CONTENT -->
 
-        <!-- START FOOTER -->
-        <footer class="page-footer">
-            <a href="#top" class="to-top icon-arrow-up8"></a>
-            <div class="footer-row container">
-                <div class="row">
-                    
-                    <div class="col-sm-7 footer-menu">
-                        <div class="widget">
-                            <ul class="link-list">
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="news.html">News</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <a href="terms.html">Terms</a>
-                                </li>
-                                <li>
-                                    <a href="privacy.html">Privacy</a>
-                                </li>
-                            </ul>
-                            <p class="disclaimer">&copy; Copyright Securly inc, 2014</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-5 footer-contact">
-                        <div class="widget">
-                            <h4 class="widget-title">Get in touch.</h4>
-                            <address>
-                                <a href="tel:18557328759"><span class="address-item icon-mobile">1-855-SECURLY</span></a>
-                            </address>
-
-                            <p class="social-icons">
-                                <a href="http://twitter.com" class="fa fa-twitter circle-border" target="_blank"></a>
-                                <a href="http://facebook.com" class="fa fa-facebook circle-border" target="_blank"></a>
-                                <a href="http://google.com" class="fa fa-google-plus circle-border" target="_blank"></a>
-                                <a href="mailto:support@securly.com" class="fa fa-envelope-o circle-border" target="_blank"></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-
-                
-            </div>
             <div id="login" class="mfp-hide col-sm-8 col-sm-offset-2 centered">
                 <div class="google-login col-sm-12 centered">
-                    <img src="http://www.securly.com/images/gafe_logo.png"><br>
+                    <img src="http://devwww4.securly.com/assets/img/gafe_logo.png"><br>
                     <input type="text" placeholder="Google Apps ID"/>
                     <a href="#login"><br>
                         <button class="button-inverted green">Submit</button>
                     </a>
                 </div>  
             </div>
-        </footer>
-        <!-- END FOOTER -->
 
         <script src="js/vendor/jquery-1.11.0.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -236,5 +137,12 @@
         <![endif]-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+<?php
+
+        Utilities::generate_footer();
+
+?>
+
     </body>
 </html>
