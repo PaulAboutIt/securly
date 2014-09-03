@@ -138,13 +138,15 @@
                     error: function(jqXHR, textStatus, errorThrown) {
                         console.log('err', jqXHR, textStatus, errorThrown);
                         if(jqXHR.status == 409) {
+                            $('.pass-error').remove();
                             $('.already').append('<span class="pass-error">This email is already registered.</span>');  
                         }
                         return false
                     }
                   });
             } else if (!re.test($('#parent-password').val())){
-                $('.already').append('<span class="error" style="color:red">Password must contain at least one capital and one lowercase letter along with a number.</span>');
+                $('.pass-error').remove();
+                $('.already').append('<span class="pass-error" style="color:red">Password must contain at least one capital and one lowercase letter along with a number.</span>');
                 
             }
             return false;
