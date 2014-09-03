@@ -1,0 +1,311 @@
+<script>
+    document.getElementById("login-password").maxLength = "16";
+    document.getElementById("cemail").maxLength = "55";
+</script>
+<a href="#top" class="to-top icon-arrow-up8"></a>
+        <div class="footer-row container">
+            <div class="row">
+
+                <div class="col-sm-7 footer-menu">
+                    <div class="widget">
+                        <ul class="link-list">
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="news.html">News</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="terms.html">Terms</a>
+                            </li>
+                            <li>
+                                <a href="privacy.html">Privacy</a>
+                            </li>
+                        </ul>
+                        <p class="disclaimer">&copy; Copyright Securly inc, 2014</p>
+                    </div>
+                </div>
+                <div class="col-sm-5 footer-contact">
+                    <div class="widget">
+                        <h4 class="widget-title">Get in touch.</h4>
+                        <address>
+                            <a href="tel:18557328759"><span class="address-item icon-mobile">1-855-SECURLY</span></a>
+                        </address>
+
+                        <p class="social-icons">
+                            <a href="http://twitter.com" class="fa fa-twitter circle-border" target="_blank"></a>
+                            <a href="http://facebook.com" class="fa fa-facebook circle-border" target="_blank"></a>
+                            <a href="http://google.com" class="fa fa-google-plus circle-border" target="_blank"></a>
+                            <a href="mailto:support@securly.com" class="fa fa-envelope-o circle-border" target="_blank"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--####################### START POPUP MODULES #######################-->
+
+        <!--START LOGIN -->
+        <div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+            <div id="normal-login">
+               <h3>Login to your Securly Account</h3>
+                <form id="parent-login">    
+                    <div class="google-login col-sm-12 centered">
+                        <input type="email" placeholder="Email Address" id="cemail" min-length="2" required/>
+                        <input type="password" placeholder="Password" id="login-password" min-length="2" required/>
+                    </div>  
+                    <button class="button-inverted green" id="login-button">Submit</button>
+                    <a id="forgot-password">Forgot Password?</a>
+                    <span>Don't have an account? </span><a class="get-started-link">Get Started</a>
+                </form>
+            </div>
+            <div id="reset" class="hidden">
+               <h3>Reset your password</h3>
+                <form id="reset-login">    
+                    <div class="google-login col-sm-12 centered">
+                        <input type="email" placeholder="Email Address" id="cemail" class="reset-input" min-length="2" required/>
+                    </div>  
+                    <button class="button-inverted green" id="reset-password-button">Reset</button>
+                    <!--<a id="return-login" href="#">Login</a>-->
+                </form>
+            </div>
+        </div>
+        <!--END LOGIN -->
+
+        <!--START SIGNUP POPUP -->
+        <div id="sign-up" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+            <div class="sign-up-location col-sm-12 centered">
+                <div class="sign-up-header">Sign up as</div>
+                <a href="parentsignup.html">
+                    <div class="sign-up-home">
+                        <i class="ss ss-home"></i>
+                        <h3>Parent</h3>
+                        <p>Some description text will appear here.</p>
+                    </div>
+                </a>
+                <a href="signup.html">
+                    <div class="sign-up-school">
+                        <i class="fa fa-building-o"></i>
+                        <h3 class="school-h3">School</h3>
+                        <p>Some description text will appear here.</p>
+                    </div>
+                </a>   
+            </div>  
+        </div>
+        <!--END SIGNUP POPUP -->
+
+        <!--START WHITEPAPER FORM -->
+        <div id='whitepaper_inline' class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+
+            <!--form real content starts here-->
+            <div class="contact_contentarea">
+                <h2>Sign up for the White Paper</h2>
+
+                <div class="contact_formarea">
+
+                   <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="free_trial">
+                                        <input type=hidden name="oid" value="00D70000000Mosy">
+                                        <input type=hidden name="retURL" value="http://www.securly.com/thankyou">
+                                        <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="free_trial">
+
+                        <div class="contact_formarea col1">
+                                    <ul>
+                                        <li>
+                                            <span class="label">Google Apps Domain</span>
+                                            <input class="text" type="text" id="00N70000003Rb21" maxlength="255" name="00N70000003Rb21" placeholder="eg: unifiedschool.com" />
+
+                                        </li>
+                                         <li>
+                                            <span class="label">IP Addresses</span>
+                                            <input class="text" type="text" id="00N70000003Rb1w" maxlength="255" name="00N70000003Rb1w" placeholder="eg: 200.167.3.23, 200.167.32.45"/>
+                                        </li>
+                                        <li>
+                                            <span class="label">Email</span>
+                                            <input class="text" type="text" name="email" placeholder="eg: admin@unifiedschool.org"/>
+                                        </li>
+                                       <li>
+                                            <span  class="label">Referral Source</span>
+                                            <select id="lead_source" class="text" type="text" name="lead_source" style="width: 240px;"/>
+                                               <option value="">None</option>
+                                                <option value="Advertisement">Advertisement</option>
+                                                <option value="Social Media">Social Media</option>
+                                                <option value="Web/SEO Content">Web Search</option>
+                                                <option value="Word of mouth (Buzz)">Word of mouth</option>
+                                                <option value="Direct Mail">Direct Mail</option>
+                                                <option value="Magazine">Magazine</option>
+                                                <option value="Online Forum">Online Forum</option>
+                                                <option value="Inside/Direct">Sales Rep</option>
+                                                <option value="RFP">RFP</option>
+                                                <option value="Affiliate/Reseller/Partner">Affiliate/Reseller/Partner</option>
+                                                <option value="Open Webinar">Open Webinar</option>
+                                                <option value="Trade Show">Trade Show</option>
+                                             </select>
+                                        </li>
+
+                                   </ul>
+                                </div>
+
+                                <!--div class="contact_formarea col2">
+                                       <ul>
+                                    </ul>
+                                </div-->
+                                <div class="submit_panel" >
+                                        <input type="submit" class="button blue requestquote_btn button-inverted" name="submit" value="Submit" onClick="javascript:submit_email('free_trial');" />
+                                </div>
+                            </form>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                    <!--form real content ends here-->
+                </div>
+        <!--END WHITEPAPER FORM -->
+
+
+        <!--START NEWSLETTER FORM -->
+        <div id='freetrial_inline' class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+
+            <!--form real content starts here-->
+            <div class="contact_contentarea">
+                <h2>Sign up for our Newsletter</h2>
+
+                <div class="contact_formarea">
+
+                   <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="free_trial">
+                                        <input type=hidden name="oid" value="00D70000000Mosy">
+                                        <input type=hidden name="retURL" value="http://www.securly.com/thankyou">
+                                        <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="free_trial">
+
+                        <div class="contact_formarea col1">
+                                    <ul>
+                                        <li>
+                                            <span class="label">Google Apps Domain</span>
+                                            <input class="text" type="text" id="00N70000003Rb21" maxlength="255" name="00N70000003Rb21" placeholder="eg: unifiedschool.com"/>
+                                        </li>
+                                         <li>
+                                            <span class="label">IP Addresses</span>
+                                            <input class="text" type="text" id="00N70000003Rb1w" maxlength="255" name="00N70000003Rb1w" placeholder="eg: 200.167.3.23, 200.167.32.45"/>
+                                        </li>
+                                        <li>
+                                            <span class="label">Email</span>
+                                            <input class="text" type="text" name="email" placeholder="eg: admin@unifiedschool.org"/>
+                                        </li>
+                                       <li>
+                                            <span  class="label">Referral Source</span>
+                                            <select id="lead_source" class="text" type="text" name="lead_source" style="width: 240px;"/>
+                                               <option value="">None</option>
+                                                <option value="Advertisement">Advertisement</option>
+                                                <option value="Social Media">Social Media</option>
+                                                <option value="Web/SEO Content">Web Search</option>
+                                                <option value="Word of mouth (Buzz)">Word of mouth</option>
+                                                <option value="Direct Mail">Direct Mail</option>
+                                                <option value="Magazine">Magazine</option>
+                                                <option value="Online Forum">Online Forum</option>
+                                                <option value="Inside/Direct">Sales Rep</option>
+                                                <option value="RFP">RFP</option>
+                                                <option value="Affiliate/Reseller/Partner">Affiliate/Reseller/Partner</option>
+                                                <option value="Open Webinar">Open Webinar</option>
+                                                <option value="Trade Show">Trade Show</option>
+                                             </select>
+                                        </li>
+
+                                   </ul>
+                                </div>
+
+                                <!--div class="contact_formarea col2">
+                                       <ul>
+                                    </ul>
+                                </div-->
+                                <div class="submit_panel" >
+                                        <input type="submit" class="button blue requestquote_btn button-inverted" name="submit" value="Submit" onClick="javascript:submit_email('free_trial');" />
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <!--form real content ends here-->
+                </div>
+        <!--END NEWSLETTER FORM -->
+
+        <!-- START LEARN MORE -->
+        <div id='learn-more-form' class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+
+            <!--form real content starts here-->
+            <div class="contact_contentarea">
+                <h2>Learn More</h2>
+
+                <div class="contact_formarea">
+
+                    <form name="learn_more" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                                <input type=hidden name="oid" value="00D70000000Mosy">
+                                <input type=hidden name="retURL" value="http://www.securly.com/thankyou">
+                                <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="learn_more">
+
+                         <div class="contact_formarea col1">
+                            <ul>
+                                <li>
+                                    <span class="label">First Name</span>
+                                    <input id="first_name" class="text" type="text"  name="first_name" />
+                                </li>
+                                <li>
+                                    <span class="label">Last Name</span>
+                                    <input id="last_name" class="text" type="text"  name="last_name" />
+
+                                </li>
+
+                                <li>
+                                    <span class="label">Phone Number</span>
+                                    <input id="phone" class="text" type="text" name="phone" placeholder="eg: 1-408-000-2854"/>
+                                </li>
+                                 <li>
+                                    <span class="label">Work Email</span>
+                                    <input id="email" class="text" type="text" name="email" placeholder="eg: admin@unifiedschool.org"/>
+                                </li>
+                               <li>
+                                    <span  class="label">Referral Source</span>
+                                    <select id="lead_source" class="text" type="text" name="lead_source" style="width: 240px; margin-bottom:20px;"/>
+                                       <option value="">None</option>
+                                        <option value="Advertisement">Advertisement</option>
+                                        <option value="Social Media">Social Media</option>
+                                        <option value="Web/SEO Content">Web Search</option>
+                                        <option value="Word of mouth (Buzz)">Word of mouth</option>
+                                        <option value="Direct Mail">Direct Mail</option>
+                                        <option value="Magazine">Magazine</option>
+                                        <option value="Online Forum">Online Forum</option>
+                                        <option value="Inside/Direct">Sales Rep</option>
+                                        <option value="RFP">RFP</option>
+                                        <option value="Affiliate/Reseller/Partner">Affiliate/Reseller/Partner</option>
+                                        <option value="Open Webinar">Open Webinar</option>
+                                        <option value="Trade Show">Trade Show</option>
+                                     </select>
+                                </li>
+
+                                <li>
+                                    <span class="label">Square root of 4?</span>
+                                    <input class="text" type="text" name="sqrt"/>
+
+                                </li>
+                           </ul>
+                        </div>
+
+                        <!--div class="contact_formarea col2">
+                               <ul>
+                            </ul>
+                        </div-->
+                        <div class="submit_panel" >
+                                <input type="submit" class="button blue requestquote_btn button-inverted" name="submit" value="Submit" onClick="javascript:submit_email('learn_more');" />
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <!--form real content ends here-->
+    </div>
+</div>
