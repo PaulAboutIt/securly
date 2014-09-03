@@ -61,6 +61,13 @@
 }
 
 /* CUSTOM STYLES ---------------*/
+.clear-left {
+    clear: left;
+}
+.signup-form.button-inverted {
+    margin-left: 75px;
+}
+
 #return-login {
     display:block
 }    

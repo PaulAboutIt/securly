@@ -262,7 +262,7 @@
         $('#forgot-password').on('click', function() {
             $('#normal-login').addClass('hidden');
             $('#reset').removeClass('hidden');
-        }); 
+        });
         $('#retun-login').on('click', function() {
             $('#normal-login').removeClass('hidden');
             $('#reset').addClass('hidden');
