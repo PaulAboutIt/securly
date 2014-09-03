@@ -34,6 +34,10 @@ Utilities::xs_hdlr();
         <link rel="stylesheet" href="css/font-awesome.css">
 
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+        <script>
+        
+        </script>
+        
         <style>
         /*COMING SOON BANNER*/
 
@@ -245,7 +249,7 @@ if (type == 'free_trial')
                     <div class="signup_container col-sm-6">
                      	<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="freemium_invite">
                                             <input type=hidden name="oid" value="00D70000000Mosy">
-                                            <input id="hostName" type=hidden name="retURL" value="http://devwww4.securly.com/features/freethankyou">
+                                            <input class="inputLink" id="hostName" type=hidden name="retURL" value="/features/freethankyou">
                                             <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="freemium_invite">
 
                             <input type="text" name="email" placeholder="Your Email" style="height:33px"class="signup-text">
@@ -609,7 +613,7 @@ if (type == 'free_trial')
             <!--<div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
 		<form action = "/app/backend/_loginsso_m" method="post" name="loginForm" id="loginForm">
                     <div class="google-login col-sm-12 centered">
-                        <img alt="Login to Google Apps Single Sign On" src="http://devwww4.securly.com/assets/img/gafe_logo.png"><br>
+                        <img  class="inputLink" alt="Login to Google Apps Single Sign On" src="/assets/img/gafe_logo.png"><br>
                         <input type="text" name="domain" placeholder="Google Apps Domain" id="cemail" min-length="2" required/>
                         
                     </div>  
@@ -680,7 +684,7 @@ if (type == 'free_trial')
               
                        <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="white_paper">
                                             <input type=hidden name="oid" value="00D70000000Mosy">
-                                            <input type=hidden name="retURL" value="http://devwww4.securly.com/app/thankyou">
+                                            <input class="inputLink" type=hidden name="retURL" value="/app/thankyou">
                                             <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="white_paper">
 
                             <div class="contact_formarea col1">
@@ -738,7 +742,7 @@ if (type == 'free_trial')
               
                        <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="news_letter">
                                             <input type=hidden name="oid" value="00D70000000Mosy">
-                                            <input type=hidden name="retURL" value="http://devwww4.securly.com/app/thankyou">
+                                            <input class="inputLink" type=hidden name="retURL" value="/app/thankyou">
                                             <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="news_letter">
 
                             <div class="contact_formarea col1">
@@ -793,7 +797,7 @@ if (type == 'free_trial')
 
                         <form name="learn_more" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
                                     <input type=hidden name="oid" value="00D70000000Mosy">
-                                    <input type=hidden name="retURL" value="http://devwww4.securly.com/app/thankyou">
+                                    <input class="inputLink" type=hidden name="retURL" value="/app/thankyou">
                                     <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="learn_more">
 
                              <div class="contact_formarea col1">
@@ -892,6 +896,11 @@ if (type == 'free_trial')
         <![endif]-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            $( document ).ready(function() {
+                $('.inputLink').val( mainUrl + $('.inputLink').val()); 
+            }); 
+        </script>
 
 <?php
 
