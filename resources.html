@@ -1,10 +1,81 @@
-<?php
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+	<base href="/">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-require_once('includes/utilities.php');
+        <title>Securly - Web Filtering 2.0 For Schools & Families</title>
 
-Utilities::generate_header();
+        <meta name="description" content="Securly is a cloud based web filtering & web-analytics engine purpose built for K-12 schools designed to provide seamless web filtering service for chromebook filtering and take home iPad.">
 
-?>
+	<META NAME="KEYWORDS" CONTENT="Securly, SECURLY, web analytics, social media analytics, parental control, parental controls, school, block youtube, block facebook, block porn, block adult, web filter, webfiltering, Chromebook, Chromebooks,K-12, K12">	
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/ss-gizmo.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/icomoon.css">
+        <link rel="stylesheet" href="css/colors/lime.css">
+        <link rel="stylesheet" href="css/colors/lime.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body>
+        <!-- START HEADER -->
+        <header id="top" class="page-top">
+            <!-- START HEADER TOP -->
+            <div class="head-top">
+                <div class="container">
+                    <a href="/" class="head-logo"></a>
+
+                    <span class="nav-trigger fa fa-bars"></span>
+
+                    <!-- START MAIN NAVIGATION -->
+            <nav class="main-nav">
+                <ul>
+                   <li class="nav" aria-haspopup="true">
+                        <a href="parents.html">Parents</a>
+                    </li>
+                    <li class="nav" aria-haspopup="true">
+                        <a href="/features.html">Features</a>
+                    </li>
+                    <li class="nav" aria-haspopup="true">
+                        <a href="/resources.html">Resources</a>
+                    </li>
+                    <li class="nav" aria-haspopup="true">
+                        <a href="/news.html">News</a>
+                    </li>
+                    <li class="nav" aria-haspopup="true">
+                        <a href="http://blog.securly.com" target="_blank">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="login-btn">Login</a>
+                        <ul>
+                            <li><a href="/app/login"><i class="fa fa-building-o"></i>School</a></li>
+                            <li id="login-btn"><a href=""><i class="ss ss-home"></i>Parent</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="sign-up-btn">Sign Up <i class="caret-o ss ss-navigatedown"></i></a>
+                        <ul>
+                            <li><a href="signup.html"><i class="fa fa-building-o"></i>School</a></li>
+                            <li><a href="parentsignup.html"><i class="ss ss-home"></i>Parent</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- END MAIN NAVIGATION -->
+                </div>
+            </div>
+            <!-- END HEADER TOP REPLACE EVERYTHING ABOVE WITH DYNAMIC HEADER -->
             <!-- START PAGE HEADER -->
             <div class="page-head news">
                 <div class="container">
@@ -178,18 +249,34 @@ Utilities::generate_header();
 
         </section>
         <!-- END MAIN CONTENT -->
-
-            <div id="login" class="mfp-hide col-sm-8 col-sm-offset-2 centered">
-                <div class="google-login col-sm-12 centered">
-                    <img src="http://devwww4.securly.com/assets/img/gafe_logo.png"><br>
-                    <input type="text" placeholder="Google Apps ID"/>
-                    <a href="#login"><br>
-                        <button class="button-inverted green">Submit</button>
-                    </a>
-                </div>  
+        <!--START PARENT LOGIN -->
+            <div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+                <div id="normal-login">
+                   <h3>Login to your Securly Account</h3>
+                    <form id="parent-login">    
+                        <div class="google-login col-sm-12 centered">
+                            <input type="email" placeholder="Email Address" id="cemail" min-length="2" required/>
+                            <input type="password" placeholder="Password" id="login-password" min-length="2" required/>
+                        </div>  
+                        <button class="button-inverted green" id="login-button">Submit</button>
+                        <a id="forgot-password">Forgot Password?</a>
+                        <span>Don't have an account? </span><a class="get-started-link">Get Started</a>
+                    </form>
+                </div>
+                <div id="reset" class="hidden">
+                   <h3>Reset your password</h3>
+                    <form id="reset-login">    
+                        <div class="google-login col-sm-12 centered">
+                            <input type="email" placeholder="Email Address" id="reset-email" class="reset-input" min-length="2" required/>
+                        </div>  
+                        <button class="button-inverted green" id="reset-password-button">Reset</button>
+                        <!--<a id="return-login" href="#">Login</a>-->
+                    </form>
+                </div>
             </div>
+            <!--END PARENT LOGIN -->
 
-
+        <script src="app/assets/scripts/settings.js"></script>
         <script src="js/vendor/jquery-1.11.0.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHU2q81-hmoEP5UQ0W5qriGM4HYwasY0Y&amp;sensor=false"></script>-->

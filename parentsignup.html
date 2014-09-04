@@ -43,13 +43,13 @@
                         <a href="parents.html">Parents</a>
                     </li>
                     <li class="nav" aria-haspopup="true">
-                        <a href="/allfeatures">Features</a>
+                        <a href="/features.html">Features</a>
                     </li>
                     <li class="nav" aria-haspopup="true">
-                        <a href="/resources">Resources</a>
+                        <a href="/resources.html">Resources</a>
                     </li>
                     <li class="nav" aria-haspopup="true">
-                        <a href="/news">News</a>
+                        <a href="/news.html">News</a>
                     </li>
                     <li class="nav" aria-haspopup="true">
                         <a href="http://blog.securly.com" target="_blank">Blog</a>
@@ -155,33 +155,37 @@
                     </div>
                 </div>                
             </div>
-            <!--<div id="login" class="mfp-hide col-sm-8 col-sm-offset-2 centered">
-                <div class="google-login col-sm-12 centered">
-                    <img src="http://www.securly.com/images/gafe_logo.png"><br>
-                    <input type="text" placeholder="Google Apps ID"/>
-                    <a href="#login"><br>
-                        <button class="button-inverted green">Submit</button>
-                    </a>
-                </div>  
-            </div>-->
+
         </footer>
             
         <!--####################### START POPUP MODULES #######################-->
 
-        <!--START LOGIN -->
-        <div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
-           <h3>Login to your Securly Account</h3>
-            <form id="parent-login">    
-                <div class="google-login col-sm-12 centered">
-                    <input type="email" placeholder="Email Address" id="cemail" min-length="2" required/>
-                    <input type="password" placeholder="Password" id="login-password" min-length="2" required/>
-                </div>  
-                <button class="button-inverted green" id="login-button">Submit</button>
-                <a class="forgot-password">Forgot Password?</a>
-                <!--<span>Don't have an account? </span><a class="get-started-link">Get Started</a>-->
-            </form>
-        </div>
-        <!--END LOGIN -->
+        <!--START PARENT LOGIN -->
+            <div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
+                <div id="normal-login">
+                   <h3>Login to your Securly Account</h3>
+                    <form id="parent-login">    
+                        <div class="google-login col-sm-12 centered">
+                            <input type="email" placeholder="Email Address" id="cemail" min-length="2" required/>
+                            <input type="password" placeholder="Password" id="login-password" min-length="2" required/>
+                        </div>  
+                        <button class="button-inverted green" id="login-button">Submit</button>
+                        <a id="forgot-password">Forgot Password?</a>
+                        <span>Don't have an account? </span><a class="get-started-link">Get Started</a>
+                    </form>
+                </div>
+                <div id="reset" class="hidden">
+                   <h3>Reset your password</h3>
+                    <form id="reset-login">    
+                        <div class="google-login col-sm-12 centered">
+                            <input type="email" placeholder="Email Address" id="reset-email" class="reset-input" min-length="2" required/>
+                        </div>  
+                        <button class="button-inverted green" id="reset-password-button">Reset</button>
+                        <!--<a id="return-login" href="#">Login</a>-->
+                    </form>
+                </div>
+            </div>
+            <!--END PARENT LOGIN -->
         
         <!-- END FOOTER -->
         <script src="app/assets/scripts/settings.js"></script>

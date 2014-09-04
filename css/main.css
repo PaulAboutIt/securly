@@ -198,7 +198,10 @@
 .video-container {
     height: 520px;
 }
-
+.parents .slide-content {
+    background: url('../assets/img/parents.jpg');
+    background-size: cover;
+}
 .video-container img {
     width: 100%;
     min-height: 600px;
@@ -954,6 +957,7 @@ label.custom-select {
 .testimonials    {
     background: #33b294 !important;
     height: 560px !important;
+    overflow: hidden !important;
     margin-bottom: -35px !important;
 }
 
@@ -2214,6 +2218,12 @@ body,
 
 .page-top {
     position: relative;
+}
+
+.head-top .container {
+    width: 95%;
+    width: calc(100% - 75px);
+    margin-left: 50px;
 }
 
 /* Header Top Bar */
