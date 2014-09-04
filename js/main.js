@@ -15,6 +15,8 @@
     /*global $, jQuery, Spinner, google*/
 
     $(document).ready(function () {
+        $('.inputLink').val( mainUrl + $('.inputLink').val()); 
+
         var wpOffset = 80,
             $portfolioContainer = $('.portfolio-container'),
             $articleContainer = $('.article-container'),
@@ -268,7 +270,7 @@
             $('#reset').addClass('hidden');
         });         
         $('.popup-vimeo').magnificPopup({type:'iframe'});
-        $('#parent-login-btn').magnificPopup({
+        $('#login-btn').magnificPopup({
           items: {
               src: '#login',
               type: 'inline'
