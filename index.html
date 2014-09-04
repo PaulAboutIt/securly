@@ -20,7 +20,7 @@ Utilities::xs_hdlr();
 
         <meta name="description" content="Securly is a cloud based web filtering & web-analytics engine purpose built for K-12 schools designed to provide seamless web filtering service for chromebook filtering and take home iPad.">
 
-	<META NAME="KEYWORDS" CONTENT="Securly, SECURLY, web analytics, social media analytics, parental control, parental controls, school, block youtube, block facebook, block porn, block adult, web filter, webfiltering, Chromebook, Chromebooks,K-12, K12">	
+	    <meta NAME="KEYWORDS" CONTENT="Securly, SECURLY, web analytics, social media analytics, parental control, parental controls, school, block youtube, block facebook, block porn, block adult, web filter, webfiltering, Chromebook, Chromebooks,K-12, K12">	
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
@@ -43,168 +43,111 @@ Utilities::xs_hdlr();
     </head>
     <body>
 
-<!--<script>
-function submit_email(type)
-{
+    <!-- START HEADER -->
+    <div class="head-top">
+        <div class="container">
+            <a href="/" class="head-logo"></a>
 
-var firstName = "";
-var lastName = "";
-var phone = "";
-var sqrt = "";
-var ipaddress = "";
-var domain = "";
-var email = "";
-var lead_source = "";
-var promo= "";
+            <span class="nav-trigger fa fa-bars"></span>
 
-if (type == 'freemium_invite')
-{
-        email = document.forms[type]["email"].value;
-        var url = encodeURI("backend/_sendemail?req="+type+"&fn="+firstName+"&ln="+lastName+"&phone="+phone+"&email="+email+"&lead_source="+lead_source+"&ipaddress="+ipaddress+"&domain="+domain+"&sqrt="+sqrt+"&promo="+promo);
-
-
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp.open("GET", url, false);
-        xmlhttp.send();
-        return;
-}
-
-if (type == 'learn_more')
-{
-        firstName = document.forms[type]["first_name"].value;
-        lastName = document.forms[type]["last_name"].value;
-        phone = document.forms[type]["phone"].value;
-        sqrt = document.forms[type]["sqrt"].value;
-}
-
-if (type == 'free_trial')
-{
-        ipaddress = document.forms[type]["00N70000003Rb1w"].value;
-        domain = document.forms[type]["00N70000003Rb21"].value;
-}
-
-        email = document.forms[type]["email"].value;
-        lead_source = document.forms[type]["lead_source"].value;
-
-        var url = encodeURI("backend/_sendemail?req="+type+"&fn="+firstName+"&ln="+lastName+"&phone="+phone+"&email="+email+"&lead_source="+lead_source+"&ipaddress="+ipaddress+"&domain="+domain+"&sqrt="+sqrt+"&promo="+promo);
-
-
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp.open("GET", url, false);
-        xmlhttp.send();
-
-}
-</script>-->
-
-        <!-- START HEADER -->
-        <header id="top" class="page-top">
-            <!-- START HEADER TOP -->
-            <div class="head-top">
-                <div class="container">
-                    <a href="/" class="head-logo"></a>
-
-                    <span class="nav-trigger fa fa-bars"></span>
-
-                    <!-- START MAIN NAVIGATION -->
-                    <nav class="main-nav">
+            <!-- START MAIN NAVIGATION -->
+            <nav class="main-nav">
+                <ul>
+                   <li class="nav" aria-haspopup="true">
+                        <a href="parents.html">Parents</a>
+                    </li>
+                    <li class="nav" aria-haspopup="true">
+                        <a href="/allfeatures">Features</a>
+                    </li>
+                    <li class="nav" aria-haspopup="true">
+                        <a href="/resources">Resources</a>
+                    </li>
+                    <li class="nav" aria-haspopup="true">
+                        <a href="/news">News</a>
+                    </li>
+                    <li class="nav" aria-haspopup="true">
+                        <a href="http://blog.securly.com" target="_blank">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="login-btn">Login</a>
                         <ul>
-                           <li class="nav" aria-haspopup="true">
-                                <a href="parents.html">Parents</a>
-                            </li>
-                            <li class="nav" aria-haspopup="true">
-                                <a href="/allfeatures">Features</a>
-                            </li>
-                            <li class="nav" aria-haspopup="true">
-                                <a href="/resources">Resources</a>
-                            </li>
-                            <li class="nav" aria-haspopup="true">
-                                <a href="/news">News</a>
-                            </li>
-                            <li class="nav" aria-haspopup="true">
-                                <a href="http://blog.securly.com" target="_blank">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#" class="login-btn">Login</a>
-                                <ul>
-                                    <li><a href="/app/login"><i class="fa fa-building-o"></i>School</a></li>
-                                    <li id="login-btn"><a href=""><i class="ss ss-home"></i>Parent</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="sign-up-btn">Sign Up <i class="caret-o ss ss-navigatedown"></i></a>
-                                <ul>
-                                    <li><a href="signup.html"><i class="fa fa-building-o"></i>School</a></li>
-                                    <li><a href="parentsignup.html"><i class="ss ss-home"></i>Parent</a></li>
-                                </ul>
-                            </li>
-                            
+                            <li><a href="/app/login"><i class="fa fa-building-o"></i>School</a></li>
+                            <li id="login-btn"><a href=""><i class="ss ss-home"></i>Parent</a></li>
                         </ul>
-                    </nav>
-                    <!-- END MAIN NAVIGATION -->
-                </div>
-            </div>
-            <!-- END HEADER TOP -->
+                    </li>
+                    <li>
+                        <a href="#" class="sign-up-btn">Sign Up <i class="caret-o ss ss-navigatedown"></i></a>
+                        <ul>
+                            <li><a href="signup.html"><i class="fa fa-building-o"></i>School</a></li>
+                            <li><a href="parentsignup.html"><i class="ss ss-home"></i>Parent</a></li>
+                        </ul>
+                    </li>
 
-                <!-- Coming Soon -->
+                </ul>
+            </nav>
+            <!-- END MAIN NAVIGATION -->
+        </div>
+    </div>
+    <!-- END HEADER -->
 
-        <!--<div class="comingsoon_banner">
-          <div class="head-top cmbanner">
-                <div class="cm_container">
-                    <div class="signup_container col-sm-6">
-                            <p>Yes. You heard right. <a href="/features/free"><span class="logo_name">Securly</span><span class="free">Free</span> is coming soon!</a></p>
-                    </div>
-                    <div class="signup_container col-sm-6">
-                     	<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="freemium_invite">
-                                            <input type=hidden name="oid" value="00D70000000Mosy">
-                                            <input class="inputLink" id="hostName" type=hidden name="retURL" value="/features/freethankyou">
-                                            <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="freemium_invite">
+    <!-- Coming Soon -->
 
-                            <input type="text" name="email" placeholder="Your Email" style="height:33px"class="signup-text">
-                            <a class="invited-button" href="javascript:;" onclick="javascript:submit_email('freemium_invite');document.freemium_invite.submit();">Get Invited!</a>
-                        </form>
-                    </div>
-                </div>
-          </div>
-        </div>-->
+<!--<div class="comingsoon_banner">
+<div class="head-top cmbanner">
+    <div class="cm_container">
+        <div class="signup_container col-sm-6">
+                <p>Yes. You heard right. <a href="/features/free"><span class="logo_name">Securly</span><span class="free">Free</span> is coming soon!</a></p>
+        </div>
+        <div class="signup_container col-sm-6">
+            <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="freemium_invite">
+                                <input type=hidden name="oid" value="00D70000000Mosy">
+                                <input class="inputLink" id="hostName" type=hidden name="retURL" value="/features/freethankyou">
+                                <input type=hidden id="00N70000003Rb2a" name="00N70000003Rb2a" value="freemium_invite">
 
-        
-            <!-- START MAIN SLIDER -->
-            <div id="main-superslides" class="main-slider superslides">
-                <div class="video-container">
-                    <video autoplay loop poster="assets/video/hero.jpg" class="desktop-only">
-                        <source src="assets/video/hero.mp4" type="video/mp4"/>
-                        <source src="assets/video/hero.webm" type="video/webm"/>
-                        <source src="assets/video/hero.ogv" type="video/ogg"/>
-                        <img src="assets/video/hero.jpg" alt="Securly web filtering for schools">
-                    </video>
-                    <!-- START SLIDE CONTENT -->
-                    <div class="slide-content">
-                        <div class="container hero">
-                            <h2 class="page-title" data-animation="fadeInDown">
-                                Web Filtering 2.0 <br>for Schools
-                            </h2>
-                            <button class="get-started" data-animation="bounceIn">Get Started - Free Forever!</button>
-                            <div class="parent-info">
-                               <img src="assets/img/parents_icon.png" class="parents-icon"/>
-                                <h3>Parents</h3>
-                                <p>Shape and secure <br>your kids online education</p>
-                                <a href="parents.html">
-                                    <button class="button-primary learn-more" data-animation="bounceIn">
-                                    Learn More <i class="fa fa-arrow-right"></i>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="mobile-only hero-img"></div>
-                    <!-- END SLIDE CONTENT -->
-                </div>
-            </div>
-            <!-- END MAIN SLIDER -->
-        </header>
+                <input type="text" name="email" placeholder="Your Email" style="height:33px"class="signup-text">
+                <a class="invited-button" href="javascript:;" onclick="javascript:submit_email('freemium_invite');document.freemium_invite.submit();">Get Invited!</a>
+            </form>
+        </div>
+    </div>
+</div>
+</div>-->
+
+
         <!-- END HEADER -->
+        <!-- START MAIN SLIDER -->
+<div id="main-superslides" class="main-slider superslides">
+    <div class="video-container">
+        <video autoplay loop poster="assets/video/hero.jpg" class="desktop-only">
+            <source src="assets/video/hero.mp4" type="video/mp4"/>
+            <source src="assets/video/hero.webm" type="video/webm"/>
+            <source src="assets/video/hero.ogv" type="video/ogg"/>
+            <img src="assets/video/hero.jpg" alt="Securly web filtering for schools">
+        </video>
+        <!-- START SLIDE CONTENT -->
+        <div class="slide-content">
+            <div class="container hero">
+                <h2 class="page-title" data-animation="fadeInDown">
+                    Web Filtering 2.0 <br>for Schools
+                </h2>
+                <button class="get-started" data-animation="bounceIn">Get Started - Free Forever!</button>
+                <div class="parent-info">
+                   <img src="assets/img/parents_icon.png" class="parents-icon"/>
+                    <h3>Parents</h3>
+                    <p>Shape and secure <br>your kids online education</p>
+                    <a href="parents.html">
+                        <button class="button-primary learn-more" data-animation="bounceIn">
+                        Learn More <i class="fa fa-arrow-right"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
 
+        </div>
+        <div class="mobile-only hero-img"></div>
+        <!-- END SLIDE CONTENT -->
+    </div>
+</div>
+<!-- END MAIN SLIDER -->
         <!-- START MAIN CONTENT -->
         <section id="main" class="homepage page-content">
             <div class="container">
@@ -325,23 +268,7 @@ if (type == 'free_trial')
                             </div>
                         </div>
                     </div>
-                    <!-- START FEATURE -->
-                    <div class="row white-row">
-                        
-                        <div class="col-sm-4 animated centered col-sm-offset-4" data-animation="fadeInUp">
-                            <div class="feature-box centered">
-				 <a href="/features/achievementanalytics" class="learn-more">
-	                                <h4 class="feature-title">Powerful Student Achievement Analytics</h4>
-				 </a>
-                                <p>Cloud based Big Data analytics designed to improve student productivity and achievement. Admins and Educators can now analyze student activity across educational sites and time sinks, in-school and at-home, across all school devices.</p>
-                                <a href="/features/achievementanalytics" class="learn-more">Learn More <span class="fa fa-arrow-right"></span></a>
-                            </div>
-                        </div> 
-             
-                        <p><a href="/features/achievementanalytics"><img class="full-width" alt="Achievement Analytics" src="assets/img/feature-list-items8.jpg"/></a></p>
-             
-                    </div>
-                    <!-- END FEATURE -->
+                    
 
                 <a href="/allfeatures" rel="" title="click to see more features"> 
                     <div class="centered more-features">
@@ -490,17 +417,30 @@ if (type == 'free_trial')
             </div>
             <!-- END SECTION SPLIT -->
 
-            <!-- START SECTION SPLIT -->
+             <!-- START SECTION SPLIT -->
             <div class="section-split partners ">
                 <div class="container">
                     <!-- START PARTNERS -->
                     <div class="row animated" data-animation="fadeInUp">
-
-                        <div class="col-sm-12">
-                            <div class="col-sm-4 tcrunch">
-                                <img alt="As seen on TechCrunch" src="assets/img/techcrunch.jpg"/>
+						<div class="col-sm-4">
+                         	<p style="text-align:left; font-size:1.3em;">Partners</p>
+                            
+                            <div class="col-sm-7 verizon">
+                                <img alt="Partners Verizon" src="assets/img/verizon.jpg"/>
                             </div>
-                            <div class="col-sm-4 edsurge">
+                            <div class="col-sm-5 verizon">
+                                <img alt="Partners Setda" src="assets/img/setda.jpg"/>
+                            </div>
+                           
+                            
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-7">
+                        	<p style="text-align:left; font-size:1.3em;"> As seen on </p>
+                            <div class="col-sm-4 tcrunch">
+                               <img alt="As featured in TechCrunch" src="assets/img/techcrunch.jpg"/>
+                            </div>
+                            <div class="col-sm-3 edsurge">
                                 <img alt="As featured in EdSurge" src="assets/img/edSurge.jpg"/>
                             </div>
                             <div class="col-sm-4 edweek">
@@ -508,6 +448,8 @@ if (type == 'free_trial')
                             </div>
                             
                         </div>
+                      
+                  
                     <!-- END PARTNERS -->
                     </div>
                 </div>
@@ -515,6 +457,63 @@ if (type == 'free_trial')
             <!-- END SECTION SPLIT -->
         </section>
         <!-- END MAIN CONTENT -->
+            
+    <!-- START FOOTER -->
+        <footer class="page-footer">
+            <a href="#top" class="to-top icon-arrow-up8"></a>
+            <div class="footer-row container">
+                <div class="row">
+
+                    <div class="col-sm-7 footer-menu">
+                        <div class="widget">
+                            <ul class="link-list">
+                            <li>
+                                <a href="http://securly.zendesk.com" target="_blank">Support</a>
+                            </li>
+                                <li>
+                                    <a href="/contact">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="/news">News</a>
+                                </li>
+                                <li>
+                                    <a href="/resources">Resources</a>
+                                </li>
+                                <li>
+                                    <a href="/about">About</a>
+                                </li>
+                                <li>
+                                    <a href="http://blog.securly.com" target="_blank">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="/terms">Terms</a>
+                                </li>
+                                <li>
+                                    <a href="/privacy">Privacy</a>
+                                </li>
+                            </ul>
+                            <p class="disclaimer">&copy; Copyright Securly Inc, 2014</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 footer-contact">
+                        <div class="widget">
+                            <h4 class="widget-title">Get in touch.</h4>
+                            <address>
+                                <a href="tel:18557328759"><span class="address-item icon-mobile">1-855-SECURLY</span></a>
+                            </address>
+
+                            <p class="social-icons">
+                                <a href="http://twitter.com/securlyinc" class="fa fa-twitter circle-border" target="_blank"></a>
+                                <a href="http://facebook.com/securlyinc" class="fa fa-facebook circle-border" target="_blank"></a>
+                                <a href="http://plus.google.com/116997641020146060034" class="fa fa-google-plus circle-border" target="_blank"></a>
+                                <a href="mailto:sales@securly.com" class="fa fa-envelope-o circle-border" target="_blank"></a>
+                            </p>
+                        </div>
+                    </div>
+        </footer>
+        <!-- END FOOTER -->
+            
+             <!--####################### START POPUP MODULES #######################-->
 
             <!--START OLD SCHOOL LOGIN -->
             <!--<div id="login" class="mfp-hide col-sm-4 col-sm-offset-4 centered">
@@ -771,10 +770,7 @@ if (type == 'free_trial')
 
             <!-- END LEARN MORE -->
 
-            
-        </footer>
-
-        <!-- END FOOTER -->
+             <!-- END FOOTER -->
         <script src="app/assets/scripts/settings.js"></script>
         <script src="js/vendor/jquery-1.11.0.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -802,19 +798,11 @@ if (type == 'free_trial')
         <script src="js/vendor/respond.min.js"></script>
         <![endif]-->
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script>
-            $( document ).ready(function() {
-                $('.inputLink').val( mainUrl + $('.inputLink').val()); 
-            }); 
-        </script>
-
 <?php
 
 	Utilities::generate_footer();
 
 ?>
-
-
+<script src="js/main.js"></script>
     </body>
 </html>

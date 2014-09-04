@@ -268,7 +268,7 @@
             $('#reset').addClass('hidden');
         });         
         $('.popup-vimeo').magnificPopup({type:'iframe'});
-        $('#login-btn').magnificPopup({
+        $('#parent-login-btn').magnificPopup({
           items: {
               src: '#login',
               type: 'inline'
