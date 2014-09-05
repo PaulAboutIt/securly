@@ -793,6 +793,7 @@ label.custom-select {
     color: #777;
     padding-top: 20px;
     font-size: 11px;
+    cursor: pointer;
 }
 
 .hero a {

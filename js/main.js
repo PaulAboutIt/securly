@@ -275,7 +275,13 @@
               src: '#login',
               type: 'inline'
           }
-        }); 
+        });
+        $('.already').magnificPopup({
+          items: {
+              src: '#login',
+              type: 'inline'
+          }
+        });
         
         $('.get-started-link').magnificPopup({
           items: {
